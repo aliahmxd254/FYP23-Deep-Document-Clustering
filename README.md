@@ -1,1 +1,1 @@
-# FYP23-Deep-Dcoument-Clustering
+# FYP23-Deep-Document-Clustering

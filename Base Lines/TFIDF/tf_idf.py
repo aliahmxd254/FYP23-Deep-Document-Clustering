@@ -101,23 +101,23 @@ def Actual_Labels():
         label_seq.append(actual_labels[doc])
     return label_seq
 
-def print_results(true_labels, predicted_labels):
+def print_results(true_labels, predicted_labels, X):
     print("RESULTS:")
     print(f"Purity: {Purity_Score(true_labels, predicted_labels)}")
     print(f"Silhouette Score: {silhouette_score(X, predicted_labels)}")
 
-if __name__ == '__main__':
+
+
+def wrapperFunction():
     ReadDocuments('Doc50')
     vectorizer = TfidfVectorizer(analyzer='word', stop_words='english', preprocessor=custom_preprocessor)
     X = vectorizer.fit_transform(corpus)
-    true_labels = Actual_Labels()
-    predicted_labels = KMeans_Labels(X, 5, 1500, true_labels)
-    print_results(true_labels, predicted_labels)
-   
-    
-    
-
-    
-    
-    
-    
+    print(X)
+    # true_labels = Actual_Labels()
+    # predicted_labels = KMeans_Labels(X, 5, 1500, true_labels)
+    # print_results(true_labels, predicted_labels, X)
+    # return predicted_labels
+    return 1
+if __name__ == '__main__':
+    predictedLabels = wrapperFunction()
+    # print_results(trueLabels, predictedLabels)

@@ -115,7 +115,7 @@ def wrapperFunction():
     true_labels = Actual_Labels()
     predicted_labels = KMeans_Labels(X, 5, 1500, true_labels)
     print_results(true_labels, predicted_labels, X)
-    return predicted_labels
+    return predicted_labels, X
 if __name__ == '__main__':
     predictedLabels = wrapperFunction()
     # print_results(trueLabels, predictedLabels)

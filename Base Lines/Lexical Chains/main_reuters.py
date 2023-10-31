@@ -2,6 +2,8 @@ import numpy as np
 import nltk
 import os
 import re
+import torch
+import pickle
 from collections import defaultdict
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
@@ -17,6 +19,7 @@ from tf_idf import wrapperFunction
 from sklearn.cluster import SpectralClustering
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.metrics import adjusted_rand_score  # Import the Rand Index metric
+from collections import Counter
 
 
 # from cuml import PCA
@@ -30,6 +33,11 @@ total_features = []  # total number of features. 1652
 final_training_Features = []
 corpus = []
 doc_list_sequence = []
+
+data_dict = {}
+cluster_dict = {}
+mapped_data_dict = {}
+word_to_int = {}
 
 
 def ReadDocuments(dir_name):
@@ -178,12 +186,29 @@ def build_lexical_chains(doc):
     return chains
 
 
-def Purity_Score(label_seq, pred_labels):
-    # Calculate the confusion matrix to compare true labels and cluster assignments
-    confusion = confusion_matrix(label_seq, pred_labels)
-    # Calculate the purity
-    purity = np.sum(np.max(confusion, axis=0)) / np.sum(confusion)
-    return purity
+# def Purity_Score(label_seq, pred_labels):
+#     # Calculate the confusion matrix to compare true labels and cluster assignments
+#     confusion = confusion_matrix(label_seq, pred_labels)
+#     # Calculate the purity
+#     purity = np.sum(np.max(confusion, axis=0)) / np.sum(confusion)
+#     return purity
+
+
+def Purity_Score(true_labels, predicted_labels):
+    total = len(true_labels)
+    num_clusters = len(set(predicted_labels))
+    
+    purity_sum = 0
+
+    for cluster in set(predicted_labels):
+        cluster_indices = [i for i, label in enumerate(predicted_labels) if label == cluster]
+        cluster_true_labels = [true_labels[i] for i in cluster_indices]
+        cluster_true_labels = [item for sublist in cluster_true_labels for item in sublist]  # Flatten the list of true labels
+        class_counts = Counter(cluster_true_labels)
+        max_class_count = max(class_counts.values())
+        purity_sum += max_class_count
+
+    return purity_sum / total
 
 
 def calculate_consensus_matrix(labels1, labels2):
@@ -204,54 +229,93 @@ def calculate_consensus_matrix(labels1, labels2):
     return consensus_matrix
 
 
-doc_50_path = os.getcwd() + "\Doc50"
-ReadDocuments(doc_50_path)
-PreprocessDocuments()
+def GetLabels():
+    with open('D:\FAST\FYP\FYP23-Deep-Document-Clustering\Base Lines\Lexical Chains\Reuters\cats.txt', 'r') as file:
+        lines = file.readlines()
+
+    for line in lines:
+        parts = line.strip().split()
+        if len(parts) >= 2:
+            key = parts[0]
+            values = parts[1:]
+            if len(values) == 1:
+                data_dict[key] = values[0]
+            else:
+                data_dict[key] = values
+                for value in values:
+                    cluster_dict[value] = None
+
+    word_list = list(cluster_dict.keys())
+
+    for i, word in enumerate(word_list):
+        word_to_int[word] = i
+
+    for key, value in data_dict.items():
+        if isinstance(value, list):
+            mapped_values = [word_to_int[word] for word in value]
+            mapped_data_dict[key] = mapped_values
+        else:
+            value_list = [value] if not isinstance(value, list) else value
+            mapped_values = [word_to_int[word] if word in word_to_int else word for word in value_list]
+            mapped_data_dict[key] = mapped_values
+
+    label_seq = list(mapped_data_dict.values())
+    # label_seq = [item for sublist in label_seq for item in (sublist if isinstance(sublist, list) else [sublist])]
+    
+    return label_seq
+
+
+def store_features():
+    file_path = r"D:\FAST\FYP\FYP23-Deep-Document-Clustering\Base Lines\Lexical Chains\Vectors.pkl"
+    file = open(file_path, "wb")
+    pickle.dump(final_training_Features, file)
+    file.close()
+
+
+def read_features():
+    file_path = r"D:\FAST\FYP\FYP23-Deep-Document-Clustering\Base Lines\Lexical Chains\Vectors.pkl"
+    a_file = open(file_path,"rb")
+    X = pickle.load(a_file)
+    a_file.close()
+    return X 
+
+
+# device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")      # GPU
+
+doc_path = "D:\FAST\FYP\FYP23-Deep-Document-Clustering\Base Lines\Lexical Chains\Reuters\Training"
+# doc_path = os.getcwd() + "\Reuters\Training"
+ReadDocuments(doc_path)
+print("Done1")
+# PreprocessDocuments()
+# print("Done2")
+# store_features()
+
+
+final_training_Features = read_features()
+# print(total_features)
+
+# final_training_Features = torch.tensor(final_training_Features, dtype=torch.float32).to(device)      # GPU
 
 normalizer = Normalizer()
-normalize_features = normalizer.fit_transform(final_training_Features)
+final_training_Features = normalizer.fit_transform(final_training_Features)
+# final_training_Features = final_training_Features / torch.norm(final_training_Features, dim=1)[:, None]      # GPU
 
 print("\n----------------------------LEXICAL CHAINS--------------------------------")
 
-
-
 SumSqDis = []
 pca = PCA(n_components=30, random_state=42)
-pca_vecs = pca.fit_transform(normalize_features)
+pca_vecs = pca.fit_transform(final_training_Features)
+# pca_vecs = torch.tensor(pca_vecs, dtype=torch.float32).to(device)
 
-# Purity Score
-for Path in os.listdir("Doc50" + "\\"):
-    file_path = os.getcwd() + f"\{'Doc50'}\\" + Path
-    with open(file_path, "r") as file:
-        FileContents = file.read()
-        corpus.append(FileContents.lower())
-        doc_list_sequence.append(Path)
+print("Done3")
 
-actual_labels = (
-    {}
-)  # dictionary to store true assignments for each document | read sequence not followed
-label_path = os.getcwd() + "\Doc50 GT"
-for labels_directory in os.listdir(label_path):  # for each assignment folder
-    actual_cluster = int(
-        labels_directory[1]
-    )  # extract cluster label from directory name
-    doc_labels = os.listdir(
-        label_path + f"\\{labels_directory}"
-    )  # for all document ids assigned to this cluster
-    for doc in doc_labels:
-        actual_labels[doc] = actual_cluster - 1  # save cluster label
+label_seq = GetLabels()
 
-label_seq = []  # save labels in order of documents read
-for doc in doc_list_sequence:
-    label_seq.append(actual_labels[doc])
-
-
-print("Actual Labels",actual_labels)
-print("Label Sequence",label_seq)
+print("Done4")
 
 purity_collection = {}
-for i in range(1500):
-    clusters = KMeans(n_init="auto", n_clusters=5, random_state=i, init="k-means++").fit(pca_vecs).labels_
+for i in range(500):
+    clusters = KMeans(n_init="auto", n_clusters=len(list(word_to_int.values())), random_state=i, init="k-means++").fit(pca_vecs).labels_
     purity_collection[i] = Purity_Score(label_seq, clusters)
 
 max_rand_state = max(purity_collection, key=purity_collection.get)
@@ -259,7 +323,7 @@ print(
     f"Maximum purity of {purity_collection[max_rand_state]} found on random state {max_rand_state}"
 )
 
-lexicalChainsLabels = KMeans(n_init="auto", n_clusters=5, random_state=max_rand_state, init="k-means++").fit(pca_vecs).labels_
+lexicalChainsLabels = KMeans(n_init="auto", n_clusters=len(list(word_to_int.values())), random_state=max_rand_state, init="k-means++").fit(pca_vecs).labels_
 
 print(f"""K-means lables using lexical chains: {lexicalChainsLabels}
       \nPurity {Purity_Score(label_seq, lexicalChainsLabels)}
@@ -279,7 +343,7 @@ consensus_matrix = calculate_consensus_matrix(tfidfLabels, lexicalChainsLabels)
 
 n_clusters = 5  # You can adjust this as needed
 purity_collection = {}
-for i in range(1500):
+for i in range(500):
     clusters = SpectralClustering(n_clusters=n_clusters, affinity="precomputed", random_state=i).fit(1 - consensus_matrix).labels_
     purity_collection[i] = Purity_Score(label_seq, clusters)
 
@@ -294,18 +358,14 @@ print("\n----------------------------Clustering With Topics---------------------
 
 num_topics = 5  # Adjust as needed
 lda = LatentDirichletAllocation(n_components=num_topics, random_state=42)
+topic_proportions = lda.fit_transform(tfidfMatrix)
 
-lda.fit(tfidfMatrix)
+combined_features = np.hstack((spectral_labels.reshape(-1, 1), topic_proportions))
 
-# Get the topic assignments for each document
-topic_labels = lda.transform(tfidfMatrix).argmax(axis=1)
+normalize_combined_features = Normalizer().fit_transform(combined_features)
 
-combined_labels = [lexicalChainsLabels, tfidfLabels, topic_labels]
-combined_labels = list(map(list, zip(*combined_labels)))
-
-normalize_combined_features = Normalizer().fit_transform(combined_labels)
 topic_purity_collection = {}
-for i in range(1500):
+for i in range(500):
     topic_clusters = (
         KMeans(n_init="auto", n_clusters=5, random_state=i, init="k-means++")
         .fit(normalize_combined_features)

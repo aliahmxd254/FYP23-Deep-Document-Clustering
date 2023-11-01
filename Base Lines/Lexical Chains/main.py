@@ -5,18 +5,14 @@ import re
 from collections import defaultdict
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
-from sklearn.metrics import silhouette_score
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import Normalizer
 from nltk.corpus import wordnet as wn, stopwords
 from nltk.stem import WordNetLemmatizer
 from tf_idf import wrapperFunction
 from sklearn.cluster import SpectralClustering
 from sklearn.decomposition import LatentDirichletAllocation
-from sklearn.metrics import adjusted_rand_score  # Import the Rand Index metric
 
 
 # from cuml import PCA

@@ -1,0 +1,71 @@
+ Persistent Linda Home Page 
+Abstract
+Source
+People
+CS Department
+Courant
+NYU
+Persistent Linda
+A software system for robust distributed/parallel computing.
+WANT TO WRITE TO US?
+Objectives
+The objectives of the PLinda project are two-fold:
+Fault tolerant parallel computing
+	    - provide language
+   	   constructs that facilitate
+   	   the design of high performance fault-tolerant parallel programs.
+Harness the aggregate power of idle cycles on networks 
+	   of workstations in a manner that is fault-tolerant and does 
+	   not disturb the owners of the workstations at all.
+	   Our system models non-idleness (e.g. user returns
+  	   to workstation) as failure.
+	   The work being done at the idle workstation is then moved.
+Applications
+The major class of PLinda applications are long-running coarse grain parallel applications.
+Example applications:
+NILE project
+Data mining (eg. biological pattern discovery)
+Distribution
+Source code is available!
+And here is how to install it.
+Please refer to the PLinda User Manual for 
+additional information.
+FAQ
+Future Work
+Debuggers and run-time visualization tools.
+Software tools for writing parallel/distributed programs.
+Performance improvements for scientific applications.
+Programming tools for data mining.
+A distributed run-time kernel for PLinda.
+Suggestions -- please feel free to send mail to plinda@cs.nyu.edu.
+People
+Dennis Shasha (Professor) 
+Brian Anderson (former student)
+Tom Brown (student)
+Karp Joo Jeong (former student)  
+Bin Li (student)
+Jihai Qiu (student)
+Suren Talla (student)
+Peter Wyckoff (student)
+Publications
+PLinda User Manual (PostScript). 
+Karpjoo Jeong. Fault-tolerant Parallel Processing Combining Linda, Chec
+kpointing, and Transactions. 
+Ph.D. Thesis, Department of Computer Science, New York University, 1996.
+(Click here for a PostScript version.)
+Karpjoo Jeong and Dennis Shasha. Persistent Linda 2: a transaction/checkpointing approach to fault-tolerant
+Linda. 
+Proceedings of the 13th Symposium on Fault-Tolerant
+Distributed Systems, October 1994. 
+(Click here for a PostScript version.)
+Brian Anderson and Dennis Shasha. Persistent Linda: Linda + Transactions + Query Processing.
+Workshop on
+Research Directions in High-Level Parallel Programming
+Languages, Mont Saint-Michel, France June 1991.
+Published as Springer-Verlag Lecture Notes in Computer
+Science 574.
+(Click here for a PostScript version.)
+Other Fault Tolerant Systems
+Last modified by 
+Bin Li.
+October 23, 1996.

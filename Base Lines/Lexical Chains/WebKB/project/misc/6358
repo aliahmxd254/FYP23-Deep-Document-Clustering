@@ -1,0 +1,43 @@
+The Oregon Wearable Computer
+ University of Oregon
+Department of Computer and Information Science
+The Oregon Wearable Computer
+The Oregon Wearable Computer is a body-worn multi-purpose computer designed for tasks that require hands-free operation. It is equipped with a heads-up display and a hands-free voice driven user-interface.
+The following diagrams show the main components of the Oregon Wearable Computer and how they are wired together:
+ The wearable computer vest
+ Processor unit and heads-up display
+ Wiring Diagram
+We also have some pictures of the Oregon Wearable Computer.
+Hardware Specification
+Pentium 70Mhz microprocessor
+40MB RAM (expandable to ??MB RAM) 
+1GB removable hard drive
+1-eye head-mounted active matrix display (640x480 VGA, 256 grey scale, usable resolution AAxBB characters) (modified Virtual-IO glasses)
+weight approximately 3 pounds 
+32bit SuperVGA port
+2 Type II or 1 Type III PCCard slot (PCMCIA)
+21 pin serial port
+mouse serial port
+1 audio in port
+1 audio out port
+Input/Output devices
+glide point tracking device 
+keyboard 
+microphone
+speaker
+single shot video camera
+Network connectivity
+Metricom wireless modem (TCP/IP dial up connection, maximum bandwidth 14400 baud)
+Power supply
+rechargeable Nickel-Metal Hydride Battery, 3.5 - 4 hour ADC
+rechargeable Lithium-Ion Battery, 3 - 3.5 hour ADC 
+AC Power Supply 
+Standard Software
+Windows95 operating system
+ JustVoice voice recognition software
+Hands-free User-Interface
+voice input using speaker dependent voice recognition software
+manual cursor control using a 2-button glide point 
+voice output
+ Last revised on July 18, 1996.
+ kortuem@cs.uoregon.edu

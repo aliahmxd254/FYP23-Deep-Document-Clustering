@@ -1,0 +1,88 @@
+TIBBIT Home Page
+The TIBBIT Project
+Timing Insensitive Binary to 
+Binary Translation
+The TIBBIT project focuses on performing automated binary-code translation 
+and migration of applications across widely different architectures, and
+automatically compensating for implicit time-based dependencies between 
+the application and the speed of the underlying hardware.  The TIBBIT project 
+is primarily concerned with the automated migration of embedded real-time 
+applications.
+An example
+of why TIBBIT is necessary
+TIBBIT project participants:
+TIBBIT is being developed cooperatively between Carnegie Mellon University 
+(CMU) and the University of Oregon 
+(UO).
+General development
+ Bryce Cogswell (CMU/UO, cogswell@cmu.edu)
+ Zary Segall (UO/CMU, zs@cs.uoregon.edu)
+Timing equivalence theory and modeling
+ Inkyu Kim
+(UO, kim@cs.uoregon.edu)
+ Automated translation and retargetability issues
+ Noble Larson (UO, ngl@cs.uoregon.edu)
+ Nick Badovinac (UO, nickb@cs.uoregon.edu)
+ Mike Haertel (UO, mike@cs.uoregon.edu)
+DSP-specific translation and optimization
+ Carol Hernandez (CMU, ch4m+@andrew.cmu.edu)
+ Hooman Yaghoobi (CMU, hy0a+@andrew.cmu.edu)
+Our sponsors:
+TIBBIT is a part of the RASSP program
+sponsored by ARPA and administered through Wright Laboratory.
+This research is in cooperation with 
+Martin Marietta Labs.
+TIBBIT progress reports.
+We send these to RASSP every month.
+Papers available:
+Note: All papers are in postscript.
+ The original 
+RASSP Proposal
+ CMU Tech Report, March '93 -
+	Timing Insensitive Binary to Binary Translation of Real Time
+	   Systems (18 pages, 40 KB) -
+	Paper
+ ISCA '94 Workshop -
+	 Timing Insensitive Binary to Binary Translation
+	   (10 pages, 33 KB) -
+	Paper and 
+	Slides
+ RASSP Review, May 94 - 
+	Slides 
+	and Demos
+ RASSP Conference, August 94 - 
+	Timing Insensitive Binary to Binary Translation of Real Time
+	   Systems (9 pages, 42 KB) -
+	Paper and
+	Slides
+ PACT '95 - 
+	Performance Impact of Architectural Features During Binary
+	  Translation (4 pages, 27 KB) -
+	Paper
+ WPDRTS - Timing Insensitive Binary-to-Binary Migration 
+	         Across Multiprocessor Architectures (2 pages, 20 KB) -
+	Paper
+ Ph.D. Thesis (Bryce Cogswell) -
+	Timing Insensitive Binary to Binary Translation
+	   (162 pages, 244 KB) -
+	Thesis and
+	Slides
+ Ph.D. Proposal (Inkyu Kim) -
+	An Interval-Based Approach to Timing Analysis in Binary to Binary
+Translation (15 pages, 103 KB) - 
+	Paper
+ Paper (Inkyu Kim) -
+	Timing Equivalence Analysis in Binary to Binary Translation (35 pages, 63 KB) - 
+	Paper
+ Paper (Carol Hernandez) -
+	Architectural Aided Binary to Binary Translation (21 pages, 211 KB) - 
+	Paper
+ Paper (Hooman Yaghoobi) -
+	Time Insensitive Binary to Binary Translation (TIBBIT) for Digital
+Signal Processors (DSP) (19 pages, 41 KB) - 
+	Paper
+Related work:
+ The dcc Decompiler
+accesses 
+since November 7, 1995.
+cogswell@cs.uoregon.edu

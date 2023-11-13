@@ -1,0 +1,34 @@
+BRASS Research Group, U.C. Berkeley
+Computer Science Division,
+UC Berkeley
+The goal of the BRASS research group, headed by John Wawrzynek,
+is to expand the set of applications for which reconfigurable
+computing is the best solution.  We are working towards this
+goal by improving both reconfigurable architectures and the compilers
+for them.
+Specifically, we are investigating the integration of processors and
+reconfigurable logic.  We are currently developing the Garp chip,
+which combines a MIPS-II processor with a fine-grained FPGA coprocessor
+on the same die (see Current Projects);
+we plan to investigate other architectures as well.  This area is
+being actively investigated by many groups around the world; here is a
+summary of past and present efforts.
+We are working in cooperation with the IRAM (Intelligent DRAM) research group in our department.
+The IRAM group's co-principle investigators are
+Tom Anderson, Dave Patterson, and Kathy Yelick.
+Having DRAM on the same die will help supply the increased memory
+bandwidth demanded by both the increased processing power and
+the dynamic loading of configurations.
+The BRASS and IRAM groups will hold their next joint
+retreat
+on January 13-15, 1997.
+ People 
+ Current Projects 
+ Available Software 
+ Papers 
+ Links 
+ Working Directory (local access only) 
+To BRASS Home Page
+Maintained by <timothyc@cs.berkeley.edu>
+Last modified
+Mon Sep 30 13:08:22 PDT 1996

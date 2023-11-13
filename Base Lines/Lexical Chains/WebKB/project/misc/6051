@@ -1,0 +1,19 @@
+ NYU Ultracomputer Project Home Page 
+   The NYU Ultracomputer Project   
+  The NYU Ultracomputer Lab conducts research in parallel computer
+ architecture and software design.  Specifically, we have constructed two
+ generations of shared memory machines: an 8 processor bus-based machine in the
+ 1980's and, our current prototype, a 16 processor, 16 memory-module machine
+ with custom VLSI switches supporting the Fetch-and-Add coordination primitive.
+  This design allows for a reduction in memory hot-spot contention by
+ interleaving memory addresses between the memory modules, and using the
+ network switches to combine requests destined for the same memory location.
+  The Ultracomputer runs Symunix, a locally developed, parallel version of Unix. 
+ We have information available on 
+  staff and students 
+  technical reports 
+  theses 
+  the Ultra III design proposal 
+  the Ultra III evaluation proposal  
+I would like more information on the 
+	NYU Computer Science department .

@@ -1,0 +1,81 @@
+DEMO
+ Dynamical & Evolutionary Machine Organization
+Brandeis University
+ DEMO attacks problems in agent cognition 
+using complex machine organizations which are created
+from simple components with minimal human design effort.
+We study recurrent neural networks, evolutionary computation,
+and dynamical systems as substrates. 
+We build working systems to test our theories. DEMO is located
+in the back of Room 118
+Volen Center, next to the 
+Interaction Lab, but our entry is through the workstation
+cluster (Room 119) or the shop (117).
+ Members of the Organization: (& Photo)
+ Jordan Pollack
+Alan Blair
+Hugues Juille
+Sevan Ficici
+Pablo Funes
+Ayal Spitz
+Gregory Hornby
+Kerry Kurian
+Works in progress
+ Co-evolution of a Backgammon Player.
+One of the persistent themes in artificial life research is the
+use of co-evolutionary arms races in the development of specific and
+complex behaviors.  However, other than Sims' work on artificial robots,
+most of the work has attacked very simple games of prisoner's dilemma or
+predator and prey.  Following Tesauro's work on TD-Gammon, we used simple
+hill-climbing in a 4000 parameter feed-forward network to develop a
+competitive backgammon evolution function.  No back-propagation,
+reinforcement or temporal difference learning methods were employed.
+Instead we start with an initial champion of all zero weights and proceed
+simply by playing the current champion network against a slightly mutated
+challenger and changing weights when the challenger wins.   Evaluation
+proceeds by applying the network to all legal moves and choosing the move
+with the highest evaluation.  Our results show co-evolution to be a
+powerful machine learning method, even when coupled with simple
+hill-climbing, and that the surprising success of Tesauro's program had
+more to do with the co-evolutionary structure of the learning task and the
+stochastic and reversible dynamics of the backgammon game itself than with
+the advanced learning techniques.
+go to backgammon page
+ Massively Parallel Genetic Programming
+The SIMD power of the Maspar MP2 is harnessed to perform genetic
+programming at top speed. See our 
+chapter
+in Advances in GP II, forthcoming from MIT Press. 
+ Coevolutionary Genetic Programming
+Using a competitive fitness, we were able to evolve an elegant
+solution to the intertwined spirals problem. This function uses 52 GP
+primitives and broke the plane into two subproblems which added up to
+a spiral.
+ Massively Parallel Neural Networks
+The MP2 is used for collective action by
+small neural networks, and for evolution 
+across network architectures.
+ High Capacity RAAM's
+Using an IFS concept for decoding,
+we find very large capacity RAAM's. Here is a
+picture of tree depth equivalence classes for a particular
+two dimensional attractor.
+ The Mind's Eye Project
+The MP2 is also used for rapid construction of neural
+network IFS-like fractal attractors as a basis for memory. 
+Here is a gallery of images...
+ Evolution of Communication
+We evolve neural networks to put in agents who cooperate and compete
+and communicate on robotic tasks. Students are needed to work on more realistic
+simulation in preparation for downloading into
+actual real robots.  If and only if
+you use ghostscript as your ps viewer, you 
+can watch a  simulation  of
+our evolved agents in action.
+ Robot Building 
+Thanks to the NSF,
+we are building a
+new robotics facility at Brandeis, complete with LEGO's,
+small metalworking equipment, and electronics capabilities.
+Opportunities abound, especially for people with electronic
+interfacing and machine shop experience. 

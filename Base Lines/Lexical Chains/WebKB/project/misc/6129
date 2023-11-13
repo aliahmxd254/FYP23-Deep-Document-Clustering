@@ -1,0 +1,53 @@
+UCLA Virtual World Data Server Home Page 
+"The Virtual World Data Server Project"
+is a three years 2.1 million dollar project
+funded under the NSF HPCC Multidisciplinary Challenge Program.
+The project is to expand 3D interactive simulations and virtual
+world models to disk based storage. Today, virtually all such systems
+require that the model data fit in main memory. The project has many
+aspects including the design of appropriate storage structures,
+real time delivery of model data in response to user actions,
+inclusion of quality-of-service tradeoffs into resource management,
+and many others.
+The applications to be explicitly addressed in the project
+span a range including
+urban simulation models
+(Figure 1)
+from 
+Department of Architecture and Urban Design
+,
+3D interactive visualization of plasma physics data
+(Figure 2)
+from 
+Physics Department
+and, from the medial domain, virtual aneursm work.
+The storage server will be designed and implemented in the
+Computer Science Department 
+and will serve, over ATM lines, users at the department of architecture
+and at the plasma physics lab as well as locally for the aneurysm
+research.
+Aside from adapting
+and interfacing the above existing applications to the storage server,
+we will also work on the actual design of the storage
+server and integration of the auxiliary databases. With respect to the
+integration of spatial databases we will be exploring novel uses of the
+3D interactive capability both as a query mechanism and as a form of
+presentation of responses to queries. 
+The Project
+The People
+Publications
+Presentations
+Facilities
+Other Related Works
+ Contact Information:
+Prof. Richard Muntz
+3732 Boelter Hall
+Computer Science Dept.
+UCLA
+Los Angeles, CA 90095-1596
+Tel  : (310) 825-3546
+Fax  : (310) 825-2273
+Email: muntz@cs.ucla.edu
+www@nugget.cs.ucla.edu
+Created: 96/02/29
+Last Modified: 96/03/02

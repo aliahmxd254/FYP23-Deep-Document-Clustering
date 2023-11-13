@@ -1,0 +1,63 @@
+Home Page | Research | Surfing/Skiing Info | WWW Hotlist | Personal
+Kurt Windisch
+Kurt Windisch - University of Oregon
+I am a Research Assistant in the 
+Dept. of Computer Science at the 
+University of Oregon.
+Active research projects:
+	Resource allocation issues in parallel supercomputers.
+	Specifically, we are currently looking at 
+	workload traces 
+	from production parallel machines,
+	with an interest in how they can be used in preformance evaluation
+	of resource management algorithms.
+ A program development environment, 
+	TAU
+	for the pC++/Sage++
+	parallel language.  This is a project of the 
+	Paraducks
+	group.
+ I have a small part in the 
+	DAQV 
+	(PTools
+Distributed Array Query and 
+	Visualization) project.
+Publications
+Full index and abstracts are available here.
+ A Comparison of Workload Traces from Two Production Parallel
+	Machines, Kurt Windisch, Virginia Lo, Dror Feitelson, Bill
+	Nitzberg, Reagan Moore, 1996. Accepted to the 6th Symposium on the 
+	Frontiers of Massively Parallel Computation.
+	Postscript
+ Non-contiguous Processor Allocation Algorithms for Mesh-connected 
+	Multicomputers, Virginia Lo, Kurt Windisch, Wanqian Liu, 
+	Bill Nitzberg, 1995. Accepted for IEEE Transactions on Parallel and
+	Distributed Computing (shorter version published in 
+	Proceedings of Supercomputing 94, November 1994, pages 227-236).
+	Postscript
+ Contiguous and Non-contiguous Processor Allocation Algorithms for 
+	k-ary n-cubes, Kurt Windisch, Virginia Lo, and Bella Bose,
+	1995. 1995 International Conference on Parallel Processing.
+	Postscript
+ ProcSimity: An Experimental Tool for Processor Allocation and 
+	Scheduling in Highly Parallel Systems, Kurt Windisch, 
+	Jayne Valenti Miller, Virginia Lo, 1995.
+	Proceedings of the Fifth Symposium on the Frontiers of Massively 
+	Parallel Computation, February 1995, pages 414-421.
+	Postscript
+ METRICS: A Tool for the Display and Analysis of Mappings in 
+	Message-passing Multicomputers, Virginia M. Lo, Kurt Windisch,
+	and Rajen Datta, 1991.
+	Proceedings of the 6th Distributed Memory Computing Conference, 
+	April 1991.
+	Postscript
+How to contact me ...
+  (503) 346-4436
+  (503) 346-5373
+kurtw@cs.uoregon.edu
+	Department of Computer and Information Science
+University of Oregon 
+Eugene , 
+	OR 97403
+	Office: Deschutes Hall, Room 254
+kurtw@cs.uoregon.edu

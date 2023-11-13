@@ -1,0 +1,111 @@
+The Distributed Artificial Intelligence Laboratory
+The Distributed Artificial Intelligence Laboratory
+Welcome to the Dis Lab Web Server
+The Distributed Artificial Intelligence Laboratory 
+is part of the Computer Science Department
+here at UMass.  You
+can find specific information here about our research, 
+publications, presentations, 
+and personnel.
+Recent Updates to these pages.
+Post-Doc Positions
+Purpose
+          The Distributed AI Lab investigates the problems that arise when multiple
+          agents (including computational agents and humans) interact to solve
+          interrelated problems. This includes mechanisms for multi-agent coordination,
+          organization, and negotiation. The Dis Lab also investigates the design of
+          sophisticated individual control mechanisms for sensor interpretation, acoustic
+          signal understanding, real-time scheduling, and resource-constrained scheduling.
+Background
+Introduction to Cooperative Distributed Problem Solving
+The Distributed Vehicle Monitoring Testbed
+Blackboard Systems
+Current Research Projects
+Automated Contracting
+Coalition Formation
+Control Issues in Parallel Knowledge-Based Systems
+Cooperation Among Heterogeneous Agents (TEAM)
+Cooperative Information Gathering
+(You
+can try out the CIG Searchbots!)
+Design-to-time Real-time Scheduling
+The DRESUN Testbed for Distributed Situation Assessment
+Electronic Commerce
+Formal Analysis of the FA/C Distributed Problem-Solving Paradigm
+A Framework for the Analysis of Sophisticated Control
+A Generic Agent Architecture for Real-Time Distributed Situation Assessment
+Generic Coordination Strategies for Agents (GPGP)
+Integrating Decision Making with Real-time Scheduling
+IPUS: Integrated Processing and Understanding of Signals
+Learning in Multi-Agent Systems 
+Negotiation among
+Computationally Bounded Self-interested Agents
+Negotiation among Knowledge-Based Scheduling Agents ([Dis]ARM)
+TÆMS: A Framework for Task Analysis, Environment Modeling, and Simulation
+Distributed Problem Solving Demonstrations
+The CIG Searchbots
+More Information
+Jobs Available (Post-doc ppositions)
+Laboratory Personnel
+Former Laboratory Associates
+Published papers
+Lab Presentations [experimental]
+Other Places to Visit
+Learning in Multi-agent Systems Webliography
+ U.C. Berkeley's Center for Information Technology and Management 
+ ICMAS '96 Conference Page
+  PAAM96 - The First International
+Conference and Exhibition on The Practical Application of Intelligent 
+Agents and Multi-Agent Technology
+ ICMAS '95 Conference Page
+  DAI Mailing List Back Issues Archive 
+  Computational Organization Research Mailing List Back Issues 
+  Ishida Lab 
+ DAI-Hards
+at the University of Tulsa.
+  DAI at Hebrew University
+  DAIG at UMich
+  MICE Software from UMich 
+  U. of Maine CDPS Research Group (Formerly at U. of New Hampshire)
+  CERC of West Virginia University 
+  NEXT-LINK: a concurrent engineering coordination project
+  KQML Page 
+ Xerox PARC's Work on Dynamics of Computation
+  DAI Reseach at QMW
+ Olivier
+Baujard's Multi-agent Page
+ DAI-Hards
+at the University of Tulsa
+  Sandip
+Sen's Multi-agent Page
+Concordia DAI Group 
+PLEIADES at CMU 
+  Blackboard Technologies Inc.
+  Enterprise Integration Page 
+  CMU OZ Project (believable agents) Page
+ CMU AI Repository
+ UMBC Intelligent Agents Page
+  UMass Computer Science Department
+ Current Lab Education
+ The IG Seminar Page
+DIS Lab WWW Server Miscellania
+If have any comments, suggestions or problems using our server please
+let us know.  We have a Guest Book
+that you can make an entry in or just browse.   
+ Server traffic summary reports
+is also available.
+DIS Lab Internal Documents
+These documents are not available to the public. Accessing them requires user 
+authentication.  Registration details are described for each document class 
+below.
+ Index - access only via password.
+	To register, DIS group members need to login to any of our 
+	lab Alphas and execute /usr/local/bin/diswww.
+ Internal Technical 
+	Reports and Design Documents - accessible either via the 
+	index above using a password
+	or directly w/o a password through this link.  Direct access is 
+	restricted to local lab machines only.
+If you have questions, problems or suggestions send mail to 
+www@dis.cs.umass.edu
+Last Update: April 24, 1996

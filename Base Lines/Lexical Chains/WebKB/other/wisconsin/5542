@@ -1,0 +1,15 @@
+ Only for people above 18 years 
+ ADULTS PAGE 
+Hi. Nice to know that ADULTS are reading my page. This page has been 
+created for 
+ STATISTICAL PURPOSES  only.
+You are the  
+107
+th
+adult visitor to my Home Page.  
+  class java:
+  main()
+ { 
+ static AdultCount; 
+ AdultCount++;
+ }

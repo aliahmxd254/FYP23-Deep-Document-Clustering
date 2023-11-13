@@ -1,0 +1,47 @@
+Project GIMME
+GIMME -- Graphical Interfaces for MultiMedia Environments
+directed by
+Prof. Joseph A. Konstan
+Department of Computer Science
+University of Minnesota
+ Project GIMME explores all aspects of graphical user interfaces and the application of user interface
+technology to multimedia systems and applications.  The project has three key components: 
+Developments in the core of user interface toolkits (e.g., constraint programming developments).
+Developments in multimedia systems and toolkits (e.g., the command stream and SynchMe multimedia toolkit).
+Applications and joint research projects.
+The joint research projects include GroupLens collaborative filtering for Usenet News (with John Riedl) and the 
+Brain Neighborhood Viewer for multiple stacks of montaged brain microscopy images (with John Carlis).  Applications include
+a wide range of collaborations on transportation, physics, counseling and other areas.
+Here is a list of individual projects and the people working on them:
+Brain Neighborhood Viewer  (Alex Safonov & Doug Perrin)  
+Distraction - Free Display Interfaces  (Zbigniew Wieckowski)
+GroupLens  (Prof. John Riedl and several graduate students)                                                     
+GroupLens Browser Watcher  (David Leppik)
+ISAP - Interactive Self Assessment in Pharmacology  (Paul Sturm)
+ITreS (Susan Herbst)
+PAMFAC -- Physics and Astronomy Multimedia Facility (Anil Kashyap)
+SynchMe -- A Toolkit for Multimedia Synchronization Research  (Brian Bailey) 
+TclProp -- A Data Propagation Formula Manager for Tcl and Tk  (Alex Safonov)
+TclStream -- Commands as a Presentation Medium  (Jon Herlocker & Tami Boeckman)
+The students currently in Project GIMME are:
+Brian Bailey
+Tammi Boeckman
+Jon Herlocker
+Anil Kashyap
+David Leppik
+Jerry Moore
+Alex Safonov
+Paul Sturm
+Zbigniew Wieckowski
+Tom Zielund
+Project GIMME alumni include:
+Kem Ferguson (1996 Minorities Scholars Development Program Student, Southern University of Baton Rouge)
+Susan Herbst (M.S.)
+Sunanda Iyengar (M.S.)
+Ann Phillippi (M.S.)
+Royce Shin (M.S.)
+Sai Tong (M.S.)
+NEXT:  Brain Neighborhood Viewer
+ Thank you for being the number person to visit the Project GIMME page.
+page design by:  Kem Ferguson, ferguson@cs.umn.edu
+project contact:  Joseph Konstan, konstan@cs.umn.edu

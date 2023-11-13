@@ -1,0 +1,61 @@
+The Duke CS PerlJaM/AdvIL page
+The Duke Computer Science
+PerlJaM/AdvIL Page
+Welcome to the home page of the Duke CS languages group,
+alternately known as 
+Perl JaM [PERL, JAva, Modula-3], and/or
+AdvIL
+[ADVanced (Interpreted | Interesting | Inestimable | Invulnerable
+| Inscrutable | Insufferable | Indispensable | Inevitable) Languages].
+Purpose
+The purpose of this group is to learn, use, and discuss the current crop
+of new and interesting languages.
+Our current focus is to be determined.
+Our original goal was to enter Sun's
+Java Cup International.
+Meetings
+TBA
+Mailing Lists
+If you wish to join the PerlJaM mailing list, please mail
+Syam Gadde (gadde@cs.duke.edu).
+If you wish to join the Duke CS Java mailing list, please mail
+Ashish Gehani (geha@cs.duke.edu).
+Java info
+Sun's official Java site.
+     Lots o' information, and includes some of the links below.
+ Beginners:
+ The Sun Java Tutorial
+     from java.sun.com.
+ My 
+     local cached copy of the Sun Java tutorial
+     for fast access (last updated July 9).
+ Non-beginners:
+ The Java API
+     is extremely useful to have open in a second browsing
+     window while you program.
+ Ashish's
+     local cached copy of the above, or
+     Surendar's
+     local cached copy of the above.
+ A set of excellent
+     postscript diagrams of the Java Beta class hierarchy.
+     If you're on a Duke CS machine, I have them in
+     ~gadde/public_html/Java/diagrams_beta.
+     Also, the 
+     text list of the class hierarchy from the API.
+     Both are very useful when you don't know where a class lives
+     (or even what it's called).
+     AWT (Abstract Windowing Toolkit) Tutorial.
+ Neat stuff:
+ Gamelan,
+     the Java demo site.
+ Everything you wanted to know
+     about MUDs
+     and 
+     MUDs on the web.
+ Java Networking examples and source
+     Simple Java Sockets
+     Thingtone's Java Workshop (good stuff here)
+Comments, or more links: Syam Gadde
+gadde@cs.duke.edu
+Last modified: Wed Sep 11 00:09:56 EDT 

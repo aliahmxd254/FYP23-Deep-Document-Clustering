@@ -1,0 +1,28 @@
+Lazy Receiver Processing (LRP): A Network Subsystem Architecture for Server Systems
+ Next: Abstract
+Lazy Receiver Processing (LRP): A Network Subsystem Architecture for Server Systems
+Peter Druschel and Gaurav Banga
+Department of Computer Science 
+Rice University  
+  Houston, TX  77005
+ Introduction
+ UNIX Network Processing
+ Overview
+ Problems
+ Sources of High Network Load
+ Design of the LRP Architecture
+ Sockets and NI Channels
+ Packet Demultiplexing
+ UDP protocol processing
+ TCP protocol processing
+ Other protocol processing
+ Performance
+ Experimental Setup
+ Experimental Results
+ Related Work
+ Conclusion
+ Acknowledgments
+ References
+   About this document ... 
+Peter Druschel 
+Mon Sep 16 18:13:25 CDT 1996

@@ -1,0 +1,25 @@
+ETag: "95a58-a00-327e84fd"
+Content-Length: 2560
+Accept-Ranges: bytes
+InfoLab Systems Home Page
+The InfoLab Systems Group develops agents that answer your questions
+on the World Wide Web in ordinary English.  More generally, our agents
+connect information seekers to information sources via natural
+language.  The seekers are usually people, but may be computers.  The
+sources are usually computers, but may be people.  Sources provide
+information in a variety of media, such as text, photographs, audio,
+and video.
+Most of our agents are centered on the START natural language system
+developed by Boris Katz at the MIT Artificial Intelligence Laboratory.
+START uses information annotations -- in the form of natural language
+sentences and phrases -- as retrieval-enabling handles.
+Our Globe Server answers questions about
+weather reports, maps and other geographical questions, and our AI Lab Server answers questions about MIT's
+Artificial Intelligence Laboratory, including questions about the
+people who work here and the research they do.  We will soon be adding
+a News Server which has connections to multiple news sources
+and answers questions about daily news.
+For more information about our work, please contact the InfoLab Systems Group.  
+InfoLab Systems Group
+Artificial Intelligence Laboratory
+Massachusetts Institute of Technology

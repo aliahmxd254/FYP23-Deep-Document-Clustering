@@ -1,0 +1,23 @@
+Global Pointers in C++ using Active Messages
+Global Pointers in C++ using Active Messages
+By Posse Software:
+John Belizaire
+Julian Pelenur
+ Mauricio Aguilar Alvarez
+Abstract
+There is a growing need for parallel programming software
+tools that make writing parallel programs easier. The goal is to
+provide transparent communication in a message passing
+multiprocessor environment. We have implemented a software package
+using C++ that meets this need. In this paper we describe the design
+and implementation of Global Pointers over C++ and Active
+Messages. In addition, several issues concerning implementation and
+solutions are discussed. A performance summary and a few
+examples of the use of our system are included.
+A Quick Overview
+ The HTML Paper 
+ The  Paper
+ Get the code in a tar compressed file.
+beli@cs.cornell.edu
+julian@cs.cornell.edu
+mauri@cs.cornell.edu

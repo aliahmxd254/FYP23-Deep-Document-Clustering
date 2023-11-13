@@ -1,0 +1,8 @@
+Homework 3
+Homework 3
+ Handed out: Tue, Feb 27th
+  Due: Thu, Mar 7th
+  This assignment must be done in groups of two with a different partner than homework 1 or 2.Hand in one solution per group (printed, not manuscript).
+ 1  Heat diffusion - this time using MPI
+  Rewrite your heat diffusion simulation using MPI. Alternatively, you may develop any similar application using MPI.
+  Compare the "ease" of programming as well as the performance of the two implementations. It might be nice to divide the running time up into a "communication time" and a "computation time", if possible, and use these timings to compare the two implementations.

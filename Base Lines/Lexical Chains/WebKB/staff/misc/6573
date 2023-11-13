@@ -1,0 +1,30 @@
+ Kathi Fisler's Home Page 
+Kathi Fisler 
+Postdoctoral Researcher Rice
+University, Department of Computer Science
+NOTE:
+In Spring 1997, I will be offering COMP 408:
+Applied Computer-Aided Verification, a seminar intended for upper
+level undergraduates and above.
+ Research 
+My primary research interests are formal
+methods and diagrammatic reasoning.
+People commonly use diagrams for problem solving; system design is no
+exception.  Designers use state machines, circuit diagrams, and timing
+diagrams, among others, while designing systems.  Formal methods
+tools, however, provide little formal support for diagrammatic
+representations.  Although some tools provide diagrammatic interfaces,
+treating diagrams as interfaces to sentential logics overlooks a more
+fundamental issue: people reason with diagrams in ways that are not
+always captured cleanly - if at all - in sentential representations.
+One of my goals is to develop formal methods tools that support
+reasoning with both diagrammatic and sentential representations.  As a
+starting point, my dissertation
+developed a formal logic of diagrammatic representations used in
+hardware design and their interactions with some sentential logics
+used in existing tools.  At present, I am implementing a verification
+tool based upon this logic.
+Publications
+Contact Information
+Education
+Bookmarks

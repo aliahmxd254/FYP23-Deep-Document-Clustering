@@ -1,0 +1,18 @@
+ Prerequisites
+ Next:  Office Hours
+Up: CS564 Fall 1996 Course 
+ Previous:  Overview
+ Prerequisites
+The most important requirement is familiarity with Unix and C++.
+I will  not cover C++; if you know C (very well!) you may
+be able to pick up the necessary C++ concepts as you go along,
+but this is up to you!  
+C++ is an extension of C with several additional features:
+function name overloading,
+call-by-reference as well as C's call-by-value,
+support for ADTs through  classes and
+support for object-oriented programming, via inheritance and dynamic binding.
+There is a fair amount of on-line
+tutorial material on C++; look at the CS564 home page for pointers.
+If you are not familiar with even C, you should not be in this course.
+Wed Sep  6 11:38:58 CDT 1996

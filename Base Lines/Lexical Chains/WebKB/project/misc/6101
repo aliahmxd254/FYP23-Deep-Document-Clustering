@@ -1,0 +1,30 @@
+Multipol Home Page
+Multipol
+Multipol is a library of distributed data structures, designed to ease
+the programming of "irregular" problems on large scale,
+distributed-memory multiprocessors.  Multipol structures are divided
+into state structures and scheduling structures.  The state structures
+include hash tables, sets, and trees, and use a combination of
+replication, partitioning, and software-controlled caching for good
+locality.  The scheduling structures are various kinds of queues that
+provide good load balancing without destroying the locality required
+by the state structures in the application.
+Papers
+Software release
+On-line documentation
+     Send mail to
+     multipol@cs.berkeley.edu
+Faculty
+Katherine Yelick
+Students
+Soumen Chakrabarti
+Etienne Deprit
+Eun-Jin Im
+Arvind Krishnamurthy
+Randi Thomas
+Chih-Po Wen
+     Jun Yang
+Alumni
+Jeff Jones
+     Steve Steinberg
+ Back to CS Division Home Page

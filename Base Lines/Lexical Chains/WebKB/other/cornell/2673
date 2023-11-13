@@ -1,0 +1,18 @@
+Some CAML Applets for your enjoyment
+Some CAML Applets for your enjoyment
+Caml is a high-level
+functional language.
+The implementation, by the Cristal people at Inria, France, is really
+well done, I think.
+The MMM browser
+allows you to import Caml bytecode and execute it dynamically.
+Caml supports the TK toolkit for the graphical stuff.  The applets below
+will only work if you're using the MMM browser.  The browser will popup
+dialog boxes asking you to accept or reject "unsigned bytecode".  This is
+part of the security mechanism.  You just have to trust me.
+A whiteboard with support for dynamic protocol switching (just what
+you always wanted!).
+Sources
+If you want to see the sources, click here.
+Cute Animations!
+Click here.

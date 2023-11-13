@@ -1,0 +1,60 @@
+Adaptive Networks Lab Home Page
+Welcome to the ANW Laboratory at UMASS/Amherst co-directed by 
+Prof. Andrew G. Barto and
+Richard S.
+Sutton
+ Introduction
+ People
+ Publications
+ Current Projects
+ Related Web Sites
+ Information For ANW users (restricted to ANW users)
+Introduction to the Adaptive NetWork Laboratory
+The major focus of the Adaptive NetWork (ANW) Laboratory is the
+learning paradigm known in artificial intelligence as reinforcement learning (RL).
+The group's research began in 1977 with a reassessment of an approach
+to artificial intelligence using artificial neural networks, and its
+first publications appeared in 1981.  Laboratory researchers
+contributed to the re-emergence of this approach in artificial
+intelligence, with an emphasis on methods for network learning through
+realistic interaction with dynamic environments and without the help
+of knowledgeable teachers.
+Current Projects
+ Basic research in the theory and applicaton of RL algorithms based on
+Dynamic Programming. The objectives of this project are: 
+ to continue development of DP-based RL methods and their theory, 
+ to explore their utility in distributed control architectures, and
+ to obtain better characterizations of the problems for which they
+ are best suited. 
+ Multiple time scale reinforcement learning. 
+This project investigates a new approach to
+learning models of dynamical systems for use in advanced RL architectures.
+We are developing a method by which an RL system can learn multiple time scale models and use them as
+the basis for hierarchical learning and planning. The project's objectives are to develop the
+mathematical theory of this approach, to examine its relationship to control
+theory and to behavioral and neural models of learning, and to demonstrate its effectiveness
+in a number of simulated learning tasks. 
+ A control basis for learning and skill acquisition.
+This project is being conducted in collaboration with Professor R.
+Grupen of the 
+Laboratory for Percepual Robotics. This project addresses
+principles for organizing purposeful, coordinated action for complex
+sensorimotor systems operating in unstructured environments. It
+emphasizes adaptive skill acquisition through the activation of
+combinations of reuseable feedback control laws.  
+ Modeling cerebellar and premotor circuits.
+This project is being conducted as part of the Center for Neuroscience
+Research on Neuronal Populations and Behavior, directed by James C.
+Houk, Professor and Chair of Physiology and Professor of Biomedical
+Engineering, Northwestern University Medical School, Chicago, IL. The
+overall objective of this project is use mathematical and computer
+models to refine and test hypotheses about how the cerebellum and
+motor cortex function together to support motor activities. The key
+hypothesis is that these networks can be modeled as arrays of
+adjustable pattern generators capable of storage, recall and execution
+of motor programs.  Understanding how motor programs can be learned
+has also been a focus of this study.
+Back to the CS home page
+Comments? Please contact Nathan Sitkoff
+(sitkoff@cs.umass.edu)
+Last Update: 1/11/96

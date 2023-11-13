@@ -1,0 +1,58 @@
+CS 596 Computational Complexity Theory Home Page
+CS 596: Computational Complexity Theory
+Computational complexity theory groups problems into classes according to
+how much of particular computational resources their solutions require.
+Familiar examples are P and NP, which are classes of problems solvable
+with at most polynomial time with and without nondeterminism.
+We will investigate what is known about common complexity classes which
+capture such ideas as feasibility, randomized algorithms, boolean
+circuits, parallel computation, and interactive proofs.
+Along the way, we will learn some of the major recent results in this
+area---some of which were even reported in the New York Times!
+This page contains
+ General information
+ Relevant newsgroups
+ Miscellaneous interesting stuff
+Please feel free to put any suggestions or comments you might have in the
+suggestion box.
+General Information
+ Instructor: James A. Foster
+ Office: JEB B24
+ Phone: 885-7062
+ Office Hours: MF 4:30-5:20, MW 2:00-3:20
+ Email:  foster@cs.uidaho.edu
+ Prerequisites: CS 490/Ma 485 and CS 495/Math 405 (or consent of the instructor)
+ Texts: 
+Balcazar, Diaz, Gabarro, Structural Complexity I, Springer-Verlag, 1988.
+(Recommended) Balcazar, Diaz, Gabarro, Structural Complexity II, Springer-Verlag, 1990.
+ Objectives
+  To understand the approach toward classifying computational
+      problems taken by structural complexity: define a class of problems
+      according to computational resources required to solve them and
+      investigate the relationships between these classes.
+  To understand the proof techniques used to characterize the
+      inherent complexity of problems in this way.
+  To be familiar with significant recent results in
+      computational complexity theory.
+  To gain experience presenting results of a theoretical nature.
+ Activities
+ Activities
+  Read the text and work appropriate exercises.
+Note: there will be no graded homework assignments, but students are
+strongly advised to work through exercises at the end of the chapters in 
+the text book.
+  Take mid term  examination.
+  Give an oral presentation of a  significant result or paper.
+ Grading:
+Final grades will be determined with approximately equal weights on the midterm and 
+the presentation.  
+Consideration will be given to class participation for on campus students.
+ Syllabus: Press here for the syllabus
+Relevant Newsgroups
+uidaho.cs.theory
+comp.theory
+sci.logic
+Other Stuff of Interest
+Check out FLAP, which is in /usr/public/bin.  This is an animation program for
+finite automata. 
+foster@cs.uidaho.edu

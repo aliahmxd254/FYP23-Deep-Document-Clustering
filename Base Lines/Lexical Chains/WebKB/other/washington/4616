@@ -1,0 +1,17 @@
+ Research: Marc Friedman 
+ Research 
+I do artificial intelligence research at the University of Washington.
+My research, like much of the AI group here, falls into two
+categories: planning and software agents. 
+ Planning 
+I built a solver called 
+FABIAN  for the classical planning problem.  FABIAN extends the
+notion of least commitment to the choice of which action to add to
+establish a subgoal. FABIAN reasons about the common properties of
+sets of possible single actions that can solve a subgoal.  
+ Agents 
+I am working with Cody Kwok and Dan Weld on an information gathering
+agent called Occam.   Cody  has
+written a paper on that.
+Marc Friedman 
+friedman@cs.washington.edu 

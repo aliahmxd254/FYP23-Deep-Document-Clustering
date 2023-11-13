@@ -1,0 +1,14 @@
+Implementation of Programming Languages
+Implementation of Programming Languages
+(Computer Science 48)
+Times: 97S: 2 
+Instructors: Aslam 
+Prerequisite: Computer Science 23, 37 and 49. Computer Science 25 is recommended. 
+Dist: TAS 
+Techniques for automatic translation of programming languages are discussed. The course includes a brief
+survey of various techniques and formalisms that can be used for describing the syntax and semantics of
+programming languages, for describing abstract and concrete machine architectures, and for describing
+program translation and transformation. Most of the course is concerned with the construction of a
+compiler that will translate an algebraic language into machine code for a conventional architecture
+machine. Offered in alternate years. 
+Back to Dartmouth CS Home Page

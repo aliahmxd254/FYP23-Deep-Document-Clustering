@@ -1,0 +1,27 @@
+CS246: Advanced Computer Architecture
+CS246: Advanced Computer Architecture
+Computer Science 246 is an undergraduate/graduate course covering
+high-performance techniques in computer architecture.
+This page provides access to on-line course materials.
+General Information:
+Course Information
+Course Notes:
+Architecture Review
+MIPS ISA Overview
+Intro to Compilation
+Basic Pipeline Design
+Stalls
+Exceptions
+Section notes on Clocking
+Instruction-Level Parallelism
+Intro to Superdom
+Homework Assignments:
+Problem Set #1
+Problem Set #2
+Problem Set #3
+Professor:
+Michael D. Smith /
+smith@das.harvard.edu
+Teaching Fellow:
+Kee Chan /
+kee@das.harvard.edu

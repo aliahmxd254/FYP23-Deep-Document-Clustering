@@ -1,0 +1,18 @@
+Design Automation Tools for VLSI Circuits
+Sreejit Chakravarty 
+Our group is involved in the development of design automation tools which are
+required for the design, validation and quality control of VLSI circuits.
+Tools required for such tasks motivates a wide variety of computational
+problems. We study the develpoment of good algorithms, both serial and 
+distributed, for such problems. Bulk of the research to date has been supported
+by grants from NSF. Currently there are three on going projects.
+Evaluation and Generation of Tests to Detect Bridging 
+Faults
+Diagnosis of VLSI Circuits
+Computing Stress Tests
+In addition to these work we have also research results on other topics like
+Synthesis of Delay Fault Testable Circuits, Binary Decision Diagrams,
+Computing Detection Probability etc. For a complete list of papers traverse the
+following links.
+Conference Papers
+Journal Papers

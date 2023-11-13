@@ -1,0 +1,33 @@
+OOCSB: Object-Oriented Compilers at UCSB
+Our research group investigates compiler optimizations for
+object-oriented languages, related implementation aspects (such as
+dispatch mechanisms or garbage collection), and studies of the
+instruction-level behavior of object-oriented programs.
+Ok, we admit it: the "Compilers" in the acronym is a bit gratuitous
+(since the group's scope goes beyond pure compiler issues), but hey,
+it sure makes for a cute acronym.
+Research
+Publications
+Visiting Researcher positions
+The Self Home Page
+Public Benchmark Data
+A C++ benchmark suite
+A class heterarchy suite
+People
+Urs Hölzle
+Gerald Aigner
+Karel Driesen
+Sylvie Dieckmann
+Andrew Duncan
+Mark Theiding
+Raimondas Lencevicius
+Other
+Local infos (accessible only from UCSB)
+UCSB as seen by Ansel Adams in 1966/67
+ECOOP `97
+OOPSLA `97
+PLDI `97
+Back to UCSB CS Department.
+Last
+modified: Thu Aug 15 13:09:02 PDT 
+No electrons were harmed in the production of this page.

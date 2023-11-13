@@ -1,0 +1,8 @@
+The AGASSIZ project
+ The primary goals of the Agassiz project are to study the architectural, compiler and machine organizational issues for high-performance computer systems, including both uniprocessors and multiprocessors, that exploit medium-grained and fine-grained parallelism. 
+  Processor architectural studies are focused on concurrent, multi-threaded architectures that allow both thread-level and instruction-level speculation, or so-called "superthreaded" architectures.
+ The compiler effort is focused on developing an integrated compiler that supports both medium-grained (loop iteration-level) and fine-grained (instruction-level) parallelism with speculation, locality enhancement, and latency hiding schemes. 
+ The machine organizational work is focused on high-performance memory systems design, and on clustered, distributed shared-memory multiprocessors.
+ Sponsored by NSF, ARPA, Intel, Cray Research Inc., and IBM.
+Facts about Agassiz
+Contact Us

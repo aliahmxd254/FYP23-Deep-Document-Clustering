@@ -1,0 +1,6 @@
+cs378netnote
+ Note  
+Turn-in procedure for Homework#2:
+On any CS unix machine, 
+type command "turnin -submit yufeng cs378net *files*"
+In case, you don't know how to use turnin, try 'man turnin'.

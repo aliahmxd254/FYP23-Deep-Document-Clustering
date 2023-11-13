@@ -1,0 +1,46 @@
+Sandhya Dwarkadas's URCS Home Page
+Sandhya Dwarkadas, URCS Faculty
+Assistant Professor
+Computer Science Department
+University of Rochester
+Rochester, NY  14627-0226
+sandhya@cs.rochester.edu
+Phone (716) 275-5647; FAX 461-2018
+Sandhya Dwarkadas received the B.Tech. degree in Electrical Engineering
+from the Indian Institute of Technology, Madras, India, in
+1986, and the M.S. and Ph.D. degrees in Electrical and Computer Engineering
+from Rice University in 1989 and 1992, respectively.
+From 1992-1996, she was a research scientist in the Computer Science
+Department at Rice University.
+She has just joined the faculty in the Computer Science Department at
+the University of Rochester as an assistant professor.
+Her research interests include parallel and distributed computing,
+computer architecture, networks, simulation methodology,
+and performance evaluation. In particular, she is interested in
+compiler and runtime support for parallelism, and parallel applications
+research.
+As a graduate student, she developed an efficient execution-driven technique
+for the simulation of shared-memory multiprocessors. This technique was
+implemented as part of the Rice Parallel Processing Testbed (RPPT).
+She used this tool
+to design and evaluate synchronization support, adaptive caching techniques,
+and the use of relaxed consistency models for a hierarchical
+bus-based shared-memory architecture.
+These results contributed to the design of the Willow multiprocessor
+architecture.
+This work also lead to a classification of memory consistency models that,
+in addition to unifying all existing models into a common framework,
+provides insight into the implications of these models with respect to access
+ordering.
+She is currently involved in the design and implementation of TreadMarks,
+a software distributed shared memory system running on a network of
+workstations. She is developing compiler-runtime integration techniques
+for improved performance.
+She has also worked with Alejandro Schaffer on
+ FASTLINK,
+a project to provide fast sequential and parallel genetic linkage analysis
+software.
+Finger:
+sandhya@cs.rochester.edu
+Back to URCS Faculty directory
+Back to URCS Home Page

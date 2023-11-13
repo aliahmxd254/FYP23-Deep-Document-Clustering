@@ -1,0 +1,86 @@
+Intelligent DRAM (IRAM)
+Intelligent DRAM (IRAM)
+Computer Science Division
+University of California at Berkeley
+PEOPLE
+PUBLICATIONS
+CALENDAR
+LINKS
+LOCAL
+WORKING
+HOME
+MAIL
+CS
+UCB
+Project Overview
+Microprocessors and memories are made on distinct manufacturing lines,
+yielding 10M transistor microprocessors and 256M transistor DRAMs. One of the
+biggest performance challenge today is the speed mismatch between the
+microprocessors and memory. To address this challenge, we predict that over the
+next decade processors and memory will be merged onto a single chip. Not only
+will this narrow or altogether remove the processor-memory performance gap, it
+will have the following additional benefits: provide an ideal building-block
+for parallel processing, amortize the costs of fabrication lines, and better
+utilize the phenomenal number of transistors that can be placed on a single
+chip. Let's dub it an "IRAM", standing for Intelligent RAM, since most of
+transistors on this merged chip will be devoted to memory.
+Whereas current microprocessors rely on hundreds of wires to connect to
+external memory chips, IRAMs will need no more than computer network
+connections and a power plug. All input/output devices will be linked to them
+via networks, as will be other IRAMs. If they need more memory, they get more
+processing power as well, and vice versa -- an arrangement that will keep the
+memory capacity and processor speed in balance.
+A single gigabit IRAM should have an internal memory bandwidth of nearly 1000
+gigabits per second (32K bits in 50 ns), a hundredfold increase over the
+fastest computers today. Off-chip accesses will go over 1 gigabit per second
+serial links. Hence the fastest programs will keep most memory accesses within
+a single IRAM, rewarding compact representations of code and data.
+History
+The initial efforts of the IRAM project were undertaken during the Spring 1996
+offerring of CS 294-4 at UC Berkeley.  This advanced graduate course, led by
+Prof. David Patterson, 
+re-examined the design of hardware and software that is
+based on the traditional separation of the memory and the processor.  The 
+course web page 
+contains a considerable amount of useful information, including copies of
+slides from many guest speakers as well as the results from three sets of
+projects performed by more than a dozen graduate students.  An earlier
+discussion that helped lead to the development of this course can be found in
+the
+article
+"Microprocessors in 2020", by Dave Patterson, in the September
+1995 issue (pages 48-51), of Scientific American.
+Related Work
+IRAM's large improvement in memory system bandwidth has significant potential
+for helpng configurable systems to achieve their full performance potential.
+Configurable systems offer improved performance by adapting processing
+capabilities to application-specific needs.  But by making the processing
+portion of an application go faster, a conventional memory system will be more
+and more of a drag on performance.  Memory bandwidth is also the performance
+bottleneck to rapid reprogramming of the configurable elements.  For these
+reasons, the IRAM group is working closely with the
+BRASS
+(Berkeley Reconfigurable Architecture, Systems and Software) group, headed by
+Prof. John Wawrzynek.
+IRAM Index:
+People
+Publications
+Calendar
+Useful Links
+Local Directory
+(You must be at UC Berkeley to access this directory.)
+Working Directory
+(You must be a part of the IRAM or BRASS groups to access this directory.)
+You can always return to this page by clicking on the
+IRAM icon.
+The IRAM Project is part of the
+Computer Science division
+at the
+University of California at Berkeley.
+Questions or comments about these pages?  Send
+mail.
+Last modified:
+20-nov-1996
+This page maintained by:
+Richard Fromm
+rfromm@cs.berkeley.edu

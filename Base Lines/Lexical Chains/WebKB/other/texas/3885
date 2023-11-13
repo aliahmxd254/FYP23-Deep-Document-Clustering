@@ -1,0 +1,14 @@
+CS 375: Programming Assignments
+CS 375: Programming Assignments
+Programming assignments may be written in either Lisp or C.
+Program files are provided, in the directory ~cs375 or
+in the 
+FTP directory for Program Files,
+for use with the assignments.  The files are described by
+Program File Descriptions.
+All programs must be individual work.
+Assignments:
+Lexical Analyzer
+Lexical Analyzer using lex
+Parser using yacc or C or Lisp
+Code Generator

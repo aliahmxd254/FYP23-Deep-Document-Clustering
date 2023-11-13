@@ -1,0 +1,4 @@
+HTImage error
+Error
+Error calling HTImage:
+Invalid QUERY_STRING: '' expecting either x,y or x=x&y=y

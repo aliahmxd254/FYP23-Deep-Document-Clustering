@@ -1,0 +1,37 @@
+Calypso Project Home Page
+Calypso project home page
+Project's Goals and Approach
+Research in resource management in metacomputing environments for reliable 
+high-performance computing. Current focus is on fault-tolerant and load-balanced parallel 
+computing on COTS networks of COTS computers running COTS systems software. At 
+the core of the system lies an integrated set of simple techniques developed in previous 
+foundational research, most notably the eager scheduling and the Two-Phase Idempotent 
+Execution Strategy.
+Calypso is a collaborative research project between New York University and Arizona 
+State University.
+You can look at: 
+A transparencies-based presentation describing the Calypso research project as of 
+spring 1996.
+A set of publications relating to the project in the Postscript format. 
+Please address questions to: Zvi M. Kedem; you can also send email. 
+Status
+We have several prototypes with the following basic set of functionalities:
+Simple programming model
+Simple syntax
+Distributed shared memory
+Transparent load balancing
+Transparent fault tolerance
+The working systems are:
+A Unix-based system implemented on Sun/OS, Sun/Solaris, and Linux. It has not 
+been released, but you can read a paper about it.
+A Window NT / Windows 95 system, which has been released, please see the ASU 
+Calypso Web Site for full details, or a brief description on this site.
+A stand-alone Java application based on the core techniques that underlie Calypso 
+with a novel implementation of shared memory. It has not been released, but you can 
+read a paper about it.
+Would you like to see a calypso?
+Recently, we saw some nice photographs.
+Acknowledgements
+The project is partially supported by DARPA and Rome Laboratory; Intel; Microsoft; and 
+NSF.
+Last edited: 5 October1996.

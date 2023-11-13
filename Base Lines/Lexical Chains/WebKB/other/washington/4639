@@ -1,0 +1,14 @@
+The Particle Tree
+The Particle Tree
+Oops!  You're not using a browser that's compatable with Beta Java.  Sorry.  No cool Java applets for you. 
+Want the source? 
+particleTree.java, a minor variation (on the right)
+particleTree2.java,
+and
+fPointTree.java.  Don't expect a work of art, though.
+The code uses a technique based (loosely) on particle systems.  Neat stuff!  This code could still use some tuning, though, since some of the things look a little to stringy to be trees.  Still cool, though.
+I have another applet that draws much better looking trees using an
+LGrammer algorithm.  Pretty cool.  It's right 
+here.
+	glinden@cs.washington.edu 
+http://www.cs.washington.edu/homes/glinden

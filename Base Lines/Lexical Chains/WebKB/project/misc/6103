@@ -1,0 +1,57 @@
+Sprite
+The Sprite Operating System
+New address!
+The new address for these pages is 
+http://www.cs.berkeley.edu/projects/sprite
+Sprite is a research operating system developed at the University of
+California, Berkeley, by John Ousterhout's research group.
+Sprite is
+a distributed operating system that provides a single system image to
+a cluster of workstations.  It provides very high file system performance
+through client and server caching.  It has process migration to take
+advantage of idle machines.  It was used as a testbed for research in
+log-structured file systems, striped file systems, crash recovery, and
+RAID file systems, among other things.
+The Sprite project has now ended, although Sprite is still running on a
+few machines.  If you have a DECstation 5000/200 or a SparcStation 2, you
+could try running Sprite off the Sprite CD-ROM.
+John Ousterhout has a retrospective
+on the Sprite project.
+Sprite papers
+There are many papers on Sprite.
+Ftp
+Sprite files are available by ftp,
+including the source code.
+Brent Welch has a
+Sprite ftp site.
+Sprite network traces (SOSP 91)
+The Sprite group traced network file system operations for our SOSP '91 paper
+Measurements of a Distributed File System.
+Information
+on accessing the trace data and information on the traces.
+Sprite CD-ROM
+Information on
+on purchasing the Sprite CD-ROM.
+This CD-ROM contains Sprite source code, documentation, and a bootable
+version of Sprite.  You can get a
+listing of the cdrom contents (long).
+Brent Welch has
+notes
+on booting Sprite from the CD-ROM and a
+bug list.
+Other OS links
+References to other operating systems
+Frequently asked
+questions from comp.os.research
+Home pages of Spriters
+Ken Shirriff
+Brent Welch
+Mary Baker
+John Ousterhout
+Fred
+Douglis
+WebCounter says:
+accesses since 3/26/96.  Thank you for visiting.
+http://www.cs.berkeley.edu/projects/sprite
+Ken Shirriff 
+    ken.shirriff@eng.sun.com

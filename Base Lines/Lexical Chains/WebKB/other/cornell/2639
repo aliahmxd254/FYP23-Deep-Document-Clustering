@@ -1,0 +1,18 @@
+ PORTS 
+ ports0_init  
+ ports0_shutdown  
+ ports0_thread_create  
+ ports0_thread_create_atonce 
+ ports0_thread_exit  
+ ports0_thread_yield  
+ports0_threadattr_setstacksize  
+ ports1_get  
+ ports1_mkglobalpointer  
+ ports1_poll  
+ ports1_put   
+ ports1_testack  
+ ports1_tocontext  
+ ports1_tolocalpointer  
+ ports1_waitack  
+ ports_mycontext  
+ ports_numcontexts  

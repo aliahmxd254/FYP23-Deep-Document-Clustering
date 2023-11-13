@@ -1,0 +1,99 @@
+ Fantasm Page 
+ The truth is out there.
+ This page is constantly under construction:
+Last Update - 
+Fri Nov 15 00:08:43 CST 1996
+<!-- ----------------------------------------------------------------------
+--
+-- 	Title : Fantasm Page
+--
+-- ---------------------------------------------------------------------- --!>
+<!-- ----------------------------------------------------------------------
+--
+-- 	What's new
+--
+-- ---------------------------------------------------------------------- --!>
+ What's New 
+Bug fixed version: f96.io.v1.1 was installed: log out from your 
+current session and relogin and let the machine 'REBUILD'. 
+After the rebuild, the new version will be visible in the 
+[System Disk]->[Fantasm] folder. Use the new version by all means.
+..........................................
+Bug in f96.io.v1.0 : if you are getting FATAL ERRORs when building,
+read this:  Alignment problems . You do 
+not need to do this if you are using v1.1 (see above)
+..........................................
+<!-- ----------------------------------------------------------------------
+  --
+  -- 	Contents
+  --
+  -- ---------------------------------------------------------------------- --!>
+ Contents 
+This page contains stuff to do with writing assembly programs on the 
+M680x0 architecture - focusing on various issues on the assembler 
+Fantasm by Lightsoft.
+ Fantasm User's Manual
+  FANTASM FAQ 
+  MacsBug Quick Overview 
+  Pitfalls in Fantasm programming 
+  IO library specification 
+ Example Programs:
+		string output, hex to base32
+	 Resources: tips, programs, links, etc.
+|Back to Contents|
+<!-- ----------------------------------------------------------------------
+  --
+  -- 	Example Programs
+  --
+  -- ---------------------------------------------------------------------- --!>
+ Example Programs
+	Here are some example programs that run under Fantasm.
+	You have to obtain the [f96.io.v1.0] library files
+	from the [System Disk]->[Fantasm] folder in the new powermacs in the
+	macintosh lab in PAI.
+	This is the specification for the following programs:
+	 program spec.
+ STROUTLN : subroutine for printing out 
+			Pascal style string (length+string)
+global definition file 
+			   (P4_globals.s)
+source file 
+			   (start.s)
+ STROUTLN : shorter version
+global definition file  
+			   (P4_globals.s)
+ source file
+			   (start.s)
+ Hex to base32 conversion :
+global definition file  
+			   (P4_globals.s)
+ source file
+			   (start.s)
+|Back to Contents|
+<!-- ----------------------------------------------------------------------
+  --
+  -- 	Resources	
+  --
+  -- ---------------------------------------------------------------------- --!>
+ Resources 
+  Lightsoft :
+		The developer of Fantasm 
+	The Programmer's Dream page at Lightsoft 
+	Brynley's page:  project and libraries stuff 
+ Fantasm Documents:
+		User's manual in StuffIt format 
+		Unregistered version of Fantasm.
+	Test Bed V1.00" Library : the current [f96.io.v1.0] is based on 
+	this library.
+|Back to Contents|
+<!-- ----------------------------------------------------------------------
+  --
+  -- 	Okay, the trailer goes here.
+  --
+  -- ---------------------------------------------------------------------- --!>
+This page is maintained by 
+Yoonsuck Choe (yschoe@cs.utexas.edu)
+| UT Austin 
+| UTCS
+| CS310 Fall 1996 Page
+| 

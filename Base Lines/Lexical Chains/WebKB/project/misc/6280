@@ -1,0 +1,64 @@
+ NSF IIP Home Page 
+Rapid Prototyping
+of Parallel Robot Vision Systems
+Using Virtual Reality and Systems Simulation  
+ An NSF Institutional Infrastructure Grant (No.  CDA-94-01142) 
+ Principal Investigators 
+ Thomas J. LeBlanc
+ Michael L. Scott
+ Dana H. Ballard
+ Randal C. Nelson
+ Christopher M.  Brown.
+ The Idea 
+ Summary 
+The emerging behavioral and active vision paradigms hold that
+machines that work in
+the real world must be built and tested in the real world, and that
+real-world interaction is necessary for perception.
+Until recently there has been
+no practical alternative to building hardware in
+order to test ideas.
+Unfortunately,
+working with sophisticated physical manipulators or navigators
+is an extremely expensive,
+time-consuming, and sometimes hazardous process.
+Recent advances in simulation
+technology in two specific areas have crossed a threshold, enabling
+us to solve this problem, and to achieve enormous
+speedup in the design of complex, real-world robotic systems.
+The first technology is the simulation of sensory interaction with physical
+environments (popularly known as virtual reality),
+which can replace
+the real world in testing and debugging a system.
+The second is execution-driven simulation
+of complex parallel algorithms
+at the level of individual messages and memory accesses,
+which can address the performance and
+low-level real-time problems of interacting processes.
+ With NSF Funding, we are equipping a laboratory that
+breaks logically into two halves.
+One half of the lab,
+the robotics laboratory,
+ is for building working systems in the real world.
+The other half, the virtual reality laboratory,
+is for prototyping and experimentation
+in the virtual world.
+This hardware and software is configured so that the
+computational engines running the robot control algorithms can be
+swapped transparently between the real-world devices and the virtual devices.
+In addition, the virtual-world lab contains hardware and software
+for simulating and analyzing the
+control algorithms at a low level,
+where all the timings and complexities of
+interaction among the various subsystems can be
+instrumented and tracked.
+ For more detailed information,  including pointers to publications, see
+the following.
+  The Current Laboratory
+  Schedule of Equipment Acquisition 
+  Virtual Reality Simulation 
+  Real Robotic Systems 
+  Computer System Simulation 
+ Chris Brown  <brown>  
+Back to Brown's Home Page
+Back to URCS Home Page

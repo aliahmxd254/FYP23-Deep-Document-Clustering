@@ -1,0 +1,53 @@
+Duke's Voice and Natural Language Laboratory
+Voice and Natural Language Laboratory
+ Department of Computer Science 
+Duke University, Durham, North Carolina
+Overview:
+In the area of natural language processing systems, we seek to develop a
+class of task-oriented natural language processors that enable a human and
+machine to collaborate efficiently in problem-solving. We emphasize the
+importance of fast, convenient communication with many interacions per
+minute using multimodal input (voice, typing and touch screen) and output
+(synthesized voice and video screen). Our work primarily concentrates on
+the developemnt of theories of semantics appropriate for such systems with
+particular emphasis on mechanisms for handling complex noun-phrase
+resolution, focusing mechanisms, dialogue comprehension, and user models.
+In order to test theories, we continuously build natural language
+interactive systems and study their performance in typical problem-solving
+situations with human subjects. This experimental work provides examples of
+human-machine dialogue for study and yields data related to the achieved
+level of efficiency.
+Personalities:
+Faculty:
+Alan Biermann
+Curry I. Guinn
+Phil Long
+Graduate Students:
+Amit Bagga
+Yue (Joyce) Chai
+Michael Fulkerson
+Greg Keim
+Krishnan Rajagopalan
+Paul Szymkiewicz
+Others:
+Zheng Liang
+D. Richard Hipp
+Ronnie Smith
+Chris Jenkins
+Dania Egedi
+Barry Koster
+Robert Rodman
+Ruth Day
+Projects:
+Dialogue Theory for Virtual Environments:
+The Programming Tutor:
+Circuit Fix-it Shop:
+Collaborative Modeling:
+Text Abstraction:
+VIPS: A Voice Interactive Processing  System for Document Management:
+Argumentation Theory:
+Metaphor:
+Other Resources:
+Publications.
+msf@cs.duke.edu
+January 17, 1996

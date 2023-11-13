@@ -1,0 +1,42 @@
+The Real-Time Systems Laboratory at UIUC
+Calendar |
+Publications |
+Members |
+Software Distribution
+The Real-Time Systems Laboratory at UIUC
+The Real-Time Systems Laboratory (RTSL) performs research on all
+aspects of real-time computing systems.  A real-time system must not
+only produce logically correct results, but it must also produce them
+with certain timing constraints.  Such systems are gaining
+importance in a number of applications: automated factories,
+telecommunication systems, defense systems, and space systems, for
+example.
+Calendar
+  During the semester the RTSL meets each week, Wednesdays at 4:00, and a
+  speaker gives a talk on a subject related to real-time systems.
+  See the Calendar page for more information.
+Publications
+  The Publications page has a bibliography
+  of the RTSL's recent publications, as well as the
+  PostScript source for many of these papers.
+Members
+      Many of the members of the RTSL have personal web pages.
+Software Distribution
+  See the Software Distribution page for more
+  information about obtaining PERTS, our real-time
+  prototyping environment, and DRTSS, our simulator for real-time systems.
+Contact Information
+To contact us, please write or call
+Department of Computer Science
+University of Illinois at Urbana-Champaign
+1304 West Springfield Avenue
+Urbana, Illinois  61801
+USA
+Telephone: (217) 244-6813 (Group Secretary)
+See also the home page of the
+IEEE Computer Society Technical Committee on Real-Time Systems
+for links to other organizations doing research on real-time systems.
+Image Copyright 1996 PhotoDisc, Inc.
+David Hull
+<hull@cs.uiuc.edu>
+Last modified: Fri Oct  4 09:47:55 CDT 1996

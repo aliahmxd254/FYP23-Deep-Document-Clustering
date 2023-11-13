@@ -1,0 +1,32 @@
+Physics of Computation
+Physics of Computation
+Welcome to Physcmp, Carver Mead's group 
+We are part of the Computation and
+Neural Systems Program at Caltech.
+The Physcmp group works on neuromorphic analog
+VLSI, meaning that we build silicon models that mimic, or capture in some
+way, the functioning of biological neural systems. We build vision systems,
+auditory systems, and systems that learn or adapt. We do a lot of work on
+device physics related to learning systems. 
+You may be interested in how
+we we design our chips,  using Tanner tools and  the Chipmunk
+tools, and perhaps also in a possible setup
+for chip design using Linux and free tools. You might also be interested
+in our lab chip testing setup,
+and how we test retina chips.
+Our chips are fabricated through the MOSIS service.
+Check out our resources.  We are the main
+site for distribution of John Lazzaro's Chipmunk
+tools. We also have a pretty extensive collection of papers
+about analog VLSI. Other resources include all the lab
+assignments for Carver's analog VLSI course (CNS 182), and the assignments
+for the companion course on Analog VLSI design
+(CNS 184). See the full list of resources
+for other stuff.
+Finally, you might be interested in some random tidbits
+of possible interest and links to related sites.
+Search us. Back to Physics of Computation.
+Comments, bugs? Mail us..
+Last modified 96 days ago.
+Recent accesses.
+Local web admin, including HTML, httpd, setting up a page, etc.

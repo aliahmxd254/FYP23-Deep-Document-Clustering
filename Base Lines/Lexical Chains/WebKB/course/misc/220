@@ -1,0 +1,15 @@
+Content-length: 1025
+CS193X
+ CS193X
+X Window System Programming
+Description
+Develop user interfaces using the X library (Xlib) and the X toolkit intrinsics (Xt). OSF/Motif is used in the examples and programming assignments; emphasis is on general Xlib and Xt techniques. Progressive exercises develop skills in using the X client/server event model, an Xt-based widget set, and more advanced Xlib operators. Prerequisites: experience with C development in a Unix environment.
+Other Information
+Quarters Offered (1995/96)
+Autumn (Yang) MW 11
+Units
+		2
+Last modified: Tuesday, April 9, 1996 5:07:33 AM
+Copyright © 1996, Stanford University
+WWW-CS-Education Webmaster
+www-cs-education@cs.stanford.edu

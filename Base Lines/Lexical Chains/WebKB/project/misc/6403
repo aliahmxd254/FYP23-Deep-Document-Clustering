@@ -1,0 +1,69 @@
+ Caltech Infospheres Group 
+ Caltech Infospheres Project 
+  Bringing Theory to the Marketplace 
+ The Caltech Infospheres Project deals with the
+theory and implementation of compositional systems that support
+peer-to-peer communication among persistent multithreaded distributed
+objects. Though our implementation of a generic distributed system uses
+Java, TCP/IP, and the Web, the ideas are directly applicable to any
+distributed (possibly object-oriented) system that supports messages and
+threads.  A key concern is the development of reliable distributed
+applications by composing existing and created software components in
+structured ways.  We are solving the problems and influencing the
+standards of distributed component technology for the user and developer
+for the Internet of the 21st century.
+ An  executive
+summary  of the Infospheres Project is available. 
+ Release 1.0b1 of the
+Infosphere Infrastructure (II) is now available! 
+ The Caltech Infospheres Infrastructure (II) is a distributed system
+framework that is implemented in Java.  It provides a generic object
+model and a variety of messaging models (asynchronous, synchronous,
+and remote procedure calls).  This system is freely available, so
+that researchers and developers can develop lightweight distributed
+systems that can leverage open standards and the World Wide Web.
+Caltech is developing methodologies that take advantage of the
+system's design so that reasoning on entire distributed systems is
+feasible.  With these methodologies, one can say something about the
+reliability, completeness, and robustness of a distributed system as a
+whole.  The II is being extended to support interoperability with
+other distributed system models and to utilize emerging standards in
+the Java domain.  Because the system is designed and implemented in a
+generic manner, the ideas, algorithms, and theories developed within
+the II framework are directly applicable to existing distributed
+systems and frameworks.
+ The 
+Caltech Infospheres Project  is part of the Compositional
+Systems Research Group of the  Center for Research on Parallel
+Computation, led by Professor
+K. Mani Chandy.  Other projects in which the Compositional Systems
+group works include 
+Problem Solving
+Environments,
+Archetypes, and our
+Infosphere Infrastructure.
+ The contributions of the Infospheres Group are both theoretical
+and experimental.  We have an extensive set of 
+papers , and our Infosphere
+Infrastructure is available for non-commercial purposes.  Our
+first major code release (1.0a) was made available on August 26th,
+1996.
+ To contact the Infospheres Group, send email to infospheres@cs.caltech.edu.
+Note that this is an internal mailing list and goes to all group
+members.  Bug reports can be sent to info-bugs@cs.caltech.edu.
+ The Infospheres Project is sponsored by the CISE directorate of the
+ National Science Foundation  under
+Problem Solving Environments  grant  CCR-9527130
+, the Center for Research in Parallel Computing under grant NSF
+CCR-9120008, and by Novell, Inc.
+The formal methods and adaptivity (reliability, mobility, security)
+parts of the project are sponsored by the Air Force Office of Scientific
+Research under grant AFOSR 91-0070.
+ [  People  ]
+[ 
+Papers  ] [ 
+Releases  ] [ 
+Mailing Lists  ] [  Related Work 
+] [ 
+Past Projects  ] [  Group
+Resources  ]

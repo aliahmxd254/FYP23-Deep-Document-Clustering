@@ -1,0 +1,66 @@
+Chuck Koelbel's Home Page
+Charles Koelbel
+(a.k.a Chuck Koelbel)
+Charles Koelbel , Research Scientist 
+B.A. (1983), Augustana College 
+M.S. (1985), Ph.D. (1990) Purdue University  
+Chuck Koelbel's research interests center on mapping algorithms and programs 
+onto distributed memory multiprocessors. His doctoral dissertation presented a 
+compiler which translated Kali, a shared-memory imperative language, for 
+execution on the Intel iPSC/2. A unique feature of this work was a unified 
+treatment of regular computations, for which the communications can be 
+generated at compile time, and unstructured computations, for which run-time 
+support is necessary. Both types of support are necessary for a truly general 
+system. Since coming to Rice he has worked closely with K. Kennedy and others 
+to apply his methods to the FORTRAN D compiler project. He is also studying new techniques for implementing adaptive and dynamically 
+varying data structures on distributed memory machines. These data structures 
+are needed in many areas, including sparse matrix calculations which have 
+applications in finite element methods and linear programming. 
+In addition to 
+his research responsibilities, Chuck Koelbel served in 1992 and 1993 as executive director 
+of the High Performance FORTRAN Forum, a group of academic, industrial, and 
+government organizations defining extensions to the FORTRAN language for use 
+on scalable parallel machines. He continues to be active with that group.
+Contact Information
+Publications
+Curriculum Vitae
+Affiliations
+Rice University
+Center for Research on 
+Parallel Computation (CRPC)
+Computer Science Department
+High Performance 
+Fortran Forum
+Scalable Input/Output Research 
+Consortium
+W. M. Keck Center for Computational 
+Biology
+Fortran 
+Tools Research Project
+D 
+System  Research Project
+Conferences of interest
+ACM Computing Week '96
+High-Performance 
+Computing and Networking (HPCN) Europe 1996
+Federated Computing 
+Research Conference
+Workshop on I/O in 
+Parallel and Distributed Systems (IOPADS)
+1996 
+International Conference on High Performance Computing (ICPP)
+Supercomputing '96
+To see Chuck's thought for the month, 
+finger chk@cs.rice.edu 
+Check out the "High Performance Fortran in Practice" tutorial.
+If you still haven't gotten enough of HPF, there's also 
+The High Performance Fortran Handbook.
+For instructions on making your own home page, see 
+How To Make Your Own Web Pages
+by Debbie Campbell.
+Last updated: February 12, 1996
+This page has been accessed  
+times since August 2, 1995.
+Chuck Koelbel (chk@cs.rice.edu) 
+(Thanks to Debbie Campbell (dcamp@cs.rice.edu)  for getting 
+this page started!)

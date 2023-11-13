@@ -1,0 +1,30 @@
+ISAAC: Internet Security, Applications, Authentication and
+Cryptography
+ISAAC
+Internet Security, Applications, Authentication and
+Cryptography
+We are a new research group in the  Computer Science Division
+at the University of California,
+Berkeley.
+Our members are
+Eric Brewer, Assistant Professor
+Paul Gauthier, Graduate Student
+Ian Goldberg, Graduate Student
+David Wagner, Graduate Student
+Ongoing research includes
+ Analysis of the SSL 3.0 protocol
+	Janus, a secure environment for helper applications
+ Internet Protocol Scanning Engine
+ Architectural considerations for
+	cryptanalytic hardware, Dave and Ian's
+        CS 252
+        project.
+ A cryptographic integrity-verifying tool
+Some past projects:
+	Basic flaws in Internet security and commerce:
+	a short note on endpoint security
+	A flaw in Netscape's PRNG 
+Other items, posts, etc. that may be of interest:
+ Exploiting security holes via the web
+ Other crypto and security publications
+	that Dave has been involved in

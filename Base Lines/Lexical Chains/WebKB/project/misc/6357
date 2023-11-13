@@ -1,0 +1,44 @@
+Wearable Computer Research Home Page
+ University of Oregon
+Department of Computer and Information Science
+Wearable Computing Research Group
+The University of Oregon is actively involved in the field of wearable
+computing. We are funded under a grant by NSF to pursue several
+concepts related to the wearable field.  
+Our research goal is to gain an understanding of the 
+technical and user-interface issues of wearable computing. More concretely, 
+our research can be categorized into the following broad areas: 
+ Developing wearable applications for fielding. The most current effort is the NetMan project, a
+     virtual aide to installing computer LANs. There is also work being done with the US Army and the Marine
+     Corps to develop systems for their use in the near future. 
+ Evaluating wearable applications under development in a number of areas.
+The goal of this effort is to
+     extract the common features of the systems. This information will be used later in our development of a
+     common software system for wearable computers. 
+ Designing a common software "backplane" that can rapidly be reconfigured to perform a variety of tasks.
+     We are attemtpting to develop a commercially acceptable system that will support the hardware being
+     developed by a variety of vendors in many applications. Our first result is a software framework which we call Functionality-On-Demand.
+For more details check the Achilles project home page. 
+Our library of software tools continues to grow, as we study more applications. 
+ Tackling the theoretical problem of the limitations of a wearable system. 
+Communications throughput,
+     processing speed, and organization of data are three obvious limitations of any wearable application. What
+     expectations can we have about systems that are designed today with the internet in its current state,
+     versus a wearable system in the next five years? 
+This is a highly fascinating topic being pursued by one of our PhD students.
+More detailed information about the wearable computer research group 
+and our work is available by following these links:
+ Papers and Reports on Wearable Computing 
+ The Oregon Wearable Computer
+ Achilles Software Architecture Home Page
+ MediWear: An Experiment in Wearable Computing
+ Members of the wearable research team
+ NEW: Workshop on Wearable Computer Systems, August 19-21, 1996
+coorganized by the Wearable Computer Research Group at University of Oregon.
+ Some WWW links related to Wearable Computing
+ Sign our guestbook and let us know about your interests in wearable computing. 
+<!-- <!WA11>
+<!-- <!WA12> 
+<!-- accesses since 8/25/95.<BR>
+ Last revised on July 1, 1996.
+ kortuem@cs.uoregon.edu

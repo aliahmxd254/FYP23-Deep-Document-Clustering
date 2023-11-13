@@ -1,0 +1,89 @@
+Taylor Simpson
+Taylor Simpson
+Post Doctoral Research Associate
+Department of Computer Science
+Rice University
+Research Interests
+Optimizing Compilers
+Data-flow Analysis
+Static Single Assignment Form
+Global Value Numbering
+Code Motion
+Redundancy Elimination
+Register Allocation
+Background
+After earning a B.S. in
+Mathematics from
+Davidson College in 1986 and an M.S. in
+Computer Studies from
+N. C. State University in 1988,
+I worked at
+Shell Oil Company where I developed
+workstation-based interactive graphics applications used for seismic
+interpretation.
+My resume is available in PostScript or
+HTML.
+Related Work
+In 1992, I entered the Ph.D. program in the 
+Computer Science Department at Rice
+University and soon joined the
+Massively Scalar Compiler
+Project.
+My first project was to rewrite the dead code
+elimination pass of the compiler in
+nuweb.
+I have written a nuweb
+version of the global value numbering algorithm
+described by Alpern, Wegman, and Zadeck in Detecting
+Equality of Variables in Programs.
+I have also implemented extensions to the algorithm to handle commutative
+operations, to eliminate redundant stores (i. e., stores where
+the value in memory will not change), and to remove operations based on
+available expressions.
+Preston Briggs, Tim Harvey, and I have made several improvements to the
+SSA
+construction algorithm.
+I have written a nuweb
+version of several types of
+value
+numbering.
+The implementation includes value numbering over the dominator tree as
+well as SCC-based value numbering.
+Currently, I am working on improvements to graph coloring register
+allocation.
+Current Research
+ Value Numbering
+ SCC-Based Value Numbering
+ Value-Driven Code Motion
+ Operator Strength Reduction
+ Value-Driven Redundancy Elimination
+Talks
+From time to time, I give talks on various subjects that interest me.
+Here is a sample:
+ Introduction to Data-Flow Analysis
+ Introduction to Dependence Analysis
+ Computing Static Single Assignment Form
+ Detecting Equality of Variables in Programs
+ Value Numbering
+ Value-Driven Reduncancy Elimination
+ Thesis Proposal
+Links
+Here are some other links you might want to check out:
+ Compilers
+ Rice University
+ WWW
+ Car Information
+ Car Manufacturers
+ Games
+ Golf
+ Beer
+How to reach me
+Taylor Simpson
+Rice University
+6100 Main St., MS 41
+Houston, TX 77005-1892
+Duncan Hall
+Room 2063
+lts@cs.rice.edu
+(713) 737-5707
+FAX (713) 285-5136

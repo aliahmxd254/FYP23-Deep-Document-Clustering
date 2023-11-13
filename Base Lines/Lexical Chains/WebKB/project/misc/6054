@@ -1,0 +1,27 @@
+ The DKBRG Home Page 
+The DKBRG Home Page
+The Data/Knowledge Base Research Laboratory supports research in very
+large data and knowledge base systems, and scientific databases.  With
+recent funding from NSF and IBM, the Laboratory serves as the testbed
+for the Gaea Project.  
+Recent research projects have included visual
+browsing and query interface design, distributing scientific
+computation and databases over a network, temporal modeling, and
+development of "Derivation Networks" that can represent complex
+computational processes.  
+The laboratory's hardware includes a
+DECstation 5000/200, a Sun SPARCstation, a SGI Indigo Elan. 
+Software includes GRASS, Khoros, and Data Explorer
+packages and Postgres and ObjectStore database management systems.
+Schedule:
+     Meeting Dates and Topics
+Faculty involved:
+Nabil I. Hachem,
+    (hachem@cs.wpi.edu)
+Michael A. Gennert, 
+    (michaelg@cs.wpi.edu)
+Matthew O. Ward, 
+    (matt@cs.wpi.edu@cs.wpi.edu)
+Gaea Project
+One of the significant activities of DKBRG is the Gaea Project.  An overview of this project is available.
+Matthew O. Ward (matt@cs.wpi.edu)

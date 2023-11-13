@@ -1,0 +1,43 @@
+Welcome to the ESL Server
+Department of Computer Science
+Experimental Systems Lab
+The Experimental Systems Lab is a facility 
+at the
+University of Colorado
+in the
+Department of Computer Science
+to support experimental
+computer science.
+Our facilities are used for general work in
+ hardware-software co-design,
+ local are area and wide-area networks,
+and
+ computer architecture .
+ Research Areas 
+	Branch Prediction Research and Publications
+	AWESIME/DUDE
+	Hemingway Distributed Shared Memory System
+ Publications.
+Sponsors and Funding.
+ESL Features
+Information
+on  Fast Ethernet 
+ Digital Unix 4.0 Manuals 
+	C++ Benchmark Suite
+	Some of our hardware-software co-design efforts
+	try to optimize statically-typed object-oriented languages.
+	We have built a benchmark suite suitable for testing
+	new compilers, comparing compilers and understanding
+	object-oriented program behavior. 
+AtomAdvocates
+	We make extensive use of ATOM, a program analysis
+	and instrumentation tool for DEC Alpha workstations, and
+	maintain a FAQ and ``tool shed'' of ATOM-based tools.
+Tools for
+	Hardware-Software Co-design
+Inter Operability Tools Survey
+Talks and Seminars
+	Computer Architecture Reading Group
+Feel free to send me any comment via the
+comment form or e-mail
+Dirk Grunwald 

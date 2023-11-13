@@ -1,0 +1,25 @@
+Syntactic Abstraction
+Syntactic Abstraction 
+Description: 
+Traditional macros used to extend programming languages suffer from
+semantic difficulties due to unintended variable bindings that occur as
+the result of the code transformations specified by macro
+transformers.
+We have developed the concept of hygienic (lexically scoped) macros
+and are continuing to refine the concept of syntactic abstraction and
+render it usable for a wider variety of applications.
+Associated Faculty:
+R. Kent Dybvig,
+Daniel P. Friedman
+Associated Postdocs and Graduate Students:
+Carl Bruggeman,
+Oscar Waddell
+Affiliated Projects:
+Scheme 2000,
+Scheme implementation,
+IU Scheme Educational
+Infrastructure Project
+ For more information
+click
+here
+Computer Science Research Page

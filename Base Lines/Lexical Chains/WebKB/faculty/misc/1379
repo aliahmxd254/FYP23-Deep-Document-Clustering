@@ -1,0 +1,252 @@
+Karsten Schwan Home Page 
+ Karsten Schwan  
+RESEARCH STATEMENT:
+Programming and Operating Systems for High Performance Platforms 
+College of ComputingGeorgia Institute of TechnologyAtlanta, GA 30332(404)894-2589, schwan@cc.gatech.edu
+Prof. Schwan has been working with experimental and commercial 
+parallel machines since their inception in the late 70's. His research
+is driven by relevant applications developed as part of a multidisciplinary
+laboratory at Georgia Tech -- the HPPCEL Laboratory contains uniprocessor
+and multiprocessor supercomputers (a Cray machine, an IBM SP-2, and
+networked sets of workstations like IBM RS6000, SUN and SGI machines). His
+research is also driven by the future heterogeneous SMP and distributed
+systems infrastructure experienced in commercial and research settings --
+the Distributed Laboratories project is constructing a heterogeneous
+computing environment consisting of ATM-networked uniprocessor and SMP machines,
+jointly offering the computational power and interconnection bandwidth of
+modern supercomputers.
+Applications and the  HPPCEL Laboratory.
+The HPPCEL Laboratory for experimentation with parallel applications
+is undertaking the development of several sample, large-scale parallel 
+applications jointly with end users (
+atmospheric modeling,
+finite element codes, fluid flow applications). In
+each case, these `applications' not only
+consist of specific computational tasks, but also include online analyses 
+being performed for these computations and real-time visualizations of program 
+data and monitoring of performance information, all of which are executed 
+simultaneously such that end users can inspect program results and steer
+program executions to gain experimental insights. Additional applications
+used to evaluate operating system support, program adaptation, and
+programming environments research have included:
+(a) robotics applications and real-time simulations (the ASV autonomous
+suspension vehicle, schema based robot navigation, and discrete
+event simulations), (b) real-time multi-media applications involving
+multiple machines and human end users, (c) the design and 
+implementation of interactive graphical interfaces for high performance
+applications, and (d) graph-based searching algorithms used in the solution of
+Operations Research problems.
+Distributed Laboratories.
+The topic of our joint research is the realization of 
+distributed laboratories, where individuals can interact with each other,
+and more importantly, with powerful, distributed computational tools as
+readily as if all were located in a single site. Our intent is to permit
+scientists, engineers, and managers at geographically distinct locations
+(including individuals ``tele-commuting'' from home) to combine their
+expertise in solving shared problems, by allowing them to
+simultaneously view, interact with, and steer sophisticated
+computations executing on high performance distributed computing platforms.
+Prof. Schwan's primary contribution to this effort concerns the construction of
+a distributed laboratory for experimentation with high performance
+numeric computations for applications in molecular physics,
+atmospheric sciences, working with high performance atmospheric and 
+pollution modelling, and manufacturing systems. In addition, Prof. Schwan's
+group is involved in the development of basic technologies facilitating the
+use of future heterogeneous and large-scale distributed and parallel systems.
+These technologies are concerned with ``middleware'' software
+that will be directly utilized by distributed laboratory applications and
+described in more detail below:
+The Falcon project is studying the dynamic monitoring, adaptation, and 
+interactive steering of high performance computations for on-line control of 
+``virtual laboratory instruments'' and for ``what-if?'' experimentation with 
+complex simulation models by distributed laboratory users. 
+ The COBS project is concerned with the distributed systems and
+communication technologies underlying distributed laboratory applications. 
+The emphasis in distributed systems research is on support for shared-state
+in multi-granular and distributed computing environments.
+Research in communication protocols is concerned with providing the necessary
+communication latencies, bandwidths, and transmission guarantees across 
+heterogeneous underlying communication media.
+Prof. Schwan's current research addresses three basic research topics
+addressing the computational requirements and underlying hardware systems 
+presented by the HPPCEL and Distributed Laboratory efforts: 
+ programming support tools, 
+ operating systems, and
+ communication protocols.
+Programming tools - FALCON. 
+The  FALCON 
+project addresses the construction of interactive parallel programs, 
+even permitting programmers to `steer'
+such applications. Steering may be defined as:
+ Program Steering - 
+A program that can interact with human users during its execution,
+where the purpose of such interactions is the use of on-line program
+information to affect or `steer' program execution.
+The FALCON project's goal is to have high performance programs become 
+equally interactive as commonly used PC tools (e.g., spreadsheets) such that
+program performance is either maintained or improved! The expectation is
+that scientists can work more effectively when able to view program results
+during execution and steer program execution toward useful data domains. The
+initial experience is that on-line steering can improve the performance of
+programs by avoiding needless execution and by adapting (algorithmically)
+specific program abstractions to better match their functionality to 
+dynamically varying program characteristics. In essence,
+we expect to gain significant increases in the usefulness of parallel
+programs to end users and in program performance by use of steering.
+FALCON offers specific support for program performance
+monitoring, evaluation, and tuning, and they provide system integration
+support using an incore data dictionary. Using FALCON, information required for 
+performance tuning is easily captured, analyzed, displayed, and then 
+used for program performance improvement. Program monitoring is 
+performed in an identical fashion for both shared and non-shared memory 
+parallel machines, using language-based and graphical user 
+interfaces. Using programming extensions of FALCON now under development, 
+program tuning is performed graphically, as well, by explicit manipulation 
+of parallel programs displayed as hierarchical sets of related objects. 
+The tools will be used in the context of large-scale parallel applications being
+interactively steered by end users. The FALCON tool is
+operational on SUNs, SGIs, IBM RS/6000, IBM SP-2 and the KSR
+machine. FALCON's programming extensions are still under construction, but 
+their runtime support is already operational.
+Adaptable Operating Systems.
+The efficient execution of a parallel program
+requires that operating system primitives match the program's performance
+and reliability requirements. By constructing and evaluating novel
+operating system mechanisms for multiple parallel architectures,
+we are studying high-performance operating system support for multiple
+parallel applications, including real-time applications, scientific and 
+engineering codes, discrete event simulations, and optimization codes.
+This research has resulted in several software libraries that facilitate
+the construction of parallel programs. The 
+`Cthreads' 
+library is commonly used in operating systems and parallel computing courses 
+and is available on many uniprocessor and multiprocessor machines. 
+Its extensions toward `Configurable CThreads' address the on-line
+monitoring and configuration of high performance parallel programs, ranging 
+from the rapid adaptation of individual program abstractions to 
+user-directed program steering. 
+Specific examples of configurable abstractions constructed with the 
+CThreads basis include (1) 
+adaptable multiprocessor locks
+able to improve program performance by adapting lock characteristics to 
+program behavior during program execution and (2) 
+adaptable communication protocols
+The DSA (Distributed Shared Abstractions) library for construction of 
+distributed objects is available on shared and (in a prototype version) on 
+distributed memory machines, including networks of workstations. 
+Its purpose is to support programmers in the construction of efficient 
+program abstractions capable of spanning both shared memory and distributed 
+memory platforms. Its initial SMP prototype is now being extended to address
+both sets of platforms, including larger scale distributed systems (see the
+COBS project described below).
+The 
+Kernel ToolKit (KTK) 
+is a substrate for parallel programming 
+and for the development of multiprocessor operating system kernels. At the
+object-level, it gives developers the ability to construct custom 
+implementations of object-based operating system abstractions. Objects are
+customized using meta-object-like interfaces described by `object attributes'
+and implemented by `policies'. Since policies may be present at runtime,
+KTK objects may also be dynamically adapted to suit varying runtime requirements
+of parallel and distributed applications. KTK`s attributes are the principal
+basis for construction of adaptable objects in the COBS project described
+next.
+The 
+GIT-C
+C-93-35
+LDA - Scalable, Off-Line Multiprocessor Scheduling for Real-Time Systems 
+Authors: Hongyi Zhou and Karsten Schwan
+ GIT-CC-94-23 Rapid -- A Multiprocessor Scheduler for Dynamic Real-Time Applications 
+Authors: Harold Forbes
+and Karsten Schwan.
+Equally importantly, recent research is addressing the formulation and support 
+of timing constraints for distributed information systems offering both 
+program-program communications and human interactive services. For such systems,
+a benchmark application being developed by our group is able to emulate the
+behavior of video delivery systems and of more dynamic systems like those
+ GIT-CC-94-29 PORTS: Experiences with a Scheduler for Dynamic Real-Time 
+Systems
+Authors: Kaushik Ghosh, 
+Richard M.  Fujimoto, and Karsten Schwan
+ GIT-CC-94-57 Reconfigurable Garbage Collection of Data Structures in a Speculative Real-Time System
+Authors: Kaushik
+Ghosh
+ Recent publications 
+Jeffrey Vetter, Karsten Schwan 
+"Progress: a Toolkit for Interactive Program Steering."
+ Proceedings of the International Conference on Parallel 
+Processing 1995  Oconomowoc, Wisconsin. August, 1995. 
+Weiming Gu, Greg Eisenhauer, Eileen Kraemer, John Stasko, Jeffrey Vetter, and 
+Karsten Schwan 
+"Falcon: On-line Monitoring and Steering of Large-Scale Parallel 
+Programs."
+ The Fifth Symposium on the Frontiers of
+Massively Parallel Computation  McLean, Virginia. February, 1995. 
+Jeffrey Vetter, Greg Eisenhauer, Weiming Gu, Thomas Kindler, Karsten Schwan,
+and Dilma Silva 
+"Opportunities and Tools for Highly Interactive Distributed and Parallel 
+Computing"  or
+here for a color version
+ Proceedings of The Workshop On Debugging and 
+Tuning for Parallel Computing Systems  Chatham, MA. October, 1994. 
+Greg Eisenhauer, Weiming Gu, Karsten Schwan,and Niru Mallavarupu,
+``Falcon - Toward Interactive Parallel Programs: The On-line Steering of a 
+Molecular Dynamics Application'' , High Performance Distributed 
+Computing (HPDC-3), San Francisco, CA, Aug. 1994. 
+Weiming Gu, Jeffrey Vetter, and Karsten Schwan,
+``An Annotated Bibliography of Interactive Program Steering'',
+ACM SIGPLAN Notices, July 1994. 
+Kaushik Ghosh, Kiran Panesar, Richard Fujimoto, and Karsten Schwan,
+ ``Ports: A Parallel, Optimistic Real-Time Simulator'', 
+8th Workshop on Parallel and Distributed Simulation (PADS), July 1994. 
+Greg Eisenhauer and Karsten Schwan, ``MD -- A Flexible Framework for 
+High-Speed Parallel Molecular Dynamics''  High Performance Computing, 
+Proceedings of the 1994 SCS Simulation Multiconference , pages 70-75, 
+April 1994, Society for Computer Simulation. 
+Ahmed Gheith, Bodhi Mukherjee, Dilma Silva, and Karsten Schwan,
+``KTK: Kernel Support for Configurable Objects and Invocations''
+, Second International Workshop on Configurable Distributed Systems,
+IEEE, ACM, March 1994. 
+Bodhi Mukherjee and Karsten Schwan,
+``Improving Performance by Use of Adaptive Objects: Experimentation with a 
+Configurable Multiprocessor Threads Package'',
+Second International Symposium on High Performance Distributed Computing (HPDC-2), Spokane, Washington, July 1993. 
+Prince Kohli, Mustaque Ahamad, and Karsten Schwan. 
+ Indigo: User-level Support for Building Distributed Shared Abstractions 
+  Fourth International Symposium on High Performance Distributed 
+Computing (HPDC-4)
+Kaushik Ghosh, Richard M. Fujimoto, and Karsten Schwan, ``Time Warp 
+Simulation in Time Constrained Systems'', 7th Workshop 
+on Parallel and Distributed Simulation (PADS), San Diego, May 1993. 
+Kaushik Ghosh, Richard M. Fujimoto, and Karsten Schwan,
+``A Testbed for Optimistic Execution of Real-Time Simulations'',
+IEEE Workshop on Parallel and Distributed Real-Time Systems,
+Newport Beach, April 1993.
+Ahmed Gheith and Karsten Schwan, ``CHAOS-Arc - Kernel Support for Atomic
+Transactions in Real-Time Applications'', ACM Transactions on Computer 
+Systems, April 1993. 
+Hongyi Zhou, Karsten Schwan, and Ian Akyildiz, ``Performance Effects of Information Sharing in a Distributed Multiprocessor Real-Time Scheduler'', 
+12th Real-Time Systems Symposium, Dec. 1992. 
+Karsten Schwan and Hongyi Zhou, ``Dynamic Scheduling of Hard Real-time Tasks and Real-Time Threads", IEEE Transactions on Software Engineering, August 1992. 
+Partial list of current and recent students:
+Greg Eisenhauer, FALCON project
+Harold Forbes, real-time systems
+Kaushik Ghosh (jointly with R. Fujimoto), real-time simulation
+ Weiming Gu , FALCON project
+Daniela Ivan, real-time communications and scheduling
+Robin Kravets, high performance communications
+ Vernard Martin Vernard Martin, FALCON project
+Bodhi Mukherjee, adaptable operating system kernels
+Byron Jeff, real-time control of multi-media applications
+Dilma Silva, high performance objects
+Phyllis Schneck, adaptable communications
+ Jeffrey Vetter , FALCON project
+Rich West, real-time threads and communications
+Hongyi Zhou, real-time scheduling
+Thomas Kindler, Mary Trauner (jointly with School of EAS), 
+parallel modeling of atmospheric conditions
+Shih-Chang Chuang (Advisor: R. Fulton, ME), finite element computation on 
+parallel machines
+Eileen Kraemer (Advisor: J. Stasko), performance animation of parallel programs
+Ranjit John (Advisor: M. Ahamad), implementing and programming 
+weakly consistent memories

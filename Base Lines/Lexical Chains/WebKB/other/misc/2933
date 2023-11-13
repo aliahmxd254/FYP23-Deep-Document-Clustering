@@ -1,0 +1,22 @@
+Richard Cole
+Other Algorithm Papers
+R. Cole, B. Mishra, J. Schmidt, A. Siegel.
+On the dynamic finger conjecture for splay trees.
+Part I: Splay sorting log n block sequences.
+Courant Institute Technical Report, No. 700, 1995.
+(Preliminary version, TR No. 471, 1989.)
+abstract
+postscript
+R. Cole.
+Part II: Finger searching.
+Courant Institute Technical Report, No. 701, 1995.
+(Preliminary version, TR No. 472, 1989.)
+abstract
+postscript
+R. Cole and R. Hariharan.
+An O(n log n) algorithm for the maximum agreement subtree problem for
+binary trees.
+Proceedings of the Seventh
+Annual ACM-SIAM Symposium on Discrete Algorithms,
+1996, 323-332.
+abstract

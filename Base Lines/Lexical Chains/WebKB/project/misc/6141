@@ -1,0 +1,53 @@
+Specialized Parallel Architectures Research Group
+Specialized Parallel Architectures Research Group 
+"Excuse me..are you going to utilize that processor? Thanks!"
+This research group is involved in building high-performance
+application-specific parallel architectures and software for
+heterogeneous systems.  We are currently engaged in two different
+research efforts.  The first project MISTE,
+is to design and analyze hardware features that support real-time
+applications on general purpose RISC processors.
+Our second project is to develop a flexible compiler framework, Scale, that
+can be easily adapted to new architectures.  Once Scale is complete,
+we will be able to quickly build a sophisticated optimizing compiler
+for our special purpose architectures.  This project is being done in
+conjection with the Systems
+for Advanced Architectures and Object Systems Laboratories.
+We have descriptions available for some of our prior research
+projects.  We developed a heterogeneous, tightly coupled system
+for real-time knowledge-based computer vision, called the Image Understanding Architecture .
+In conjunction with the Real-Time Systems research
+group, we built a single-chip parallel array, called SSCoP , that implements the scheduling kernel of
+the Spring
+real-time operating system.
+We have also constructed the ARPA Image
+Understanding Benchmark .  This benchmark is intended to measure
+the appropriateness of parallel machines for image processing.  
+We have several pieces of software, such as the IU Benchmark,
+available on our anonymous FTP site.
+Lab Personnel
+ Faculty and Staff 
+Dr. Charles Weems    Director >
+Alan Boulanger  Staff Programmer >
+ Graduate Students 
+Steven Dropsho
+Glen Weaver
+Former Graduate Students
+Sunit Bhalla
+Katja Daumueller
+Dr. Rabi Dutta
+Arundhati Dhagat
+Joe Kiniry
+Dr. Martin Herbordt
+Dr. Deepak Rana
+Michael Scudder
+Technology Transfer
+Papers and Reports
+Umass Technology Transfer Policy
+Some of our source code is available 
+here or else
+here.
+Page Accesses: 577
+UMass Specialized Parallel Architecture Research Group
+c/o weaver@spa-www.cs.umass.edu
+Back to UMass Research

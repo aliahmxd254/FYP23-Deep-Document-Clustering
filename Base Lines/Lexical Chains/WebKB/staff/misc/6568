@@ -1,0 +1,49 @@
+Vikram Adve's Home Page
+Vikram Adve
+Vikram Adve is a Research Scientist in the Computer Science Department
+at Rice University.  His research interests broadly lie in the design
+and performance evaluation of parallel computing systems, spanning
+performance modeling, parallelizing compilers, and parallel computer
+architecture.  His current work primarily focuses on optimizing
+compilers and programming environments to support machine-independent,
+data-parallel programming.
+Education
+ Ph.D. (1993), M.S (1989),
+     Computer Sciences,
+University of Wisconsin-Madison
+ B.Tech. (1987)
+     Electrical Engineering, Indian Institute of Technology, Bombay
+Research
+Advanced compilation techniques for data-parallel languages
+We are developing a second-generation
+High Performance Fortran (HPF)
+compiler to serve as a platform for experimental research on:
+ compilation techniques for regular and irregular
+     data-parallel applications,
+ optimization for message-passing, shared-memory, and hybrid
+     architectures,
+ first-class compiler support for programming tools
+     for performance analysis and data layout selection.
+Programming tools for data-parallel languages
+We are developing techniques and tools that enable programers to
+understand and tune the performance of data-parallel applications without
+having to understand the extensive, machine-dependent transformations
+performed by a sophisticated, parallelizing compiler.  
+Extensive cooperation between the compiler and performance tools is key to
+providing the detailed, source-level performance feedback required 
+in order to fulfill this goal.
+Publication List
+Affiliations
+Computer Science Department
+Rice University
+Center for Research on Parallel Computation (CRPC)
+Contact Information
+E-Mail : adve@cs.rice.edu
+    Phone  : 713-285-5934
+    Fax    : 713-285-5136
+    Office : 3805 Duncan Hall (aka the Computational Engineering Building)
+    US Mail: Rice University,
+	 	 Computer Science Department, MS 132,
+	 	 6100 South Main Street,
+	 	 Houston, TX 77005-1892.
+http://www.cs.rice.edu/~adve/

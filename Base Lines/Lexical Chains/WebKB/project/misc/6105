@@ -1,0 +1,85 @@
+TITAN: A Next-Generation Infrastructure for Integrating Computing and Communication
+TITAN: A Next-Generation Infrastructure for Integrating Computing and Communication
+Funded by the National Science Foundation CISE Institutional Infrastructure Program
+The Computer Science faculty at the University of California at Berkeley
+is developing as its computing and communication
+infrastructure a new type of computing system, called Titan.  This
+computing system comprises an integrated ensemble of computing and
+communication elements, organized to provide the user with a number of
+services that we think will characterize the practice of computing into
+the next century.  The most important of these are (i) multimedia
+(especially video) capabilities in delivery vehicles, storage and
+communication, (ii) huge computing power (especially from clusters
+of workstations operating as a single parallel computer) and enormous
+storage space, (iii) innovative parallel languages, debuggers, and
+libraries, and (iv) high accessibility from mobile as well as fixed
+locations.
+  Progress Report 1995-96
+  Progress Report 1994-95 
+  Project Presentation  1995 NSF IIG PI Meeting, Duke University, June 1995.
+ Primary Components of the Project
+ Core Computing Component
+ NOW forms the architecture and operating systems portion of the core computing component of
+Titan.
+     Castle forms the parallel programming and compilation portion of the Core.
+ Media Component
+ Driving Applications
+ General CS Research Infrastructure
+  NOW: Architecture and OS for a Network of Workstations 
+NOW: Network of Workstations as a High Performance Integrated System 
+ Areas of Research within the NOW Component
+Active Messages: Fast Communication Primitives (Culler)
+Fast implementations of conventional communication layers. Fast Sockets and MPI. (Culler,Anderson)
+ GLUnix: Global management of resources. (Anderson)
+ xFS: a distributed file system using striping across workstation disks and 
+co-operative caching in client memories.(Anderson, Patterson)
+Network Virtual Memory.(Patterson,Anderson,Culler)
+The NOW Benchmark Suite(Patterson)
+ Castle: Core parallel programming and language support 
+ The Castle Project: Integrated
+software support for parallel computing.
+ Areas of Research within the Castle component
+Split-C: A performance programming language for NOWs and parallel machines. Include Mantis graphical debugger. (Culler,Yelick)
+Multipol a library of distributed data structures, designed to ease the programming of
+"irregular" problems on large scale, distributed-memory multiprocessors. (Yelick)
+ScaLAPACK: Scalable version of the Titanium:
+compiler and language support for parallel programming
+of distributed memory multiprocessors(Aiken,Yelick,Graham)
+  pSather is a parallel
+version of the object oriented language Sather.(Feldman)
+ MultiMedia Systems Support and Content Development 
+ Areas of Research within the Multimedia component
+ Tenet Protocols for real-time applications.(Ferrari)
+   Plateau Multimedia Research Group: continuous media applications
+ and systems infrastructure. (Rowe)
+  Multimedia Authoring Initiative  (Harrison)
+  Ensemble: Language- and Document- centric Interactive
+Systems   (Graham and Harrison)
+  Computer Graphics  (Sequin, Barsky, Forsyth, Canny, Malik)
+  Info pad:prototype for providing ubiquitous, wireless access to multimedia data. (Broderson, Brewer, Katz, Messerschmitt, Rowe)
+The Daedalus/Icarus Project:wireless networking strategies. (Katz)
+ Connection to BagNet 
+  Driving Applications  
+ Global Climate Modeling:  GATOR (Demmel)
+  Soda Hall Building Walkthrough  (Sequin)
+  The SmartPath Simulation and Animation Package , part of the
+Path Project  (Varaiya, Yelick)
+  BAT (Bayesian Automated Taxi): Autonomous Vehicle Control
+ , part of the
+Path Project  (Russell)
+  Cancer Cell Simulation  (Yelick, Demmel)
+ Digital Repositories: intelligent access to massive quantities of multimedia 
+information in distributed repositories (Wilensky, Stonebraker)
+  CS Technical Report Server
+ and Electronic Environmental Library Project
+NASA EOSDIS Alternative Architecture Project.
+  OPtometric Topography Involving the Cornea And
+Lens  (Barsky)
+  Database  (Stonebraker)
+ Scalable Web Services (Brewer)
+ General CS Research Infrastructure  
+ SoftWare Warehouse 
+CS Division Home Page
+ David E. Culler
+ culler@CS.Berkeley.EDU
+culler@CS.Berkeley.EDU

@@ -1,0 +1,48 @@
+Asynchronous Triggers Project Documentation
+Asynchronous Trigger Project -- Internal Documentation 
+Personnel Information
+Eric 
+Chris 
+Vinod 
+Huey-Lin 
+Samir 
+Sreenath 
+Rich 
+Roger 
+JB 
+Required Office Hours for Team Members 
+TBA 
+Other Project Information 
+white paper describing project goals (do not
+distribute) 
+How to run Oracle Pro*C
+Phased Approach Overview
+Phase 1 Design
+Tcl Overview
+Index to Info on
+Tcl and Tk (Don't print postscript books! Buy the book if you want
+a hard copy.)
+On-line
+Tcl Manual
+Information
+on MTtcl, a version of tcl providing multi-thread support.
+RCS Info. 
+Teknekron Systems
+Rendezvous Bus Architecture
+Data Source
+Outline
+Phase 1 Detailed Architecture Design
+TriggerMan Server Design
+Eric's thoughts on binary transmission
+of objects over the network. 
+PointCast, Inc.
+Installation and setup of the TriggerMan directories: 
+How to install a copy of the
+TriggerMan directory
+What a programmer should know
+about the Makefile
+Information on using ODBC from SPARC/Solaris
+Proposed Sybase Data Source Architecture
+Proposed Parallel Architecture for TriggerMan
+Last
+updated 9/6/95 by hanson

@@ -1,0 +1,18 @@
+ Rice PLT Group 
+Rice Programming Language Research 
+The Programming Language Theory (PLT) Group at Rice works on all
+aspects of advanced programming languages, including design,
+semantics, implementations, programming environment tools, and
+applications. 
+We are developing DrScheme, a comprehensive programming environment
+for writing, debugging and analyzing Scheme programs.
+  DrScheme Programming Environment
+  On-Line Documentation
+  Publications
+  Software Packages
+  PLT People
+Contacting us:
+Regarding problems with our software, write to
+plt-bugs@cs.rice.edu.
+For general information, write us at
+scheme@cs.rice.edu.

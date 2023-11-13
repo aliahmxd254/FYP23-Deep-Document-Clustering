@@ -1,0 +1,12 @@
+X Interface for Gnu Common Lisp
+X Interface for Gnu Common Lisp
+This software provides an easy-to-use interface between Gnu Common Lisp
+and X windows.  It provides windows, menus, and graphics functions.
+The file  draw.lsp  provides an interactive  system for making
+drawings, drawing programs, and graphical menus.
+On-line Demonstration of
+      Interactive X Graphics from Lisp.
+On-line Demonstration of
+      Interactive Drawing Program.
+  Example: Drawing of Ice-Cream Cone
+       FTP directory for software and documentation.

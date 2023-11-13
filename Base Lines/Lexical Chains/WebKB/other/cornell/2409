@@ -1,0 +1,32 @@
+ PS 314 Specification -- Table of Contents 
+ Back to the CS 314 home page 
+ Processing System 314 
+  Processor Overview 
+  System Interface 
+  Instruction Set 
+  Instruction Word Format 
+  Operand Modes 
+  Arithmetic/Logic Instructions 
+  NAND 
+  SUB 
+  ADD 
+  ASL 
+  ASR 
+  LSL 
+  LSR 
+  Data Transfer Instructions 
+  COPY 
+  LOAD 
+  STORE 
+  LEA 
+  Program Control Instructions 
+  CMP 
+  Bcc 
+  RTI 
+  HALT 
+  NOOP 
+  Instruction Execution 
+  Traps and Interrupts 
+  PS314 Simulator 
+  Example Program 
+ Back to the CS 314 home page 

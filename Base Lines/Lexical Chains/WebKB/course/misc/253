@@ -1,0 +1,3 @@
+COM 1317 - Transaction Processing Systems
+Focuses on the concepts and practice of modern processing systems in a distributed setting. Describes the overall architecture of systems such as TP monitor, recovery manager, lock manager, log manager, and lock manager. Discusses the principles of DO/UNDO/REDO logging such as the write-ahead log rule and the force log-on-commit rule. Describes compensation log records, checkpoint and restart recovery procedures, two-phase commit, lock tables, granularity of locking, and two-phase locking.
+Prereq. COM 1315

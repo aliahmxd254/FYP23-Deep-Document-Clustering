@@ -1,0 +1,18 @@
+Algorithms and Data Structures
+Algorithms and Data Structures
+(Computer Science 105)
+Times: 96F: Arrange 
+Instructors: Drysdale 
+Prerequisite: Computer Science 45 
+	and 49. 
+	Students are expected to be familiar with basic concepts from
+	graph theory, discrete mathematics, linear algebra, and probability.
+The main topics of the course are paradigms for designing algorithms (e.g., divide and conquer, greedy
+method, structured search, balancing, dynamic programming, scaling, problem reductions), and the criteria
+for their analysis (e.g., worst-case, average case, lower bounds, sensitivity, amortization, resource
+tradeoffs, NP-completeness). The course deals primarily with the classical sequential algorithms, but also
+introduces parallel, distributed, random, probabilistic, and approximation algorithms as time permits. 
+The techniques are illustrated with algorithms for several domains, drawn from among information
+retrieval, graphs, networks, matroids, string matching, cryptology, arithmetic, matrices, and algebra.
+Many examples of important data structure and algorithms are described. 
+Back to Dartmouth CS Home Page

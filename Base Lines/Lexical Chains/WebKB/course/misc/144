@@ -1,0 +1,60 @@
+198:205 Course Information
+198:205 Course Information
+Discrete Structures I, Sections 6 & 7
+Professor Srinivasan
+Office: CoRE 324
+Phone: 445-2019
+Office Hours: Tuesday 10am - Noon
+E-mail: srinivas@cs.rutgers.edu
+TA: John Iacono
+Office: Hill Center, Room 371
+Phone: 445-4634 ext 23
+Office Hours: Tuesday and Thursday 2:00 - 3:30 and by appointment.
+E-mail: iacono@john.rutgers.edu
+ Grading 
+Note: There is no curve. A 59 is an F.
+if (final>90)
+  grade = A;
+else
+  if (final>midterm)
+    grade = 0.8*final + 0.2*homework;
+  else
+    grade = 0.4*final + 0.4*midterm + 0.2*homework;
+ Homework 
+Homework is due every week at the begining of recitiation. Graded homework is given back every week at the end of recitation. To pick up unclaimed homework and midterms please see John Iacono during office hours. 
+ Homework Solutions 
+Note: The following are postscript files. The suggested method of viewing
+and printing
+these files is to run Netscape from a UNIX based system with ghostscript
+installed. For most of you this means running Netscape on eden, romulus or
+remus while you are on an X-Term in a computer lab. YOU WILL NOT BE ABLE
+TO VIEW THESE FILES FROM A PC OR VIA AOL. If you need help, please see me
+during office hours or after recitation and I can show you in a lab how to 
+view these solutions.
+To print the solutions, do not use the print command from ghostscript
+as it is broken and does not work. 
+From Netscape, use shift-leftmousebutton to save the homework solution to
+a file. Then from a prompt run
+lpr -Pprinter filename
+Where printer is the printer you wish to print to and filename is the
+file you saved the marked pages as. To see a list of valid printer
+names type printers.
+Homework 1
+Homework 2
+Homework 3
+Homework 4
+Homework 5
+Homework 6
+Homework 7
+Homework 8
+Homework 9
+Homework 10
+ Grades 
+Last Updated 11/19/96
+Again, this is in postscript format. Look for the last four digits of
+your ID number. The roster is two pages long. The number in the
+grade column is 80% midterm and 20% homework.
+View Grades.
+ Final 
+The final is on Thursday December 19, 8:00 PM - 11:00 PM in Cambell
+Hall, Room A-3, College Avenue Campus. The test is open book & notes.

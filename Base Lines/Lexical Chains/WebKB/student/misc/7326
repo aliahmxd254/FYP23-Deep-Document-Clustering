@@ -1,0 +1,90 @@
+Hu Song's Homepage 
+Welcome to HU Song's Homepage!!!  <!--h1,h2,h3,h4-h6>
+My world: Science, 
+              Art, 
+              Sports and 
+              News
+Scienc make the world reasonable.
+Biology and Biochemistry let me know who am I.
+Biology
+ a branch of knowledge that deals with living organisms and vital
+     processes.
+        the plant and animal life of a region or environment.
+       the life processes of an organism or group.
+Biochemistry
+chemistry that deals with the chemical compounds and processes 
+          occurring in organisms
+       the chemical characteristics and reactions of a particular living
+           system or biological substance (as chlorophyll) 
+Computer Science let me know why I should stay in this world.
+Programming language enable me talk to computer.
+C Programming lauguage
+       C++ Programming lauguage
+       Assembling laugage
+       Html laugage
+Data Structure make me manage my world logically.
+Software extend my power to other areas
+Art make the world beautiful.
+Nature is art.
+  Lauguages is art.
+  Friendship is art.
+  Art is art.
+Sports make the living.
+News make the comparison.
+this is the end of first p. <!--p used for end of the paragraph,notice: if no p all are treat into one paragraph>
+this is the end of second paroagrph.
+Link to test2 file  
+This is link to ccic.ifcss.org
+Jump to Clients
+ this is the jump place for clients 
+oranges
+peaches
+grapes
+National Center for Supercomputing Applications
+   NCSA is located on the campus of the University
+  of Illinois at Urbana-Champaign. NCSA is a one of
+  four member institutions in the National Metacenter for
+  Computational Science and Engineering.
+   Cornell Theory Center
+   CTC is located on the campus of Cornell
+  University in Ithaca, New York. CTC is another member
+  of the National Metacenter for  Computational Science
+  and Engineering.
+ A few New England states:
+ Vermont
+     New Hampshire
+ One Midwestern state:
+ Michigan
+  #!/bin/csh
+  cd $SCR
+  cfs get mysrc.f:mycfsdir/mysrc.f
+  cfs get myinfile:mycfsdir/myinfile
+  fc -02 -o mya.out mysrc.f
+  mya.out
+  cfs save myoutfile:mycfsdir/myoutfile
+  rm *
+  Let us not wallow in the valley of despair. I say to you, my
+  friends, we have the difficulties of today and tomorrow. 
+  I still have a dream. It is a dream deeply rooted in the
+  American dream. 
+  I have a dream that one day this nation will rise up and
+  live out the true meaning of its creed. We hold these truths
+  to be self-evident that all men are created equal. 
+  A Beginner's Guide to HTML / NCSA / pubs@ncsa.uiuc.edu
+ Italic
+      text puts text in italics (HTML Primer)
+      text also italicizes text (only one viewer)
+      text is used for citations of names of manuals,
+      sections, or books (HTML Primer)
+      text indicates a variable (filename)
+   Bold
+      text puts text in bold (Important)
+      text also emphasizes text (Note:)
+   Fixed width font
+      text puts text in a fixed-width font (1 SU = 1 CPU
+      hour)
+      text also puts text in a fixed-width font (1 SU
+      = 1 CPU hour)
+      text formats text for samples (-la)
+      text displays the names of keys on the keyboard (
+      HELP)

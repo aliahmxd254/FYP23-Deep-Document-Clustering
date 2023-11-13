@@ -1,0 +1,199 @@
+BU CAS CS 113: Introduction to Computer Science II with Intensive C 
+-- Home Page
+BU
+CAS
+CS 113
+Introduction to Computer Science II with Intensive C 
+Fall 1996
+COURSE HOME PAGE
+ Information On Line
+ Programming assignments: 
+|
+HW0
+| 
+HW1
+|
+HW2
+|
+HW3
+|
+HW4
+|
+HW5
+|
+HW6
+|
+HW7
+|
+HW8
+|
+HW9
+|
+ Student solutions: 
+|
+HW1
+(Nick Eskelinen)
+|
+HW2
+(Tom Worster,
+Joshua Berke)
+|
+HW4 (Luis Aversa)
+|
+HW5 (Ronak Shah,
+Matthew Wertz)
+FAQs:
+|
+Compiling (Make & gccx)
+|
+Grading
+|
+HW1
+|
+HW2
+|
+HW3
+|
+HW4
+|
+HW5
+|
+HW6
+|
+Miscellaneous
+|
+Exams:
+|
+Midterm Study Sheet
+|
+Lecture Materials:
+|
+Lecture Topics thru midterm
+|
+Lecture Topics since midterm
+|
+Code for stacks (10/17)
+|
+Sep 3
+|
+Sep 16
+|
+Sep 26
+|
+Section Information:
+|
+Discussion Section Home Page
+|
+Lab and Tutor Schedule
+|
+Course Policy/Info:
+|
+Course Syllabus 
+| 
+Course Policy 
+| 
+Grading Guidelines 
+| 
+Collaboration and Academic Honesty 
+|
+Coding Convention
+|
+Use of Personal Computers
+|
+Useful Tutorial Information:
+|
+Unix, emacs, and the Internet
+|
+more on Unix, emacs, and the Internet
+|
+ Source Code for all examples in texts:
+|
+Roberts 
+|
+Standish
+|
+(This is also readable under 
+~cs113/F96/source/ on csa.  
+The Roberts 
+executables are there as well, so you can try out any of the programs by 
+changing to the appropriate directory and typing the name of the program.)
+ Errata from texts:
+|
+Roberts 
+|
+Standish
+|
+Other information from Addison-Wesley (probably not needed):
+|
+Roberts
+| 
+Standish
+|
+ Other Information 
+Instructor:
+ Randall Pruim 
+Room MCS-281, phone 353-8927
+ E-mail: 
+rpruim@cs.bu.edu
+ Office hours:  Tuesdays, Thursdays 11am - noon.  
+Teaching Assistant:
+Rob Pitts
+Room MCS-223, phone 353-1498.
+ E-mail: 
+rip@cs.bu.edu
+ Office hours: see the 
+Discussion Section Home Page
+  Calendar:
+ Mid-term:  
+Thursday, October 24, in class (date subject to confirmation)
+ Final exam:  
+Tuesday, December 17, 9:00-11:00 am
+Course Description:
+Designed for students who program proficiently in Pascal, BASIC,
+Fortran, or some other high-level programming language.  Begins with
+an intensive introduction to the C programming language and then
+covers all the material in CS 112.
+Work Load:
+Heavy, fast. This is an intensive course that covers
+the topics of CS 111 and CS 112 in one semester.
+ Required Textbooks:
+The Art and Science of C by Eric Roberts
+Data Structures, Algorithms, and Software Principles in C,
+by Thomas Standish.
+ Optional Reference Texts:
+Since neither of the required texts aims to be a comprehensive reference
+on the C programming language, you may wish to consider one of the following
+reference books.  The first is a classic reference but is quite terse.  The
+second is similar in scope, but includes more prose.  The third one is a 
+smaller book which has quick reference on most of the important C constructs 
+and on the standard library functions; it is less comprehensive.
+The C Programming Language, by Kernighan and Ritchie, Prentice
+Hall.
+C: A Reference Manual, by Harbison and Steele, Prentice Hall.
+C: The Pocket Reference, by Herbert Schildt, McGraw-Hill.
+Lectures:
+	Tue, Thu: 9:30-11:00 am in CAS-204
+Sections:
+	A2: Tuesdays, 5:00-6:00 pm in MCS-B23 
+	A3: Wednesdays, 9:00-10:00 am in MCS-B31
+Lab section meetings convene in the CS computer lab (MCS-B24), and
+discussion section meetings convene in the rooms listed above.
+For a schedule of which section meetings will be labs and which will
+be discussions, please see the
+Course Schedule.  I will also
+make announcements regarding section meetings in lecture on Tuesdays.
+Programming exercises will be completed during lab section that will
+contribute towards your final grade. 
+Grading: 
+ Grading will be based on the following approximate weighting: 
+  55% Programming assignments and labs 
+  15% Mid-term    
+  30% Final (comprehensive) 
+If there are questions about grades, please see the TA.
+There will be no incompletes in this course.
+Graders:
+TBA
+Page Created: 15 August 96
+Last Modified: 9 October 96
+Maintained by: Randall Pruim 
+(http://cs-www.bu.edu/courses/cs113/F96/)

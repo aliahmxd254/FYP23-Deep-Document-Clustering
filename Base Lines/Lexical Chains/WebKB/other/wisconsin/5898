@@ -1,0 +1,26 @@
+CS302 Example Programs
+CS302 Example Programs
+    Sections 16 and 17
+PAT - an example of style and functional
+	programming
+class date - a simple class
+	example
+The Grid Printer - an example of mixed,
+	nested loops
+Text Chess Program (incomplete) -
+	multi-dimensional arrays
+chess.h
+chess.cpp
+board.cpp
+moves.cpp
+class Date (new and improved) - a complete
+	class
+date.h
+date.cpp
+main.cpp
+The multi-level Animal class
+	hierarchy
+Chris Weaver,
+	Computer Sciences Department,
+	University of Wisconsin-Madison
+Last Change: 9/3/96 by Chris Weaver

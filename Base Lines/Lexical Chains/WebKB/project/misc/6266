@@ -1,0 +1,67 @@
+Declarative Logic Programming Research Project
+Research Project
+Specialized, Fully Declarative Logic Programming 
+Languages for Expert Systems and Databases
+NSF 
+Grant: IRI-9308970
+Starting Date: August 16, 1993
+In progress.
+Researchers
+Stephen Murrell
+   (co-principal investigator)
+Jan Plaza
+   (co-principal investigator)
+George Holler (graduate assistant, fall-spring '95)
+Eric Gotlieb (graduate assistant, summer '94)
+Sidong Liu (graduate assistant, summer '94)
+Introduction
+The style of traditional programming is imperative:
+a program instructs the computer
+how to accomplish a task, for instance, how to sort a list.
+On the other hand, logic programming opens a possibility of declarative
+programming, i.e. writing programs which just tell the computer
+what final state is desired, for instance, 
+what is meant by a sorted list. A logic program should be written 
+as a set of logical definitions (declarations, specifications.) 
+The same program should be interpreted by a computer as a set of imperative procedures. After the program is ready, the programmer may wish to consider its imperative meaning, and add control structures to improve the efficiency.
+This research project is concerned with designing a logic programming 
+system which could offer the programmer a wide expressive power 
+and minimize the need for thinking about the procedural meaning of the
+program. It includes the development of a theory and an experimental
+implementation.
+Abstract
+We propose creating a family of logic programming languages -- one for
+general purpose programming, and the others specialized and aimed
+at major application areas of artificial intelligence. The languages
+will be fully declarative, and based on solid mathematical
+foundations.
+The language for general purpose programming  will admit (unlike
+PROLOG) extended syntax: general quantifiers, and a functional
+form of classical negation. This language will be the basis from which
+the others are developed.  The language for expert systems will have
+intrinsic support for non-numerical measures of confidence, and
+formal mechanisms for handling hierarchies of contradictions.  The
+language for deductive databases will support multiple open and closed
+domains and efficient query evaluation.  The fourth language will combine features of the previous two will be
+suitable for distributed multi-component intelligent systems.  The languages will have a potential for parallelization.
+No languages with such features currently exist, and we believe that
+their availability  would have a desirable impact on the construction
+of future intelligent systems.
+Further Information
+You can read or download related
+papers.
+You can download and try a preliminary version of the 
+LOGOS
+programming language which is being implemented as a part of this project.
+You can look at the current research  
+topics.
+A series of 
+seminars 
+is offered as a part of this project.
+The following
+logic programming software is available at the 
+department.
+You can also access the home page of 
+LPNMR
+-- a forum for exchange of information on logic programming and 
+non-monotonic reasoning.  

@@ -1,0 +1,17 @@
+MPI References
+MPI References
+There are many MPI documents on the Web. Here is a list of good starting
+points.
+MPI man pages
+The 
+     Message Passing Interface (MPI) standard page
+The
+    MPI FAQ
+Roger Frye's 
+    Message Passing Tutorial
+    Cornell's MPI tutorial
+ANL's
+    MPI tour
+Ian Foster's
+    MPI chapter from his on-line text book
+Designing and Building Parallel Programs

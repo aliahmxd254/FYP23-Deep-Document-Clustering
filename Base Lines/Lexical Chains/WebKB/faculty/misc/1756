@@ -1,0 +1,24 @@
+Research Interests:  Laszlo Babai
+Laszlo Babai
+	My fields of interest include computational complexity theory,
+algorithms, combinatorics, and finite groups.  Randomization plays a role
+in each area.
+	A major recent result, obtained in collaboration with Lance Fortnow,
+our former graduate students Carsten Lund (Ph.D. '91) and Mario Szegedy
+(Ph.D. '89), and Leonid Levin of Boston University, is the invention of
+"transparent proofs," proofs one can verify by a small number of spotchecks.
+We have shown that all formal mathematical proofs can be transformed into
+transparent form.  The result and its subsequent refinements have found
+applications in areas as seemingly remote as approximate discrete optimization
+(e.g., nearly optimal traveling salesman routing).
+	In joint work with graduate student Bob Beals (Ph.D. '93), we have
+found Monte Carlo algorithms with guaranteed performance bounds to find
+structural elements of matrix groups (given by a list of generators).  The
+work involves methods from group theory, combinatorics, and probability
+theory (Markov chains).
+	I have been studying group actions on graphs.  A recent result
+provides an asymptotic classification of finite vertex-symmetric graphs
+with an excluded minor, using connections to hyperbolic geometry.
+ Back to faculty interests home page.
+Last modified: Mon Mar 27 11:25:07 1995
+millard@cs.uchicago.edu

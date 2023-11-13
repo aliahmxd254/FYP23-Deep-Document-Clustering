@@ -1,0 +1,52 @@
+PHOENIX 
+Welcome to PHOENIX home page 
+Department of Computer Science 
+ H R Bright Building 
+Texas A&M University 
+College Station, 
+Texas 77843-3112.
+ Like most homepages 
+this page is also under construction! 
+The Phoenix project is being carried out at the Distributed Systems Laboratories, at Texas A&M University, Computer Science Department.
+Phoenix is an object oriented environment, which will provide fault tolerance 
+capabilities to objects.  Phoenix uses, 
+Spring Research Distribution  from Sun, 
+which is a object oriented distributed operating system, as its base.  
+The aim of Phoenix is to provide fault tolerance to objects in Spring.
+The fault tolerance in Phoenix is provided at two levels:
+Totally user (application) tranparent: At this level the system provides 
+fault tolerance for any (object oriented) application that is developed in Spring.  Fault tolerance is provided without the modification of the source code.  Thus fault tolerance can be provided for a third party object, whose source code is not available.
+Fault Tolerance API: At this level, users specifically develop the
+application to tolerate faults using the library functions provided by Phoenix 
+(application programmers interface - APIs).  This is not totally user 
+transparent, but will have a better performance than the totally user 
+transparent one.
+Phoenix Components:
+The major components (inter dependent) of the Phoenix system are:
+Fault Tolerance support for distributed Objects (provided by FTO Layer): FTO
+layer makes the objects in Phoenix fault tolerant, using checkpointing and
+message logging and object replication.  It does so, with minimal disturbance 
+in the object response time.  It uses the support provided by FTNS and FTC.
+Fault Tolerant Naming Service (provided by FTNS layer): This service helps 
+in finding replicated objects, objects that are moved/restarted because of 
+failures.  This is done transparent to the user.
+Fault Tolerant Communication services (provided by FTC Layer): This layer
+provides reliable causally/totally ordered communication support for objects.  It also assists FTO in
+checkpointing and message logging.
+ Distributed system health checker (distributed failure detection service):
+This module continuously checks the health of the system in a distributed
+fashion.  It informs Phoenix of the faults in the system.  This layer also
+helps in continuing execution of a failed object/node.
+Researchers involved:
+ Prof. Dr. Udo W Pooch  
+Ganesha Beedubail  
+ Anil Gurijala  
+ Anish Karmarkar  
+ Willis Marti  
+ Ellen Mitchell  
+Phoenix Meeting Schedule and Agenda
+Papers related to Phoenix  
+Papers on Spring  
+Computer Science Dept Home Page
+If you have any questions/comments/suggestions about Phoenix homepage, send mail to Anish Karmarkar 
+ Last updated: 18th Oct., 1995. 

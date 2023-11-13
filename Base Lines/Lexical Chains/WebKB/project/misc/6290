@@ -1,0 +1,73 @@
+Rutgers CAM Project 
+The Rutgers CAM Project
+The Rutgers CAM2000 Memory Architecture uses the concepts of
+associative processing to overcome the shortcomings of conventional
+von Neumann architecture in dealing with compute-bound applications
+involving massive amounts of data.  The architecture provides hardware
+support for data parallel, reduction, broadcast, and parallel
+prefix/suffix operations within a memory architecture that is DRAM
+compatible.  
+The CAM2000 architecture is particularly appropriate for applications
+that require simple operations (e.g., counting, matching, etc.) over
+large amounts of data.  It is designed to replace the memory, not the
+processor, of a conventional computer and is a dual of cache.  It
+ameliorates the performance bottleneck imposed by the processor/memory
+bus by moving processing across into the memory.  The CAM2000 can
+emulate existing memory functions, and run existing software
+unchanged.  Furthermore, software can be upgraded incrementally, on a
+statement-by-statement basis, to use associative functions.
+The CAM2000 applies the associative processing model by placing many
+word-width, low performance processors in the memory.  The word-width
+hardware designed for the CAM2000 provides significant speedup and
+reduces software complexity compared to approaches using single-bit
+data paths.  In addition, the CAM2000 supports extended precision
+(functions on data wider than its hardware) allowing arbitrary
+precision CAM operations to execute with minimal slowdown.
+This approach can produce significant speed-up even when the in-memory
+processors run only at memory speed.  By 2000 a CAM architecture can
+provide 5-10 giga-ops on a single chip that replaces DRAM,
+significantly increases system peak performance, and scales with
+memory size.
+The graphic above illustrates the architecture of the Rutgers CAM2000
+which replaces DRAM chips in an otherwise conventional architecture.
+Half the area of the CAM2000 chip is DRAM and the other half is
+processing elements.  The processing elements can provide enormously
+high parallelism whenever it is applicable; otherwise the CAM chip
+acts as ordinary memory.
+Personel
+Saul Levy  --   levy@cs.rutgers.edu, 908-445-3523
+Josh Hall --  josh@cs.rutgers.edu, 908-445-3896
+Don Smith  -- dsmith@cs.rutgers.edu, 908-445-3628
+Keith Miyake -- kmiyake@cs.rutgers.edu, 908-445-2558
+Chung-Hsing Hsu -- chunghsu@cs.rutgers.edu, 908-445-4635
+This work is supported by ARPA and NASA under NAG 2-668
+Online Publications
+J. Storrs Hall,
+"FORNAX", 
+USENIX VHLL,
+April 1995 (FORNAX is a very high-level programming language
+we are developing to ameliorate the difficulties of programming
+the unconventional architecture of CAM (and other parallel 
+machines)).
+J. Storrs Hall and Don Smith,
+"Database Mining and Matching in Rutgers CAM", 
+2nd Associative Processing & Applications Workshop, 
+Syracuse University, July 1993
+J. Storrs Hall, Don Smith, and Keith Miyake,
+"Collective Functions in the Rutgers CAM", 
+Associative Processing & Applications Workshop, 
+Syracuse University, July 1992
+Donald E. Smith, J. Storrs Hall, and  Keith M. Miyake, 
+"Rutgers CAM Chip Architecture", 
+Technical Report No. LCSR-TR-196, 
+Department of Computer Science, 
+Rutgers University, 1992
+Donald E. Smith, Keith M. Miyake, and J. Storrs Hall
+"A Greedy Rescheduling Assembler for the CAM2000" ,
+Department of Computer Science, 
+Rutgers University, 1994
+Keith M. Miyake and Donald E. Smith, 
+"Circuit Design Tool User's Manual",  
+Technical Report No. LCSR-TR-191, 
+Department of Computer Science, 
+Rutgers University, 1992

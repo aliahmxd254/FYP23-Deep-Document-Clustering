@@ -1,0 +1,40 @@
+CS A11 home page
+Computer Science A11
+Fundamentals of Computer Programming
+Fall, 1996
+Course Info: (Course Catalog Entry)
+      Location: Tech, Room L313 (Note: This is changed from schedule)
+      Time: Monday, Tuesday, Wednesday, and Friday at 9:00-9:50 AM
+Instructor:
+Ken Forbus
+      Institute for the Learning Sciences
+      1890 Maple Avenue, Room 300
+forbus@ils.nwu.edu
+      (847) 491-7699
+TAs:
+Andy Bachmann, Katia Obradovic
+      Institute for the Learning Sciences
+      1890 Maple Avenue, Room 308
+a11@cs.nwu.edu
+      (847) 467-1869
+Office hours:
+      Monday, 1:00-4:00 PM
+Introduction to A11
+Download the latest version of Scheme48 with sockets from here.
+Scheme specification. Look here to find all about Scheme syntax, standard procedures and more...
+  How the class will be graded - final, midterm, late assignments, etc.
+  Information about homeworks - how to submit them, general advice on programming.
+  How to use Scheme 48 and Emacs - where to download them, how to run them.
+  Emacs key commands
+Assignment Information (updated after each class)
+Lecture Notes
+Homework Assignments
+Class Handouts
+More Information about...
+SICP, from MIT Press.
+  Schematics of Computation, from the authors.
+  Scheme, from us, and other places.
+Last edited October 9, 1996.
+Please send suggestions to 
+Ken Forbus or
+a11@cs.nwu.edu.

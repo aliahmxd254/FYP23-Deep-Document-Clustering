@@ -1,0 +1,15 @@
+Bit count of a byte - version one
+;This program counts the number of one bits found in byte 01FFH, and
+;put the count (a number between 0 and 8) into location 0200H.
+;
+;
+        mov al, byte ptr 01ffH          ;get the input
+        mov byte ptr 0200h, 0           ;zero out count of "1" bits
+        mov bl, 8                       ;shift left 8 times
+lp:     add al, al                      ;double number = shift left
+        jnc checkend
+        add byte ptr 0200h, 1
+checkend: sub bl, 1
+        jnz lp
+        hlt
+        end

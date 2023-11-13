@@ -1,0 +1,9 @@
+ Logic Programming Languages
+ Logic Programming Languages
+Language metaphors:
+ Algol family: Von Neumann machine
+ functional programming: function definition and application
+ object-oriented programming: simulation
+ logic programming: theorem proving
+Prolog
+Constraint Logic Programming

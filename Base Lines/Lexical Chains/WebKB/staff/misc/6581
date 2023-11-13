@@ -1,0 +1,38 @@
+Sandhya Dwarkadas
+Sandhya Dwarkadas
+Research Scientist
+Department of Computer Science 
+Sandhya Dwarkadas received the B.Tech. degree in Electrical Engineering 
+from the Indian Institute of Technology, Madras, India, in 
+1986, and the M.S. and Ph.D. degrees in Electrical and Computer Engineering 
+from Rice University in 1989 and 1992, respectively.
+Since then she has been a research scientist in the Computer Science 
+Department at Rice University.
+Her research interests include parallel and distributed computing, 
+computer architecture, networks, simulation methodology, 
+and performance evaluation. In particular, she is interested in 
+compiler and runtime support for parallelism, and parallel applications 
+research.
+As a graduate student, she developed an efficient execution-driven technique 
+for the simulation of shared-memory multiprocessors. This technique was 
+implemented as part of the Rice Parallel Processing Testbed (RPPT).
+She used this tool 
+to design and evaluate synchronization support, adaptive caching techniques, 
+and the use of relaxed consistency models for a hierarchical 
+bus-based shared-memory architecture. 
+These results contributed to the design of the Willow multiprocessor 
+architecture.
+This work also lead to a classification of memory consistency models that, 
+in addition to unifying all existing models into a common framework, 
+provides insight into the implications of these models with respect to access
+ordering.
+She is currently involved in the design and implementation of TreadMarks, 
+a software distributed shared memory system running on a network of 
+workstations. She is developing compiler-runtime integration techniques 
+for improved performance.
+She has also worked with Alejandro Schaffer on
+ FASTLINK,
+a project to provide fast sequential and parallel genetic linkage analysis
+software.
+ Publications
+E-Mail:  sandhya@rice.edu, Phone: 713-527-8101 Ext. 3291, Fax: 713-285-5930

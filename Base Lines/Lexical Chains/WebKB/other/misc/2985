@@ -1,0 +1,13 @@
+Packages
+API User's Guide
+Applet API Packages
+java.applet
+java.awt
+java.awt.image
+java.awt.peer
+java.io
+java.lang
+java.net
+java.util
+Other Packages
+sun.tools.debug

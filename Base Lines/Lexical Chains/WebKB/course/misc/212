@@ -1,0 +1,18 @@
+Content-length: 1656
+CS137
+ CS137
+Introduction To Scientific Computing
+Description
+The fundamental issues of numerical computation for the mathematical, computational, and physical sciences, and engineering. Emphasis from the perspective of the computer scientist. Use of numerical algorithms in engineering practice. Problems of accurately computing solutions in the presence of rounding errors and of computing discrete approximations of solutions which are defined on the continuum. The taxonomy of problem classes with methods for their solution and principles useful for analysis of performance and algorithmic development. Topics: error analysis, the solution of linear and nonlinear equations, interpolation and numerical differentiation, the approximation of integrals, and the solution of differential equations. Prerequisites: 106A; Math. 103 or 113 or equivalents.
+Materials Fall 96-97
+Other Information
+Quarters Offered (1995/96)
+Autumn (Oliger) MW 11-12:15
+		Summer (Gander) TTh 11-12:50
+Units
+		4*
+* May be taken for 3 units by graduate students.
+Last modified: Tuesday, April 9, 1996 5:07:33 AM
+Copyright © 1996, Stanford University
+WWW-CS-Education Webmaster
+www-cs-education@cs.stanford.edu

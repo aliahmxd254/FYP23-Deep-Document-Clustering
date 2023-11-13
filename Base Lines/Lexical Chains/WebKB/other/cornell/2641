@@ -1,0 +1,13 @@
+ Multithreading 
+ Multithreading 
+ Objectives: 
+ maximize utilization of multiprocessor resources: CPU, memory,
+      network, I/0, etc. 
+ simplify implementation of load balancing policies 
+ Idea: Exploit concurrency in the uniprocessor level 
+ Implementation:  use multiple threads of control per processor 
+ Swap out blocked threads in order to maximize
+     utilization of multiprocessor resources: CPU, memory, network, I/0, etc 
+ Assign at run-time priorities to threads in order to
+     simplify implementation of load balancing policies 
+ For more information contact  Nikos P. Chrisochoides 

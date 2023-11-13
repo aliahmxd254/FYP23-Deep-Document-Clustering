@@ -1,0 +1,61 @@
+Matthew Sams' home page
+School's Address and Location
+E-mail:
+maclean@cs.mcgill.ca
+Office:
+McConnell Engineering 209N
+Office Phone:(514) 398-7087
+Office FAX:
+(514) 398-3883 
+In an effort to keep this really simple and to save a bit of
+bandwidth I've cut my home page down to the bare minimum of
+informational content.
+Quite simply I have been working for the School of Computer Science
+as a Systems Administrator for five years. My specialties
+are Sun workstations and servers running SunOS and Solaris. Although
+I have been known to look at other vendors machines.
+I've included a couple of links to sites I think are important.
+Usenix flunky
+Member of the System Adminstrators Guild (SAGE)
+Sun Managers Archive
+System Administrators Job Descriptions
+Unix Guru Universe
+Have you ever wondered how you can learn more about computers and
+unix in particular? Well here's my unofficial SOCS reading list.
+In no particular order:
+Languages other than C:
+Exploring Expect by Don Libes
+Tcl and the Tk Toolkit by John Ousterhout
+Programming Perl by Wall & Schwartz
+C:
+The standard C library by Plauger
+C: a reference manual 4ed by Harbison & Steele
+The C programming language 2ed by Kernighan & Ritchie
+Unix programming:
+Advanced programming in the unix environment by Stevens
+Unix network programming by Stevens
+The design and implementation of the 4.4 BSD operating system
+PANIC: unix system crash dump analysis by Drake & Brown
+General:
+Safeware: system safety and computers by Leveson
+Systems Administration:
+Unix System Administration Handbook 2ed by Nemeth Snyder Seebass Hein
+Sendmail by Costales
+DNS and BIND by Albitz & Liu
+System Performance Tuning by Loukides
+Sun Performance and Tuning by Cockroft
+NFS and NIS by Stern
+Online:
+Internet RFC, FYI, and STD available at ds.internic.net
+Usenet FAQ at rtfm.mit.edu
+Publishers:
+O'Reilly and Associates
+Unix System Administration Handbook
+Addison Wesley
+Prentice Hall
+As an added bonus (please no snickering from the peanut gallery) I've
+included a link to a tutorial I wrote on Programming in C on UNIX. My
+only disclaimer might be that if you write code for critical systems,
+don't read this tutorial. Some might even say "don't program in C".
+clicky here
+September 9, 1996

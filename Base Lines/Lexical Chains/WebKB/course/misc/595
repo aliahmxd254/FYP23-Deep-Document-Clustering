@@ -1,0 +1,108 @@
+CS 377 Operating Systems 
+  CS 377 Operating Systems   
+Instructor
+Kathryn S. McKinley
+(mckinley@cs.umass.edu)  
+Office:  LGRC 357, x5-2410
+Office Hours:  M: 11:00-12:00, W: 9:00-10:00
+TA
+ Archna Kalra  (kalra@cs.umass.edu)  
+Office: LGRC 305, x5-4753 
+Office Hours: in 224 LGRT, Tu: 4:00-5:00pm, and F: 9:00 - 10:00am  
+Recitation:  323 LGRT, W: 5:00-6:00pm
+Detailed Schedule and On-line Lecture Notes
+Project
+  Materials 
+Laboratory Instructions: How to Use Nachos in the Edlab
+Thomas Narten,  
+``A Road Map Through Nachos''
+Reading: Schilberschatz & Galvin, ``Operating Systems Concepts,''
+Appendix The Nachos System 
+Thomas Anderson, 
+``A Quick Introduction to C++''
+  Assignments 
+    Threads
+    Multiprogramming
+    Virtual Memory
+Homeworks
+   Homework 1 (Available: 9/13/96) - 
+ Solution  (DUE: 9/20/96)
+   Homework 2 (Available: 9/30/96) - 
+ Solution  (DUE: 10/7/96)
+   Homework 3 (Available: 10/18/96)  -
+ Solution  (DUE: 10/25/96)
+   Homework 4 (Available: 11/4/96)  -
+ Solution  (DUE: 11/13/96)
+   Homework 5 (Available: 11/??/96)  -
+ Solution  (DUE: 11/??/96)
+   Homework 6 (Available: 12/2/96)  -
+ Solution (DUE: 12/9/96)
+Description
+This course is about operating systems.  Roughly speaking, the
+operating system provides a well-known, convenient, and efficient
+interface between user programs and the bare hardware of the computer
+on which they run.  The operating system is responsible for allowing
+resources (e.g., disks, networks, and processors) to be shared,
+providing common services needed by many different programs (e.g.,
+file service, the ability to start or stop processes, and access to
+the printer), and protecting individual programs from one another.
+The course will start with a brief historical perspective of the
+evolution of operating systems over the last fifty years, and then
+cover the major components of most operating systems.  This discussion
+will cover the tradeoffs that can be made between performance and
+functionality during the design and implementation of an operating
+system.  Particular emphasis will be given to three major OS
+subsystems: process management, memory management, and the file
+system, and operating system support for distributed systems.
+Requirements and Grading
+ 6 Homeworks (15\%)
+ 3 Programming Projects (45\%)
+ 3 Exams (40\%) - in-class, open book, and open notes
+ Exam 1: first 1/3 of course
+ Exam 2: second 1/3 of course
+ Final Exam: 75% on final 1/3 of course and 25% over first 2/3s
+of course
+The course will be graded on a curve.  You are expected to attend
+class regularly, read the assigned reading before class, and
+participate in class discussions.
+ Late Policies  
+This course covers a lot of material.  To make it easier to learn, I
+have divided the course into many small components.  This division
+means late assignments will seriously impact your ability to learn the
+next section of the course.  Therefore, I have the following strict
+late policies.
+  Homework  - no late homeworks will be accepted.  Since several
+homeworks are due right before an exam, the solutions will be
+published on the day the homework is due and therefore, no late
+assignments will be accepted.  I give homeworks to enable you to apply
+what you are learning in class before an exam.  They are not a large
+portion of your grade, but doing homework will improve your
+performance on exams (a much larger portion of your grade), and it is
+therefore to your benefit to do all the homeworks and turn them in on
+the deadline.  Again, regardless of the circumstances, you will not
+get any credit for late homework assignments.
+  Labs  - If you turn in your lab late, you will receive a 10\%
+penalty for each day after ({\em or portion thereof}\/) that the
+assignment was due, up to three days.  Individual extensions without
+penalty will be granted only in extreme circumstances (serious illness
+with a doctor's note, ...).  It is unfair to the rest of the class if
+I give certain individuals extensions, so plan accordingly and start
+on your assignments early.
+  Exams  - If you will miss an exam or a significant amount
+of class time, you  must  tell me ahead of time.  Make up exams
+will be oral, and, based on previous experience, will be tougher than
+the original exam.
+Cooperation and Cheating
+Feel free to discuss homework and labs with other members of the
+class, myself or the TA.  However, do not look at or copy another
+students solution to a homework or lab.  I am not concerned with
+how you come to understand the problem and how to solve it, but once
+you have the background necessary to solve it, you must provide your
+own solution.  Exchanging homework or lab solutions is cheating and
+will be dealt with according to University policies.
+ Complete
+Syllabus and Course Policies 
+Acknowledgements
+I used course materials from Tom Anderson, John Carter, Hank Levy, and
+Thomas Narten to prepare the lecture notes, homeworks, labs, and
+exams. Thanks!

@@ -1,0 +1,21 @@
+Phalanx Parallel Active DB Project
+The Phalanx Parallel Active Database Project
+Phalanx is an active database project focussing on acheiving high-performance
+active rule (trigger) processing for complex triggers using parallel
+processing.  The complex triggers we envision have conditions based on events,
+selections, joins, aggregates, and user-defined functions on built-in and
+extended data types.  An important form of active rules we are considering in
+detail are triggers based on geographic data.  
+In the Phalanx project, we are modifying Paradise, a parallel relational
+DBMS extended with geographic data management capability.  Paradise is
+currently under development at the University
+of Wisconsin.
+The Phalanx project got underway in the fall of 1994.  The principal
+investigator is Eric Hanson.
+Students working on the project include PhD candidates Mohktar Kandil and Nabeel Al-Fayoumi, and
+undergraduate Albert Vernon.  The
+project is funded by grants from AT&T Global Information Solutions, and the
+Air Force Rome Laboratory.
+January 1996 talk on proposed parallel trigger system design.  MS PowerPoint format.
+Internal Project Information
+Last updated 10/22/96 by aev 

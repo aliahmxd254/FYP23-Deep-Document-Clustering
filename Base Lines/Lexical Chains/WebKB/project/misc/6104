@@ -1,0 +1,22 @@
+Titanium homepage
+ The Titanium Project
+The Titanium group is developing compiler and language support for
+parallel programming of distributed memory multiprocessors.  We are
+designing program analysis techniques and transformations for
+explicitly parallel programs and are working on a prototype compiler
+that applies these optimizations.  The language is a small extension
+to C, using the 
+Split-C language as a starting point.
+ Faculty 
+Susan L. Graham
+Alexander S. Aiken
+Paul Hilfinger
+Katherine A. Yelick
+ Students 
+Joseph D. Darcy
+David Gay
+Benjamin Greenwald
+Arvind Krishnamurthy
+Geoff Pike
+Related Papers
+Talks

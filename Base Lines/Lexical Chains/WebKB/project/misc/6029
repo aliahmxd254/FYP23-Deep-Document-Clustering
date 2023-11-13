@@ -1,0 +1,70 @@
+Resource-Bounded Reasoning -- Home Page
+The Resource-Bounded Reasoning Research Group
+Department of Computer Science
+University of Massachusetts
+Box 34610, Lederle Graduate Research Center 
+Amherst, MA 01003-4610 
+voice: +1-413-545-4189 fax: +1-413-545-1249
+  Personnel 
+  Research 
+  Publications 
+  Symposia 
+  Talks 
+  Affiliations 
+The Resource-Bounded Reasoning Research Group is part of the
+Department of Computer Science at
+the  University of Massachusetts,
+Amherst.
+The group, headed by Professor Shlomo Zilberstein,
+studies the implications of limited computational resources on the
+design of intelligent agents.  The group conducts research in
+decision theory, real-time planning, autonomous agent
+architectures and reasoning under uncertainty.
+What is resource-bounded reasoning?
+Resource-bounded reasoning is an emerging field within artificial
+intelligence that is concerned with the construction of intelligent
+systems that can operate in real-time environments under uncertainty and
+limited computational resources.  Research in this field covers 
+the construction, composition and
+meta-level control of computational methods that allow small quantities
+of computational commodities -- such as time, memory, or information -- to
+be traded for gains in the value of computed results.
+Why is it needed?
+The need to employ resource-bounded reasoning techniques is based on a
+simple, but general, observation.  In many complex domains, the
+computational resources required to reach an optimal decision reduce the
+overall utility of the result.  This observation covers a wide range of
+applications such as medical diagnosis and treatment, combinatorial
+optimization, probabilistic inference, mobile robot navigation, and
+information gathering.  What is common to all these problems is that
+it is not feasible (computationally) or desirable (economically) to
+compute the optimal answer.  Moreover, taking the cost of decision-making
+into account is not an easy task, since the "optimal" level of
+deliberation varies from situation to situation.  It is therefore 
+beneficial to build systems that can tradeoff computational resources 
+for quality of results.
+Advantages of resource-bounded reasoning
+From the early days of AI, heuristic methods and "satisficing" techniques
+have been used to address the problem of computational complexity.
+Resource-bounded reasoning techniques have two important advantages over 
+those previous approaches: they shift the attention from design-time 
+solutions to more flexible, run-time solutions, and they seek to optimize 
+rather than satisfice solution quality.
+The shift to run-time control of deliberation improves the capability of
+intelligent systems to deal with two primary sources of uncertainty.
+The first source is internal to the system and relates to its
+capability to produce incrementally improving solutions and to assess
+their quality.
+The second source of uncertainty is external and relates to
+unpredictable change in the environment in which the system operates.
+Run-time control of deliberation seeks to reduce the effect
+of these uncertainties on the performance of the system.
+Optimization of decision quality is another distinctive feature of 
+resource-bounded reasoning.  That is, instead of building systems that 
+find a "good" answer, the goal of resource-bounded reasoning techniques
+is to find an "optimal" answer.  Optimality, however, is defined with
+respect to the system knowledge and computational capabilities.  Typically,
+an optimal answer does not require maximal solution quality.  Hence these
+systems are sometimes referred to as "bounded optimal" or
+"bounded rational".
+shlomo@cs.umass.edu

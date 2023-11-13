@@ -1,0 +1,17 @@
+ Collective Communications 
+ Collective Communications 
+ Collective communications 
+are routines that require greater than two processors
+to communicate in order to carry out some global operation on distributed
+data.  This is in contrast to a point-to-point operation such as a simple
+send/receive or data exchange.  These operations include broadcast, reduction,
+scatter/gather, combine, scan (or parallel prefix). 
+These operations can be found in 
+ explicitly written parallel applications,
+ remapping of data, 
+ updating of globals in a distributed 
+memory environment, 
+ synchronizing a group of processes,
+ library routines optimized for the 
+particular interconnection.
+W. Derrick Weathersby  

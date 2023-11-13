@@ -1,0 +1,36 @@
+ Travler Research Project 
+TRAVLER: System Support for Nomadic Computing
+Welcome to the enhanced Travler project page.  
+The TRAnsparent VirtuaL
+EnviRoment (Travler) project is one of
+several ARPA-funded research efforts within the
+UCLA Computer Science Department.  
+This nomadic computing research effort focuses on developing models, 
+prototyping systems software, and running experiments in support of those
+capabilities needed by a mobile user.  In support of these capabilities,
+we are involved in the following activities:  virtual networking,
+nomadic routing, wireless and nomadic systems simulation, nomadic systems
+modeling, predictive caching, user-level replication services,
+security encapsulation,
+and data consistency. Each activity is shown as a piece of the adjacent
+pie chart, and a full description of each activity is obtained by clicking
+on each piece.  
+Some of these services are currently being built, some are in the design
+phase.  Eventually, Travler will integrate those services that already exist in reasonable forms (wireless communication protocols, power management software,
+secure transmission of data and authentication services) with components
+produced by the project and built into the Travler framework.  
+The Principal Investigators on the Travler mobile computing research team are:
+Dr. Leonard Kleinrock
+Dr. Gerald Popek
+Dr. Rajive Bagrodia 
+Dr. Peter Reiher
+Team members have published several  
+important papers that 
+directly relate to research currently underway on Travler.  
+The Travler research team is also conducting simultaneous ARPA-funded
+research on the following related topics:  Large-Scale Filing and Data Management
+Environments (Ficus), Secure, Bilateral 
+Replicated Distributed Filing  (Truffles),
+Wireless Adaptive Mobile Information Systems (WAMIS) and
+Co-Base. 
+ ARPA/CSTO Contract No: DABT63-94-C-0080

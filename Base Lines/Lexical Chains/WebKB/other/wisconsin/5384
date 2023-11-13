@@ -1,0 +1,12 @@
+CS536 Course Overview
+ CS536 Course Overview 
+CS536 is an introduction to the design and translation
+of programming languages.
+Subjects to be covered include scanning and regular expressions,
+context-free grammars and parsing,
+syntax-directed translation,
+abstract syntax trees,
+scoping,
+symbol tables, and
+code-generation.
+A variety of tools, including Lex, Yacc, and Spim will be used.

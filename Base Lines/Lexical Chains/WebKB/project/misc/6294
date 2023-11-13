@@ -1,0 +1,15 @@
+Visualization Lab Home Page
+Visualization lab
+Welcome to the Visualization Laboratory of the 
+Department of Computer 
+Sciencei at the 
+State University of New York at Stony Brook. 
+Most of the research done here concerns the development of volume rendering 
+techniques for use in scientific visualization. Currently, we have projects 
+in: architectures for volume rendering, parallel methods for volume rendering 
+(regular and irregular grids), development of tools for visualization, 
+flow visualization, ... We also do research in several other areas of computer 
+graphics, such as virtual reality and geometric techniques. The laboratory was 
+founded and is headed by 
+Leading Professor Arie E. Kaufman. 
+Our laboratory has a comprehensive visualization tool, the VolVis system. The system is available free of charge in both binary and source format and it runs on virtually any machine that supports X/UNIX/MOTIF. 

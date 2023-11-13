@@ -1,0 +1,13 @@
+Principles of Programming Languages
+Principles of Programming Languages
+(Computer Science 68)
+Times: 97W: 2  98W: Arrange 
+Instructors: Rebelsky 
+Prerequisite: Computer Science 23. Computer Science 25 and 37 are recommended. 
+Dist: TAS 
+This course provides a study of the principles of programming languages. The course will focus on the
+similarities and differences among conventional, functional, logic programming, and object-oriented
+languages. Topics include formal definitions of languages, control structures, methods for structuring data,
+scoping, types, and functions as first-class data values. For each language category, implementation issues
+will be discussed, and program development strategies illustrated through programming exercises. 
+Back to Dartmouth CS Home Page

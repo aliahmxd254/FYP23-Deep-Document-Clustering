@@ -1,0 +1,19 @@
+Ariel -> Rule Optimization Project
+Optimization of Rule Condition Testing in Active Database
+Systems
+This project is investigating ways to optimize testing of complex
+trigger conditions in active databases.  It is funded by a grant from
+NSF.  The principle  investigator is Eric Hanson.  Students who are
+working (or have worked) on the project include Mohammed Hasan,
+Jayashree Rangarajan, Goutam Kulkarni,  Sreenath Bodagala, and Yi Gao. 
+See the technical
+reports from 1993 for a discussion of the Gator discrimination
+network structure and optimization methods for Gator.  Additional
+publications are under development.  We are currently extending the
+Ariel active DBMS with an optimized rule condition testing mechanism.
+Developers working on the project
+Active Assignments
+Publications
+Technical reports
+Documentation
+Last updated 2/14/95

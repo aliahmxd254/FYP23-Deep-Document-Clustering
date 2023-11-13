@@ -1,0 +1,175 @@
+Charles Thayer's Home Page
+Charles Graham Thayer
+(c) Charles Thayer.  Netsurfers are encouraged to jump to my
+hotlist.
+Index:
+www-announce,
+Academic Info, 
+Tcl/Tk, 
+Firewalls, 
+Wanky stuff, 
+Local info,
+About the author,
+...
+Academic Information
+Wavelets
+The wavelet digest, 
+    a mailing list I subscribe to.
+  Wavelet information
+     a pointer to a more complete source of information.
+TCL Information
+Tcl Things
+Local TCL Mirror
+tkwm (The Tk-based Window Manager
+    ftp-site.)
+	tcl Quick Ref
+	Tk Quick Ref
+The mh mail reader written by 
+      Brent Welch (ftp exmh)
+  A TeX DVI previewer is underway at
+    TkDvi, by
+    Anselm Lingnau.
+  The OBject system of STone, OBST,
+    which includes a tcl interface, from folks at 
+    Forschungszentrum Informatik,
+    Simon is an interesting hotlist extension written mostly in tcl.
+	Berkeley Windows NT FTP.
+  Ohio Tcl FAQ.
+  Wade's Tcl Stuff.
+  IXI Tcl Stuff.
+	IXI Tcl References.
+	Tcl Man Pages.
+	Tk Man Pages.
+	Tcl API Man Pages.
+	Tk API Man Pages.
+Tcl Info Node
+Go to tcl
+      info node
+New Beginner's Guide to TCL and TK. --
+    Experimental document being written Charles Thayer
+Stub
+Techno-Fun
+ Stuff
+Perl
+	 5 man pages 
+Perl Manual
+Perl World Wide Web Page
+Perl BBS
+Some merges of perl and snmp are available from:
+    The DNPAP of Delft University of Technology
+(ftp Tricklet),
+    and CMU's SNMP folks.
+  Literate Programming
+The above comes from the folks at 
+  info.desy.de
+  This is a very hopeful group which has been collecting a terrific
+  conglomeration of information on literate programming.  This site
+  goes well beyond the literate programming originally introduced in
+  Donald Knuth's book of the same name.
+Good Stuff for HPs
+  Iworks FTP site with a lot of user-contrib type stuff (iworks ftp)
+  This is a terrific collection of pre-configured stuff that goes beyond
+  the rudimentary computing environment.  Unfortunately the ftpd doesn't
+  support enough the unix ls command so you may want to ftp there by hand.
+HP-PA Reference
+  For those who want to know more about the assembly language for
+  the hp-pa 1.1 processor, you can get
+  HP's manual on-line.
+Precompiled HP binaries
+  The University of Wisconsin-Madison's Computer Aided Engineering Center has
+  compiled a lot of good software to get just about anybody up and going
+  with all sorts of large public domain systems. (cae ftp hpux9.)
+HP Support
+   Patches and other important stuff from HP
+   can be found at the support
+   page.
+Publishers of Technical Books
+O'Reilly & Associates
+Addison-Wesley, 
+    (Readme for site)
+Prentice Hall's gopher.
+C++ Stuff
+Errata to Effective C++
+    (This is a great book for those who know C++.)
+Web Things
+Tests of servers
+http://aries.ibms.sinica.edu.tw/~taob/Bench/
+http://www.sonoma.edu/btools/theTest.html
+http://website.ora.com/devcorner/white/wsperf.html
+http://www.ncsa.uiuc.edu/InformationServers/Performance/V1.4/report.html
+http://www.sgi.com/Products/WebFORCE/WebStone/
+Hotlist stuff:
+      My hotlist in HTML format.  Great for the newcomer.
+     My Mosaic hotlist
+     in raw text format.
+     My Netscape hotlist
+     in raw text format.
+      Perl script that generated 
+      my hotlist below
+The sandbox where I experiment with html.
+      Simon is an interesting hotlist extension written mostly in tcl.
+Usenet URLs (references turned off for maintenance):
+    URLs from USENET news
+    Script for grabbing URLs from USENET news
+    My perl script for ftp'ing to sites (manages a large history list)
+Hardware Information Guides
+	The Linux SCSI HowTo
+	The Linux PCI HowTo
+BSDI Operating Systems
+	BSDI Hardware Requirements
+Dell Computers for overpriced
+	hardware.
+  Send mail to x86hcl@Sun.COM to receive the the x86 
+	solaris hardware docs.
+Some Firewall Information:
+The Purdue Computer Operations, Audit, and Security Technology (COAST)
+        FTP archive
+	.
+Trusted Information Systems.
+Great Circle Associates.
+SOS Corp (brimstone and freestone).
+Other local points of interest:
+CS Department Home Page
+  Miscellaneous Department Information (/misc/info)
+  Experimental CRF-Guide (so don't expect much.)
+  My Version of the CRF photo from last year's BBQ.
+  Bitmaps for perusing.  Warning: may take hours to transmit!
+Personal Information
+Charles Thayer: research bum
+Hello. I'm one of the systems administrators here at the department
+of Computer Science at Columbia University.  I have a wide variety of
+interests about most aspects of computer systems.  Feel free to get in
+touch with me, and certainly let me know if you have any trouble with
+this page...
+Occasionally I put software (or whatever) up for
+  ftp.
+For addresses and phone numbers
+  finger
+  my account.
+Find out more about my site, 
+  The Department of Computer Science.
+ Or more specifically about my group, 
+  The CRF.
+If you've forgotton to get me a present here's my 
+  xmas list.
+Since I'm a firm believer in public key encryption, here's my 
+  public key.
+If you're curious about what sys-admins here do you can take a 
+  look at my todo list, which often has entries
+  as much as a year old!
+Review my resume
+Pictures of me for new folks in the department (
+  medium gray-scale, 
+  full color image).
+Some of the groups I belong to are: 
+  CS Dept., 
+  CCSP,
+  ...
+If you'd like to see where I've been surfing, you can see my
+  hotlist.
+A page pointing to some of my friends.
+The dept. newspaper I'm now editing: CS.Social.
+My opinion of the current health care situation: 
+  Cartoon.
+Charles Thayer / thayer@cs.columbia.edu
+$Id: Home,v 1.25 1995/01/20 16:36:04 thayer Exp thayer $

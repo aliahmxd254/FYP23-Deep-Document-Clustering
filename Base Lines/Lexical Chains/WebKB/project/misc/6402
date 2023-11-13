@@ -1,0 +1,41 @@
+L0 Home Page
+ L0 - Computational modeling of
+semantics and syntax
+This page is under construction, and will be fleshed out with more
+detailed information soon.
+L0 (Also called L-zero) is a research project in computational
+semantics headed by Jerry Feldman of the International Computer
+Science Institute and George Lakoff of the U.C. Berkeley
+Department of Linguistics.  Lokendra Shastri is
+another senior researcher on the project.  
+There is a mailing list for discussion of lzero issues and
+announcements of lzero meetings.  It is at lzero@icsi.berkeley.edu.
+To subscribe, send mail to 
+lzero-request@icsi.berkeley.edu.
+A Good first place to look for information is the paper Lzero:
+The First Five Years.
+The current set of Graduate Students working on the project is
+ David Bailey
+ Srini Narayan
+ Jonathan Segal
+The first thesis to come directly out of the L-zero project was that of Terry
+Regier, who is now a professor at the University of Chicago.  His
+research produced a structured connectionist model which could
+learn to categorize spatial scenes with spatial prepositions from a
+variety of natural languages, without using negative evidence.  A
+short paper version of his research can be found as:
+  Regier,
+Terry (1995).  A model of the human capacity for categorizing spatial
+relations, Cognitive Linguistics, vol. 6, no. 1,
+pp. 63-88.
+The second thesis to come directly out of the project was that of Andreas
+Stolcke.  His research focussed on the bayesian learning of
+probabilistic language models.  His thesis can be found as:
+ Stolcke,
+Andreas (1994).  Bayesian Learning
+of Probabilistic Language Models (UC Berkeley thesis)
+If you don't want to read his whole thesis, you can read the
+13 page
+"executive summary"
+Jonathan Segal - 
+Last modified $Date: 1995/12/04 21:44:08 $

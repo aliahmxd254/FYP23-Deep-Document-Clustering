@@ -1,0 +1,87 @@
+Paul Henning
+Where are you?
+ This is the WWW server at the CSRL Lab in the Computer Science
+      Department of the University of Iowa, Iowa City, IA, USA.  Click here
+      for a map! 
+Isaac
+      The goal of the 
+Isaac project is is to unify methodologies based on
+      existing technology and develop a system for simulating
+      virtual microcosms populated with autonomous robots. The
+      principal focus is to lay down the foundation that unifies
+      eight major components; geometric modeling, model-driven
+      dynamics simulation, collision detection and contact analysis,
+      motion control, sensory feedback, knowledge representation
+      about the environment, incremental planning and a
+      load-balancing, multi-processor computational model.  The
+      primary investigator for Isaac is James Cremer. 
+ My work is centered on building the dynamics simulation
+      engine for Isaac and unifying all the components into
+      one usable system.  The "interactive time" constraints of the
+      Isaac project necessitate highly efficient model
+      representations, fast linear algebra methods, fast stable DAE
+      solvers, and distribution of the simulation across processes
+      and machines. 
+ You can find some papers I've written about Isaac
+here, and here is a funny "advertisement"
+      related to what I do. 
+Linux!
+ When I'm not in the lab, I can still do my research at home.  "At
+        home?"  you say.  "Are you one of those strange wealthy graduate
+        students with your own unbelievably expensive workstation?"  NO!
+        I use Linux, the Unix operating system for personal computers!
+        And you can too, for the low, low price of... free! Click
+        here
+ to go to Linux Links,
+        where you will find links to just about anything you want to know
+        about Linux, including the location of sites you can download it
+        from.
+Pretty Good Privacy
+ I've just started playing with the "Pretty Good Privacy" (PGP)
+        system.  This allows people to get a reasonable assurance of
+        authenticity and security when communicating over insecure
+        networks.  I see the primary purpose of this for it's digital
+        signature verification, which allows one to easily refute or
+        detect forged messages.  You may have application for it's
+        encryption, also.  The PGP  FAQ
+         answers general questions and gives the location of the MIT
+        distribution.  You can do PGP public key lookups here.
+        To get my public key, either use that web interface or "finger
+        phenning@cs.uiowa.edu". 
+Hobbies
+Well, here are some of the things I do when not chained to a
+    computer.
+Cooking
+ The Kitchen List: The best cooking list-of-lists page I have found
+ Chile-Heads Home Page:  All about that hot stuff I like 
+ Gourmet/Bon Appetit: Recipies and articles from those magazines
+Le Cordon Bleu: Recipies/techniques from a premier cooking school.
+Fish Keeping
+  The Krib : Aquariums and Tropical Fish 
+ The Cichild Home Page : All about the Cichlidae family of fish.
+Home Brewing. 
+	Check-out the home page for the smallest brewer in the world, 
+	one who makes it just the way I like it, me! 
+	phenning phermenters.
+Interesting (to me) Links
+ UI CS Department Home Page 
+	  Computer Science Departments Across The Web! 
+	  NPSNet Research Group : Good VE stuff.
+	  NAVE : Navigating and Acting in Virtual Environments.
+	  GVU Meta Virtual Environments : VE Web Index.
+	  Encyclopedia of Virtual Environments 
+EXPO: WWW
+	exhibit organization.
+The Virtual Tourist:
+	A graphical WWW locator.
+ Cool Stuff :
+	Andrew Tong's home page. 
+Especially see
+	    Know Your Unix SysAdmin
+The X-Files:  Deceive. Inveigle. Obfuscate.  Official FOX page.
+URouLette: Get randomly thrown into the web.  
+Graphics File Formats Page: 3D Object speficiation file formats.
+DilbertZone
+Paul Henning 
+phenning@cs.uiowa.edu
+    The views and opinions expressed in this page are strictly those of the page author.  The contents of this page have not been approved by the Division of Mathematical Sciences, the College of Liberal Arts or The University of Iowa.

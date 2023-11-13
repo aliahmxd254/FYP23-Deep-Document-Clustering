@@ -1,0 +1,15 @@
+ CS100 Program 1 
+ CS100 Program 1 
+IMPORTANT: When you type in the  curve.c
+ program, remember to change the following lines in the 
+CompoundCurve  function.
+Change
+int xm = (x2 + x1 + y2 - y1) / 2.0;
+int ym = (y2 + y1 - x2 + x1) / 2.0;
+to
+double xm = (x2 + x1 + y2 - y1) / 2.0;
+double ym = (y2 + y1 - x2 + x1) / 2.0;
+Click this link to retrieve the Program 1 folder:
+Program 1 Folder
+CS100 Spring 1996 
+pierce@cs.cornell.edu

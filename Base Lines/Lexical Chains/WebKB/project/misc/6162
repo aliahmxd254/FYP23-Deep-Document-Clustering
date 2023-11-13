@@ -1,0 +1,58 @@
+Concurrent Systems Architecture Group home page
+Concurrent Systems Architecture Group (CSAG)
+Research in CSAG focuses on hardware and software architecture issues in
+parallel computer systems (e.g. MPP's, scalable servers, and clusters of high
+performance workstations).  Computer systems design involves a cooperative
+effort between software and hardware designers; our research efforts reflect
+this blend, including efforts to build parallel programming systems, scalable
+input/output systems, and high speed communication software and hardware.
+These projects emphasize the development of innovative designs and their
+evaluation, based on actual implementations.  CSAG is led by Andrew Chien.
+Job Opportunities
+Research Projects
+ Illinois Concert System
+     (efficient concurrent object-oriented programs) 
+ Languages:
+          Illinois Concert
+          C++ and
+          Concurrent Aggregates
+ Implementation
+          Techniques
+ Applications Studies
+ Papers,
+          talks, and
+          software distributions.
+ High Performance Virtual
+Machines (HPVM) a.k.a. Scalable Clusters
+ Fast Communication
+ MPI on Fast Messages (MPI-FM)
+ Fast Messages (on the Cray T3D
+          and Myrinet)
+      Network Interfaces and
+          Routing
+ Papers,
+          talks, and
+          software distributions
+ Parallel Input/Output
+ Characterization
+ Portable Parallel
+          File System
+ Talks
+ MORPH: High Performance
+computing based on Smart Reconfiguration
+People
+Papers
+Funding information
+ Projects in the Concurrent Systems Architecture Group are supported in part
+by the National Science Foundation, Advanced Research Projects Administration,
+Office of Naval Research, National Aeronautics and Space
+Administration, Intel Corporation, 
+Tandem Computer, Hewlett-Packard Corporation,
+Microsoft Corporation,
+and Motorola Corporation.
+  Job Opportunities
+If you find our research interesting and enjoy working in an
+academic environment, consider applying for one of our Research Programmer or Post-Doctoral Associate positions.
+The Concurrent Systems Architecture Group is part of the Department of Computer Science of the University of Illinois at Urbana-Champaign.
+Last updated 15 May 1996
+webmaster

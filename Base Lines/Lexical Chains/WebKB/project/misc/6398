@@ -1,0 +1,66 @@
+Caltech Archetypes/eText Project
+The Caltech Archetypes / eText Project
+The Caltech Archetypes/eText project combines work in two areas:
+ an investigation of programming archetypes,
+	where 
+	a programming archetype (briefly) is an abstraction from
+	a class of programs with a common structure and includes
+	class-specific design strategies
+	and a collection of example program designs and implementations.
+ an experimental electronic textbook, with content based on
+	the idea of programming archetypes.
+Please send comments and suggestions to
+archetype@cs.caltech.edu
+or
+etext@cs.caltech.edu.
+ Overview 
+	The paper Concurrent Program Archetypes
+	(.html
+	or .ps),
+	delivered as the keynote address of the 1994
+	International Parallel Processing Symposium,
+	gives an overview of
+	what an archetype is and how it can be used. 
+ Prototype Archetype Implementations 
+	We have developed a collection of 
+	prototype archetype implementations,
+	each containing documentation and program code.
+ Archetype Applications 
+	We have developed several
+	archetype-based applications.
+ The Electronic Textbook  
+	We have a collection of 
+	prototype chapters
+	for an electronic textbook based on archetypes.
+	Most of these chapters were initially developed using a
+	NeXT-based authoring tool called the
+	eText engine.
+ Related Papers and Student Projects 
+	We also have a collection of
+	papers and student projects
+	about archetypes and the electronic textbook.
+ Useful Links 
+Here
+	is a collection of useful links -- related projects,
+	textbooks, bibliographies, etc.
+ Repositories of Code and Documentation 
+	Much program code is available via
+	anonymous ftp from etext.caltech.edu,
+	as noted in individual documentation.
+	PostScript versions of many of the HTML documents are also
+	available via anonymous ftp from etext.caltech.edu.
+	They are collected in this
+	repository.
+Copyright (c) 1994, K. Mani Chandy.  All rights reserved.
+Reproduction of all or part of this work is permitted for educational
+or research use provided that this copyright notice is included in
+any copy.
+From the
+	Compositional Systems Research Group 
+of the Caltech CS Dept.
+Last modified by
+Berna Massingill,
+September, 1996.
+This work was supported in part by
+DARPA grant N00014-91-J-4014 and
+CRPC grant CCR-9120008.

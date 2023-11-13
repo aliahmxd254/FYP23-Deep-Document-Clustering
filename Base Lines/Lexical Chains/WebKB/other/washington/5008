@@ -1,0 +1,16 @@
+UW Dynamic Compilation Project Papers
+UW Dynamic Compilation Project Papers
+Conference Papers:
+J. Auslander, M. Philipose, C. Chambers, S.J. Eggers and B.N. Bershad,
+Fast,
+Effective Dynamic Compilation, Conference on
+Programming Language Design and Implementation, May 1996.
+Workshop Papers:
+C. Chambers, S.J. Eggers, J. Auslander, M. Philipose, M. Mock and
+P. Pardyak,
+Automatic
+Dynamic Compilation Support for Event Dispatching in Extensible Systems,
+ Workshop on Compiler Support for Systems Software, February
+1996.
+Last updated August 8, 1996.
+Brian Grant (grant@cs.washington.edu)

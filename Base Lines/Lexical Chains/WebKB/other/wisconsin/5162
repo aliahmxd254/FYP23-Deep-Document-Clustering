@@ -1,0 +1,13 @@
+ Stephen C. Billups and  Michael C. Ferris
+MP-TR-95-09
+June 1995
+ QPCOMP is an extremely robust algorithm for solving mixed nonlinear complementarity problems that has fast local convergence behavior. Based in part on the NE/SQP method of Pang & Gabriel (1993), this algorithm represents a significant advance in robustness at no cost in efficiency. In particular, the algorithm is shown to solve any solvable Lipschitz continuous, continuously differentiable, pseudo-monotone mixed nonlinear complementarity problem. QPCOMP also extends the NE/SQP method for the nonlinear complementarity problem to the more general mixed nonlinear complementarity problem. Computational results are provided, which demonstrate the effectiveness of the algorithm.
+How to view this document
+Display the whole document in one of the following formats.
+PostScript
+ 131916 bytes. (compressed on disk, will be sent uncompressed)
+Print or download all or selected pages.
+ You are granted permission for the non-commercial reproduction, distribution,display, and performance of this technical report in any format, BUT thispermission is only for a period of 45 (forty-five) days from the most recenttime that you verified that this technical report is still available fromthe Computer Science Department of the University of Wisconsin - Madison underterms that include this permission.  All other rights are reserved by theauthor(s). 
+[ Search
+ ]
+NCSTRLThis server operates at UW Madison Computer Sciences Technical Reports . Send email to www@cs.wisc.edu 

@@ -1,0 +1,14 @@
+Advanced Operating Systems
+Advanced Operating Systems
+(Computer Science 108)
+Times: 97W: Arrange 
+Instructors: Danskin 
+Prerequisite: Computer Science 23
+	 and 37. An undergraduate course in 
+	 operating systems (Computer Science 58) 
+	 would be helpful. 
+This course covers advanced topics in operating systems, including issues such as the hardware/software
+interface, operating-system structure, CPU scheduling, concurrency, virtual memory, interprocess
+communication, file systems, protection, security, fault tolerance, and transaction processing. The course
+also considers many of these topics in the context of distributed systems. 
+Back to Dartmouth CS Home Page

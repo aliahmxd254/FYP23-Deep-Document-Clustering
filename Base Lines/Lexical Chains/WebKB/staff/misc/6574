@@ -1,0 +1,34 @@
+Linda Torczon
+Linda Torczon
+Faculty Fellow
+Department of Computer Science
+Rice University
+Research Interests
+Linda Torczon is one of the principal investigators on the Massively
+Scalar Compiler Project at Rice and the project director of an effort funded by the State of Texas to study compiler-based optimization of non-numerical code.
+Her research interests include code generation and optimization, 
+interprocedural data-flow analysis and optimization, and programming 
+environments.  In the code generation and optimization realm, 
+she has published a set of improvements to graph coloring register allocation. 
+She is also one of the key implementors of an optimizing compiler for Fortran.
+In the area of interprocedural analysis and optimization, she has developed techniques for 
+interprocedural constant propagation and recompilation analysis.  She has also completed 
+studies on the effectiveness of several interprocedural constant propagation techniques.
+In the programming environment arena, she was one of the driving forces behind the ParaScope
+programming environment project.  She was a principal architect of the framework for
+whole program analysis in the ParaScope programming environment.
+The current 
+D System project is a descendant of the ParaScope programming
+environment.
+Related Publications
+Torczon has produced a number of publications
+related to the Massively Scalar Compiler Project.
+Other Projects
+Linda Torczon is the Executive Director of the 
+Center for Research on 
+Parallel Computation, an NSF Science and Technology Center devoted
+to making massively parallel computer systems usable---as usable as 
+conventional supercomputer systems are today.
+She is also involved in the 
+The Rice School/La Escuela Rice, a Rice-Houston Independent School District laboratory 
+school for students from kindergarten through eighth grade.

@@ -1,0 +1,10 @@
+#
+# Makefile for handout for program 1 CSE 542 Fall 96
+#
+CC=gcc
+CFLAGS=-g
+LIB= -lsocket -lnsl
+listen:	listen.o
+	$(CC) $(CFLAGS) -o $@ listen.o $(LIB)
+speak:	speak.o
+	$(CC) $(CFLAGS) -o $@ speak.o $(LIB)

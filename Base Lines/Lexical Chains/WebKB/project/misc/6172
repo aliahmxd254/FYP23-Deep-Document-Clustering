@@ -1,0 +1,216 @@
+PLEASE NOTE: We are not endorsed by, licensed by, or affiliated
+with the Estate of Pablo Picasso.
+Project foci... 
+You are the 
+76465th
+visitor since September 29, 1995.
+ Contents
+Research Overview
+Major Group Projects
+Research Group Members
+What's New
+Upcoming Conferences
+Job Opportunities
+Contact Information
+ Research Overview 
+The Pablo academic research group is located at the 
+Department of Computer Science
+at the
+University of Illinois at Urbana-Champaign
+.
+Under the direction of
+Professor Dan Reed
+, 
+the members of the group investigate the interaction of
+architecture, system software, and applications on massively parallel
+computer systems.
+Major research topics include 
+performance instrumentation and data analysis tools
+,
+integration of
+data parallel compilers (HPF),
+and performance analysis,
+virtual reality techniques
+for performance data immersion and real-time adaptive control,
+portable parallel file system software
+,
+for data caching and staging experiments on parallel input/output
+systems, and
+input/output characterization studies
+.
+A variety of the group's 
+papers
+are available in postscript form.
+A description of some of the group's computing facilities is also available.
+In addition, there is more general information on the national
+High Performance Computing and Communications (HPCC) program, 
+on
+the ARPA HPCC program,
+and 
+software and tools
+for high-performance computing.
+Major Group Projects
+Pablo Performance Analysis Environment
+High-Performance Fortran (HPF)
+Virtual Reality and Massively Parallel Systems
+WWW Server Performance Analysis
+Portable Parallel File System (PPFS)
+Input/Output Characterization
+Scalable I/O Initiative
+Research Group Members
+Here is a 
+group photograph
+.
+Project Leader
+        Dan Reed
+(with a message on the love of research)
+Research Staff
+ Ruth Aydt 
+ Ana Cristina Grossi 
+ Eric Shaffer 
+ Ying Zhang 
+Post-doctoral Associates
+  Luiz De Rose 
+  Evgenia Smirni 
+  Randy Ribler 
+Graduate Students
+    Chris Elford
+  Matt Gardner
+      Thomas Kwan
+      Tara Madhyastha
+    Celso Mendes
+  Mario Medina
+   Mike Mesnier
+   Ember Normand
+  Jim Oly
+   Huseyin Simitci
+    Luis Tavera
+Group Alumni
+        Phyl Crandall
+        (University of Connecticut)
+        Postdoc 94-95
+        Beth Frank (NCSA)
+        Staff 94-95
+        Dirk Grunwald 
+        (University of Colorado)
+        RA 86-89(PhD)
+  Ilker Hamzaoglu 
+RA 95-96
+        Jay Huber (
+	BALR Corporation)
+        RA 93-95(MS)
+        Dave Kohr
+        (Argonne National Laboratory)
+        RA 91-94(MS)
+        Stephen Lamm
+        ( 
+           Netscape Communcations Corporation)
+        RA 94-96(MCS)
+ Baochun (Burton) Li 
+RA 95-96
+        Al Malony
+        (University of Oregon)
+        RA 86-90(PhD)
+        Oleg Nickolayev 
+        (Oracle)
+        RA 95-96(MS)
+        Roger Noe
+        (Platinum Solutions)
+        Staff 91-96
+        Anuradha Rawal 
+        (Microsoft)
+        RA 94-96(MCS)
+        Jon Reid
+        (Claris Corporation)
+        Staff 94-96
+        Phil Roth 
+        ( Chen Systems )
+        RA 93-94(MS)
+        Will Scullin
+        ( 
+           Netscape Communcations Corporation)
+        RA 93-95(MCS)
+        Keith Shields (
+	Tera Computer)
+        RA 91-95(MS)
+	Brian Totty
+        (Inktomi)
+        RA 88-94(PhD)
+        Jhy-Chun Wang
+        (IBM)
+        Postdoc 94-95
+What's New (Last Updated August 8, 1995)
+MPEG videos
+of input/output intensive applications, obtained via our
+virtual reality environment
+.
+A recent paper on 
+characterization of HPCC application I/O patterns
+(to appear at Supercomputing '95).
+New 
+virtual reality
+displays of dynamic performance data.
+A 
+paper
+analyzing of five months of the NCSA WWW server logs with 
+new displays
+of a
+day in the life
+of the
+NCSA WWW server.
+New performance data on our
+Portable Parallel File System (PPFS)
+and its upcoming software distribution.
+Release 4.0
+of the
+Pablo
+performance environment with a
+demonstration
+.
+New
+input/output characterization
+results.
+A new
+paper
+on the
+integration
+of the Rice Fortran D compiler and the
+Pablo
+ performance environment
+An expanded description of the Pablo
+self-defining data format (SDDF)
+A
+white paper
+and 
+presentation
+on the keys to building successful performance tools
+Upcoming Conferences
+At the
+ACM
+Federated Computing Research Conference (FCRC)
+there will be several meetings related to performance analysis and
+high-performance input/output.
+Sigmetrics '96 Conference on Measurement and Modeling of Computer Systems
+Sigmetrics '96 Symposium on Parallel Tools
+IOPADS: Fourth Annual Workshop on I/O in Parallel and Distributed Systems
+ Job Opportunities
+If you find our research interesting and you enjoy working in 
+an academic environment, consider applying for 
+one of our 
+Research Programmer 
+or 
+Post-Doctoral Associate
+positions.
+ Contact Information
+Department of Computer Science
+University of Illinois
+1304 West Springfield Avenue
+Urbana, Illinois  61801
+USA
+Telephone: 217-333-3328 (Group Secretary)
+FAX: 217-244-6869
+Please report problems with this server to
+root@guitar.cs.uiuc.edu.
+Usage statistics
+for this WWW server are here.
+Last Change: 15 July 1996 

@@ -1,0 +1,12 @@
+Non-Transpose Case
+John A. Gunnels
+ Department of Computer Science 
+            University of Texas at Austin 
+gunnels@cs.utexas.edu 
+ The code enclosed does not do accuracy testing -- it was removed to make
+the runs because our accuracy tester creates the global matrix on each processor. There is also a checking routine on eureka and spice if anyone cares.
+main.c
+csmmult1.c
+colrow1.c
+globals.h
+rand.c

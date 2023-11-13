@@ -1,0 +1,155 @@
+Daedalus Project Home Page 
+ The Daedalus Project Home Page 
+The Daedalus project at UC Berkeley is concerned with research into
+Wireless Networking and Mobile Computing. The goal is to combine
+intelligent adaptive applications with smart networking software that
+can multiplex connections over a wide variety of different networking
+technologies.
+ Index: 
+People |
+Recent Publications |
+The Big Picture |
+Recent Talks |
+Calendar 
+   People Involved: 
+ Faculty: 
+  Randy Katz. 
+  Eric Brewer. 
+ Graduate Students: 
+  Elan Amir. 
+  Hari Balakrishnan. 
+  Armando Fox. 
+  Steve Gribble. 
+  Todd Hodes. 
+  Daniel Jiang. 
+  Giao Nguyen. 
+  Venkat Padmanabhan. 
+  Mark Stemm. 
+ Undergraduate Students: 
+ John Loffeld. 
+ Staff: 
+  Keith Sklower  (part-time).
+ Alumni: 
+  Srinivasan Seshan  (now at IBM T.J. Watson Research Center, NY).  
+  Now Hiring... Programmer/Analyst Wanted 
+   Recent Publications: 
+  Notice: 
+ The documents contained in these directories are included
+  by the contributing authors as a means to ensure timely
+  dissemination of scholarly and technical work on a
+  non-commercial basis.  Copyright and all rights therein
+  are maintained by the authors or by other copyright
+  holders, notwithstanding that they have offered their
+  works here electronically.  It is understood that all
+  persons copying this information will adhere to the terms
+  and constraints invoked by each author's copyright. 
+All Papers are in Compressed Postscript (gzipped).
+A Trace-based Approach for Modeling Wireless Channel Behavior
+(Postscript, 567KB). 
+Giao T. Nguyen, Randy H. Katz, Brian Noble, Mahadev Satyanarayanan 
+To appear, Proceedings of the Winter Simulation Conference, December 1996
+Related Work:
+Mobile Network Tracing
+Note: Some versions of ghostview have problems handling the postscript file, but most printers seem to print it out without any trouble.
+Security on the Move: Indirect Authentication using Kerberos
+(Postscript, 152 KB) 
+ Armando Fox and Steven D. Gribble  
+To appear, ACM MobiCom 96, Rye, NY, November 1996. 
+Fast and Scalable Handoffs for Wireless Internetworks
+(Postscript, 152 KB) 
+ Ramon Caceres and Venkata N. Padmanabhan  
+To appear, ACM MobiCom 96, Rye, NY, November 1996. 
+Adapting to Network and Client Variation via On-Demand,
+Dynamic Distillation (Postscript, 1.1MB) 
+ Armando Fox, Steven D. Gribble, Eric A. Brewer, and Elan Amir  
+To appear, ASPLOS-VII, Boston, MA, October 1996. 
+Reducing Power Consumption of Network Interfaces in Hand-Held Devices
+ (Compressed Postscript, 64 KB) 
+ Mark Stemm, Paul Gauthier, Daishi Harada, and Randy H. Katz  
+In Proc 3rd International Workshop on Mobile Multimedia Communications (MoMuc-3), Princeton, NJ, USA, Sept 1996 
+ A Comparison of Mechanisms for Improving TCP Performance over Wireless
+Links  
+Compressed Postscript, 438 KB 
+ Adobe PDF, 586 KB 
+ H. Balakrishnan, V. N. Padmanabhan, S. Seshan, and R. Katz.  
+Proc. ACM SIGCOMM Conference, Stanford, CA, USA, Aug 1996. 
+Note: Some versions of ghostview have problems handling the postscript file, but most printers seem to print it out without any trouble.  The PDF file works fine. 
+Using Predictive Prefetching to Improve World Wide Web Latency 
+ (Compressed Postscript, 95 KB) 
+ Venkata N. Padmanabhan and Jeffrey C. Mogul  
+To appear, ACM SIGCOMM Computer Communication Review, July 1996. 
+Reducing WWW Latency and Bandwidth Requirements by Real-Time
+Distillation
+(HTML) 
+ Armando Fox and Eric A. Brewer  
+Proceedings of the Fifth International World Wide Web Conference,
+Paris, France, May 6-10, 1996. 
+Handoffs in Cellular Wireless Networks: The Daedalus Implementation and Experience  (Compressed Postscript, 90 KB).
+ Srinivasan Seshan, Hari Balakrishnan, Randy H. Katz.  
+To appear, Kluwer International Journal on Wireless Personal Communications. 
+The Case for Wireless Overlay Networks (Compressed Postscript, 266 KB) 
+ Randy H. Katz, Eric A. Brewer  
+SPIE Multimedia and Networking Conference (MMNC'96), San Jose, CA, Jan 29-30, 1996.
+The Bay Area Research Wireless Access Network(BARWAN) (Compressed Postscript, 215 KB) 
+ Randy H. Katz, Eric A. Brewer, Elan Amir, Hari Balakrishnan, Armando Fox, Steve Gribble, Todd Hodes, Daniel Jiang, Giao Thanh Nguyen, Venkata Padmanabhan, Mark Stemm.  
+Proceedings Spring COMPCON Conference 1996.
+Improving Reliable Transport and Handoff Performance in Cellular Wireless Networks  (Compressed Postscript, 101 KB).
+ Hari Balakrishnan, Srinivasan Seshan, Randy H. Katz.  
+ACM Wireless Networks, Vol. 1, No. 4, December 1995.
+Improving TCP/IP Performance over Wireless Networks  (Compressed Postscript, 76 KB).
+ Hari Balakrishnan, Srinivasan Seshan, Elan Amir, Randy H. Katz.  
+Proc. 1st ACM Conf. on Mobile Computing and Networking,
+Berkeley, CA, November 1995. 
+ Best Student Paper Award.  
+An Application Level Video Gateway (Compressed Postscript, 47 KB).
+ Elan Amir, Steve McCanne, Hui Zhang.  
+In Proc. ACM Multimedia '95, San Francisco, CA, November 1995. 
+Efficient TCP over Networks with Wireless Links  (Compressed Postscript, 28 KB). 
+ Elan Amir, Hari Balakrishnan, Srinivasan Seshan, Randy H. Katz.  
+Proc. Fifth Workshop on Hot Topics in Operating Systems (HotOS-V),
+Orcas Island, WA, May 1995. 
+  Adaptation and Mobility in Wireless Information Systems  (Compressed Postscript, 115 KB). 
+ Randy H. Katz.  
+IEEE Personal Communications Magazine, Vol. 1, No. 1, (First Quarter, 1994), pp. 6-17. 
+ Improving HTTP Latency  (Compressed Postscript, 35 KB) 
+ Venkata N. Padmanabhan and Jeffrey C. Mogul  
+In Proc. Second International World Wide Web Conference, Chicago, IL, USA, October 1994. 
+(A slightly revised version of this paper appeared in Computer Networks and ISDN Systems, v.28, nos.1&2, December 1995, pp. 25-35.) 
+  Software Architecture of the Infopad System  (Compressed Postscript, 263 KB). 
+ M.T. Le, S. Seshan, F. Burghardt and J. Rabaey.  
+Proc. Mobidata Workshop on Mobile and Wireless Information Systems New Brunswick, NJ, October 1994. 
+  Providing Network Video Service to Mobile Clients  (Compressed Postscript, 21 KB). 
+B. Mah, K. Keeton, S. Seshan, D. Ferrari, R. Katz. 
+Proc. 4th ACM Workshop on Workstation Operating Systems (WWOS-IV), Napa, CA, October 1993. 
+Design of Wireless Portable Systems. 
+ E. Brewer, T. Burd, F. Burghardt, A. Burstein, R. Doering, K. Lutz, S. Narayansaramy, T. Pering, B. Richards, T. Truman, R. Katz, J. Rabaey, R. Brodersen. 
+Proc. Spring COMPCON Conference, San Francisco, CA, March 1995. 
+  Providing Connection-Oriented Network Services to Mobile Hosts  (Compressed Postscript, 59 KB). 
+ K. Keeton, B. Mah, S. Seshan, R. Katz, D. Ferrari. 
+Proc. 1993 USENIX Symposium on Mobile and Location-Dependent Computing, Cambridge, MA, (August 1993). 
+   Recent Talks/Poster Sessions: 
+  June '96 Retreat Materials 
+  March '96 ILP Materials 
+  January '96 Retreat Materials 
+   Calendar of Recent and Upcoming Events: 
+  The Summer 1996 Daedalus Retreat, June 1996 (Lake Tahoe, CA). 
+  Retreat Materials 
+ Industrial Liaison Program (ILP), March 1996 (Berkeley, CA).
+  ILP Materials 
+ The Spring 1996 Daedalus Retreat, January 1996 (Monterey, CA).
+  Retreat Materials 
+Please also check out our  FTP site. 
+This page has been visited  Times since January 30, 1996, and is maintained by:
+ Mark Stemm   (stemm@cs.berkeley.edu) 
+and
+ Hari Balakrishnan   (hari@cs.berkeley.edu). 
+ Other Wireless Networking Pages at Berkeley 
+Daedalus |
+GloMop |
+Barwan |
+Infopad
+Infonet |
+Medley 
+Also check out our  FTP site. 
+This page has been visited  Times since Janurary 27, 1996, and is maintained by:
+ Mark Stemm  stemm@cs.berkeley.edu

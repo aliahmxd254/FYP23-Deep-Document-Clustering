@@ -9,6 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import silhouette_score
 from sklearn.cluster import KMeans
+from scipy.sparse import save_npz, load_npz
 
 
 
@@ -70,20 +71,19 @@ def Purity_Score(true_labels, pred_labels):
 def KMeans_Labels(X, n, rstate_limit, true_labels):
 
     # Specify the number of clusters (you can choose an appropriate value)
-    num_clusters = 7
+    num_clusters = n
     
-    # find centoids which give maximum purity
-    # purity_collection = {}
-    # print("Finding Optimum Clusters")
-    # for i in range(rstate_limit):
-    #     clusters = KMeans(n_init='auto', n_clusters=num_clusters, random_state=i, init='k-means++').fit(X).labels_
-    #     purity_collection[i] = Purity_Score(true_labels, clusters)
+    #find centoids which give maximum purity
+    purity_collection = {}
+    print("Finding Optimum Clusters")
+    for i in range(rstate_limit):
+        clusters = KMeans(n_init='auto', n_clusters=num_clusters, random_state=i, init='k-means++').fit(X).labels_
+        purity_collection[i] = Purity_Score(true_labels, clusters)
     
-    # max_rand_state = max(purity_collection, key=purity_collection.get)
-    # print(f"Maximum purity of {purity_collection[max_rand_state]} found on random state {max_rand_state}")
+    max_rand_state = max(purity_collection, key=purity_collection.get)
+    print(f"Maximum purity of {purity_collection[max_rand_state]} found on random state {max_rand_state}")
 
     print("Good Clustering BEgin")
-    max_rand_state = 42
     # Create a KMeans model
     kmeans = KMeans(n_init='auto', n_clusters=num_clusters, random_state=max_rand_state, init='k-means++')
     # Fit the KMeans model to the TF-IDF data
@@ -96,7 +96,7 @@ def KMeans_Labels(X, n, rstate_limit, true_labels):
 
 def Actual_Labels():
     actual_labels = {} # dictionary to store true assignments for each document | read sequence not followed
-    dir_num = 1
+    dir_num = 0
     label_path = os.path.join(os.getcwd(),'WebKB')
     for labels_directory in os.listdir(label_path): # for each assignment folder
         actual_cluster = dir_num 
@@ -120,6 +120,7 @@ def wrapperFunction():
     ReadDocuments('WebKB')
     vectorizer = TfidfVectorizer(analyzer='word', stop_words='english', preprocessor=custom_preprocessor)
     X = vectorizer.fit_transform(corpus)
+    save_npz('tfidf_matrix_WEBKB.npz', X)
     vocab = vectorizer.get_feature_names_out()
     with open('webkb_features.txt', 'w') as f:
         for feature in vocab:
@@ -127,7 +128,7 @@ def wrapperFunction():
             f.write('\n')
     
     true_labels = Actual_Labels()
-    predicted_labels = KMeans_Labels(X, 5, 1, true_labels)
+    predicted_labels = KMeans_Labels(X, 7, 100, true_labels)
     print_results(true_labels, predicted_labels, X)
     return predicted_labels, X
 

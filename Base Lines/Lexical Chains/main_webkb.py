@@ -29,13 +29,16 @@ doc_list_sequence = []
 
 
 def ReadDocuments(dir_name):
-    for Path in os.listdir(dir_name):
-        file_p = os.path.join(dir_name, Path)
-        with open(file_p, "r") as file:
-            FileContents = file.read()
-            doc_content.append(FileContents.lower())
-            doc_name.append(Path)
-            files_path.append(file_p)
+    for Path in os.listdir(dir_name + '\\'):
+        file_p = os.getcwd() + f"\{dir_name}\\" + Path
+        for files in os.listdir(file_p):
+            file = os.path.join(file_p, files)
+            files_path.append(file)
+            with open(file, 'r', encoding='utf-8') as file:
+                FileContents = file.read()
+                doc_content.append(FileContents.lower())
+                doc_name.append(Path)
+                doc_list_sequence.append(files)
 
 
 def preprocess_text(text: str, remove_stopwords: bool) -> str:
@@ -121,8 +124,8 @@ def eliminateWords(lexical):
 
 def PreprocessDocuments():
     for i in files_path:
-        f = open(i, "r")
-        dataset = preprocess_text(f.read(), remove_stopwords=True)
+        with open(i, "r", encoding='utf-8') as file:
+            dataset = preprocess_text(file.read(), remove_stopwords=True)
         # use lexical chains as the feature selection method
         nouns = []
         l = nltk.pos_tag(dataset)
@@ -200,7 +203,7 @@ def calculate_consensus_matrix(labels1, labels2):
     return consensus_matrix
 
 
-doc_50_path = os.getcwd() + "\Doc50"
+doc_50_path ="WebKB"
 ReadDocuments(doc_50_path)
 PreprocessDocuments()
 
@@ -215,38 +218,24 @@ SumSqDis = []
 pca = PCA(n_components=30, random_state=42)
 pca_vecs = pca.fit_transform(normalize_features)
 
-# Purity Score
-for Path in os.listdir("Doc50" + "\\"):
-    file_path = os.getcwd() + f"\{'Doc50'}\\" + Path
-    with open(file_path, "r") as file:
-        FileContents = file.read()
-        corpus.append(FileContents.lower())
-        doc_list_sequence.append(Path)
-
-actual_labels = (
-    {}
-)  # dictionary to store true assignments for each document | read sequence not followed
-label_path = os.getcwd() + "\Doc50 GT"
-for labels_directory in os.listdir(label_path):  # for each assignment folder
-    actual_cluster = int(
-        labels_directory[1]
-    )  # extract cluster label from directory name
-    doc_labels = os.listdir(
-        label_path + f"\\{labels_directory}"
-    )  # for all document ids assigned to this cluster
+actual_labels = {} # dictionary to store true assignments for each document | read sequence not followed
+dir_num = 0
+label_path = os.path.join(os.getcwd(),'WebKB')
+for labels_directory in os.listdir(label_path): # for each assignment folder
+    actual_cluster = dir_num 
+    doc_labels = os.listdir(label_path + f"\\{labels_directory}") # for all document ids assigned to this cluster
     for doc in doc_labels:
-        actual_labels[doc] = actual_cluster - 1  # save cluster label
-
-label_seq = []  # save labels in order of documents read
+        actual_labels[doc] = actual_cluster # save cluster label
+    dir_num+=1
+label_seq = [] # save labels in order of documents read
 for doc in doc_list_sequence:
     label_seq.append(actual_labels[doc])
 
-
-print("Actual Labels",actual_labels)
-print("Label Sequence",label_seq)
+# print("Actual Labels",actual_labels)
+# print("Label Sequence",label_seq)
 
 purity_collection = {}
-for i in range(1500):
+for i in range(1):
     clusters = KMeans(n_init="auto", n_clusters=5, random_state=i, init="k-means++").fit(pca_vecs).labels_
     purity_collection[i] = Purity_Score(label_seq, clusters)
 
@@ -275,7 +264,7 @@ consensus_matrix = calculate_consensus_matrix(tfidfLabels, lexicalChainsLabels)
 
 n_clusters = 5  # You can adjust this as needed
 purity_collection = {}
-for i in range(1500):
+for i in range(1):
     clusters = SpectralClustering(n_clusters=n_clusters, affinity="precomputed", random_state=i).fit(1 - consensus_matrix).labels_
     purity_collection[i] = Purity_Score(label_seq, clusters)
 
@@ -301,7 +290,7 @@ combined_labels = list(map(list, zip(*combined_labels)))
 
 normalize_combined_features = Normalizer().fit_transform(combined_labels)
 topic_purity_collection = {}
-for i in range(1500):
+for i in range(1):
     topic_clusters = (
         KMeans(n_init="auto", n_clusters=5, random_state=i, init="k-means++")
         .fit(normalize_combined_features)

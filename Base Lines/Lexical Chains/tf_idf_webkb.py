@@ -26,6 +26,7 @@ def ReadDocuments(dir_name):
                 FileContents = file.read()
                 corpus.append(FileContents.lower())
                 doc_list_sequence.append(files)     
+                print(doc_list_sequence)
 
 def in_wordnet(word):
     synsets = wordnet.synsets(word)

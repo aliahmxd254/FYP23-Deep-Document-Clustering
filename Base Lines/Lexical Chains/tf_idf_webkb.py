@@ -26,7 +26,7 @@ def ReadDocuments(dir_name):
                 FileContents = file.read()
                 corpus.append(FileContents.lower())
                 doc_list_sequence.append(files)     
-                print(doc_list_sequence)
+                #print(doc_list_sequence)
 
 def in_wordnet(word):
     synsets = wordnet.synsets(word)
@@ -130,7 +130,7 @@ def wrapperFunction():
     
     true_labels = Actual_Labels()
     predicted_labels = KMeans_Labels(X, 7, 100, true_labels)
-    print_results(true_labels, predicted_labels, X)
+    #print_results(true_labels, predicted_labels, X)
     return predicted_labels, X
 
 if __name__ == '__main__':

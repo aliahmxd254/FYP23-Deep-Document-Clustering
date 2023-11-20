@@ -10,7 +10,7 @@ from sklearn.decomposition import PCA
 from sklearn.preprocessing import Normalizer
 from nltk.corpus import wordnet as wn, stopwords
 from nltk.stem import WordNetLemmatizer
-from tf_idf import wrapperFunction
+from tf_idf_webkb import wrapperFunction
 from sklearn.cluster import SpectralClustering
 from sklearn.decomposition import LatentDirichletAllocation
 
@@ -204,6 +204,7 @@ def calculate_consensus_matrix(labels1, labels2):
 
 
 doc_50_path ="WebKB"
+print("Reading Documents and building relations...")
 ReadDocuments(doc_50_path)
 PreprocessDocuments()
 
@@ -213,8 +214,6 @@ normalize_features = normalizer.fit_transform(final_training_Features)
 print("\n----------------------------LEXICAL CHAINS--------------------------------")
 
 
-
-SumSqDis = []
 pca = PCA(n_components=30, random_state=42)
 pca_vecs = pca.fit_transform(normalize_features)
 

@@ -1,0 +1,139 @@
+=================== DOC 50 =============================
+
+**** Lexical Chains ****
+
+Maximum purity of 0.72 found on random state 990
+Purity: 0.72
+Silhouette Score: -0.04868462913792616
+ARI Score: 0.5223636957231472
+NMI Score: 0.6812077250799164
+
+**** TF-IDF ****
+Maximum purity of 0.74 found on random state 512
+Purity: 0.74
+Silhouette Score: 0.00663201635872161
+ARI Score: 0.4174511808058529
+NMI Score: 0.5278813100675652
+
+
+**** Consensus Clustering ****
+Maximum purity of 0.62 found on random state 79
+Purity: 0.62
+Silhouette Score: 0.4214097790294838
+ARI Score: 0.34922482671040794
+NMI Score: 0.4974727747684437
+
+**** Topical Clustering ****
+
+Maximum purity of 0.62 found on random state 103
+Purity: 0.62
+Silhouette Score: 0.43785537046414036
+ARI Score: 0.2927296937416778
+NMI Score: 0.4069415691077988
+
+
+=================== BBC =============================
+
+**** Lexical Chains ****
+
+Maximum purity of 0.7478651685393258 found on random state 606
+Purity: 0.7478651685393258
+Silhouette Score: -0.024339736196491817
+ARI Score: 0.5064025551370372
+NMI Score: 0.5210485295651401
+
+**** TF-IDF ****
+Maximum purity of 0.9622471910112359 found on random state 499
+Purity: 0.9622471910112359
+Silhouette Score: 0.010218972318231987
+ARI Score: 0.911712231307629
+NMI Score: 0.8785596848846153
+
+
+**** Consensus Clustering ****
+Maximum purity of 0.5995505617977528 found on random state 29
+Purity: 0.5995505617977528
+Silhouette Score: 0.24106704926477115
+ARI Score: 0.3616399420946902
+NMI Score: 0.5473986830618421
+
+**** Topical Clustering ****
+
+Maximum purity of 0.8588764044943821 found on random state 71
+Purity: 0.8588764044943821
+Silhouette Score: 0.6609660724161398
+ARI Score: 0.7186189217262748
+NMI Score: 0.7144144650712116
+
+
+=================== WEBKB =============================
+
+**** Lexical Chains ****
+
+Maximum purity of 0.5391209852692587 found on random state 221
+Purity: 0.5391209852692587
+Silhouette Score: 0.1526184179189444
+ARI Score: 0.15611769144041573
+NMI Score: 0.14122245615129927
+
+
+**** TF-IDF ****
+Maximum purity of 0.6761651774933591 found on random state 71
+Purity: 0.6761651774933591
+Silhouette Score: 0.01206404904992725
+ARI Score: 0.26483536600457835
+NMI Score: 0.3335608713532205
+
+
+**** Consensus Clustering ****
+Maximum purity of 0.730379135474523 found on random state 335
+Purity: 0.730379135474523
+Silhouette Score: 0.195682459982077
+ARI Score: 0.2808571947823359
+NMI Score: 0.4154660139433615
+
+
+**** Topical Clustering ****
+
+Maximum purity of 0.5638734605167833 found on random state 121
+Purity: 0.5638734605167833
+Silhouette Score: 0.5726049355353215
+ARI Score: 0.1388594059671092
+NMI Score: 0.2120688822825985
+
+
+=================== Reuters =============================
+
+**** Lexical Chains ****
+
+Maximum purity of 0.36985539488320357 found on random state 143
+K-means lables using lexical chains: [17 39 63 ... 44  8  0]
+      
+Purity 0.36985539488320357
+      
+Silhoutte Score: 0.05858385816446256
+
+
+**** TF-IDF ****
+
+Maximum purity of 0.36772339636633294 found on random state 67
+RESULTS:
+Purity: 0.36772339636633294
+Silhouette Score: -0.006047238747527097
+
+
+**** Consensus Clustering ****
+
+Maximum purity of 0.36763070077864296 found on random state 2
+Purity Score:  0.36763070077864296
+Sillhouette Coefficient:  -0.11535524251258987
+
+
+**** Topical Clustering ****
+
+Maximum purity of 0.3674453096032629 found on random state 0
+Purity:  0.3674453096032629
+Sillhouette Coefficient:  0.7289370934632332
+
+
+

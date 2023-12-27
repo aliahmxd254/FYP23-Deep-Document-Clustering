@@ -95,45 +95,49 @@ NMI Score: 0.4154660139433615
 
 **** Topical Clustering ****
 
-Maximum purity of 0.5638734605167833 found on random state 121
-Purity: 0.5638734605167833
-Silhouette Score: 0.5726049355353215
-ARI Score: 0.1388594059671092
-NMI Score: 0.2120688822825985
+Maximum purity of 0.5559043709248974 found on random state 563
+Purity: 0.5559043709248974
+Silhouette Score: 0.6507934280895056
+ARI Score: 0.12741494571257972
+NMI Score: 0.19919770734535858
 
 
-=================== Reuters =============================
+================= Reuters =====================
 
-**** Lexical Chains ****
+**** Lexical Chains *****
 
-Maximum purity of 0.36985539488320357 found on random state 143
-K-means lables using lexical chains: [17 39 63 ... 44  8  0]
-      
-Purity 0.36985539488320357
-      
-Silhoutte Score: 0.05858385816446256
-
-
-**** TF-IDF ****
-
-Maximum purity of 0.36772339636633294 found on random state 67
-RESULTS:
-Purity: 0.36772339636633294
-Silhouette Score: -0.006047238747527097
+Maximum purity of 0.6332962550982574 found on random state 344
+Purity: 0.6332962550982574
+Silhouette Score: 0.07678740078527892
+ARI Score: 0.06573096111164656
+NMI Score: 0.22230449797850924
 
 
-**** Consensus Clustering ****
+**** TFIDF *****
 
-Maximum purity of 0.36763070077864296 found on random state 2
-Purity Score:  0.36763070077864296
-Sillhouette Coefficient:  -0.11535524251258987
+Maximum purity of 0.724972191323693 found on random state 555
+Purity: 0.724972191323693
+Silhouette Score: 0.017570933661307995
+ARI Score: 0.21702607367248578
+NMI Score: 0.3494098071368686
+
+
+**** Consensus Clustering *****
+
+Maximum purity of 0.621153133110864 found on random state 9
+Purity: 0.621153133110864
+Silhouette Score: 0.2591406333596326
+ARI Score: 0.06628240284570283
+NMI Score: 0.14891482754107224
 
 
 **** Topical Clustering ****
 
-Maximum purity of 0.3674453096032629 found on random state 0
-Purity:  0.3674453096032629
-Sillhouette Coefficient:  0.7289370934632332
+Maximum purity of 0.703559510567297 found on random state 69
+Purity: 0.703559510567297
+Silhouette Score: 0.6300340764366461
+ARI Score: 0.25165354595760014
+NMI Score: 0.23570216355030582
 
 
 

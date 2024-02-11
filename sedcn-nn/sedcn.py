@@ -245,7 +245,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='train', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--name', type=str, default='acm')
+    parser.add_argument('--name', type=str, default='bbc')
     parser.add_argument('--k', type=int, default=3)
     parser.add_argument('--lr', type=float, default=1e-3)
     parser.add_argument('--n_clusters', default=3, type=int)
@@ -298,7 +298,7 @@ if __name__ == "__main__":
     if args.name == 'bbc':
         args.k = 10
         args.n_clusters = 5
-        args.n_input = 10000
+        args.n_input = 9635
 
 
 

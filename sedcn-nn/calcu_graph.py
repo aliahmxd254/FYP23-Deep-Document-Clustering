@@ -8,7 +8,7 @@ from sklearn.preprocessing import normalize
 topk = 10
 
 def construct_graph(features, label, method='heat'):
-    fname = 'graph/reut10_graph.txt'
+    fname = 'graph/bbc_graph.txt'
     num = len(label)
     dist = None
 
@@ -61,7 +61,7 @@ hhar = np.loadtxt('data/hhar.txt', dtype=float)
 label = np.loadtxt('data/hhar_label.txt', dtype=int)
 '''
 
-reut = np.loadtxt('data/reut.txt', dtype=float)
-label = np.loadtxt('data/reut_label.txt', dtype=int)
+reut = np.loadtxt('data/bbc.txt', dtype=float)
+label = np.loadtxt('data/bbc_label.txt', dtype=int)
 
 construct_graph(reut, label, 'ncos')

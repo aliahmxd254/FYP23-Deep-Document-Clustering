@@ -16,5 +16,7 @@ class PositionalEncoding(nn.Module):
         stacked = torch.stack([even_PE, odd_PE], dim=2)
         PE = torch.flatten(stacked, start_dim=1, end_dim=2)
         return PE
+    
+
 
         

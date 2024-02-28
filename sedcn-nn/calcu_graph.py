@@ -8,7 +8,7 @@ from sklearn.preprocessing import normalize
 topk = 10
 
 def construct_graph(features, label, method='heat'):
-    fname = 'graph/bbc_graph.txt'
+    fname = 'graph/bbc10_graph.txt'
     num = len(label)
     dist = None
 

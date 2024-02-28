@@ -21,6 +21,7 @@ from collections import Counter
 from tqdm import tqdm
 import tsne
 import os
+import time
 
 seed = 100
 random.seed(seed)
@@ -244,6 +245,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     print('F1={:.2f} +- {:.2f}'.format(res_lst[:, 3][best_idx]*100, np.std(res_lst[:, 3])))
 
 if __name__ == "__main__":
+    start = time.time()
     parser = argparse.ArgumentParser(description='train', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--name', type=str, default='bbc')
     parser.add_argument('--k', type=int, default=3)
@@ -318,3 +320,7 @@ if __name__ == "__main__":
     #         lambda_2 = lambda_2 * 0.1
     #         for _ in range(5):
     #             train_sdcn(dataset, lambda_1, lambda_2)
+    
+    end = time.time()
+    duration = end - start
+    print(f"Time taken: {duration:.2f}s")

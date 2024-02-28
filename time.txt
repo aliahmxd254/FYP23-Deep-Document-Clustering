@@ -1,0 +1,17 @@
+Base Lines:
+    Doc50: 102.74s
+    BBC: 769.63s
+
+Transformer:
+    Doc50: 8.83s
+    ACM-CUDA: 27.17s
+    BBC: 328.95s
+    BBC-CUDA: 141.48s
+    Cite-CUDA: 10.41s
+    Reuters-CUDA: 17.50s
+
+SEDCN:
+    Reuters: 213.02s
+    ACM: 78.06s
+    Cite: 127.70s
+    BBC: 109.36s

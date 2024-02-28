@@ -42,7 +42,7 @@ class MultiheadAttention(nn.Module):
         
         d_k = q.size()[-1]
         scaled = torch.matmul(q, k.transpose(-1, -2)) / math.sqrt(d_k)
-        if not mask:
+        if mask:
             scaled += GenerateMask(scaled)
         attention = F.softmax(scaled, dim=-1)
         values = torch.matmul(attention, v)

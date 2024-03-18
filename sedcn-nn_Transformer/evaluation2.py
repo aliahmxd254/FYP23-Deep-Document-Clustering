@@ -1,4 +1,3 @@
-from scipy.optimize import linear_sum_assignment
 import numpy as np
 from munkres import Munkres, print_matrix
 from sklearn.metrics.cluster import normalized_mutual_info_score as nmi_score
@@ -9,7 +8,7 @@ from sklearn import metrics
 
 def cluster_acc(y_true, y_pred):
     y_true = y_true - np.min(y_true)
-    #print(y_pred)
+
     l1 = list(set(y_true))
     numclass1 = len(l1)
 
@@ -17,40 +16,20 @@ def cluster_acc(y_true, y_pred):
     numclass2 = len(l2)
 
     ind = 0
-    i = 0
-    if numclass1 != numclass2: # 5 != 4
-        #print(l1)
-        #print(l2)
-        while(i<len(l1)):
-            if l1[i] in l2:
-                i+=1
+    if numclass1 != numclass2:
+        for i in l1:
+            if i in l2:
                 pass
             else:
-                y_pred[ind] = l1[i]
+                y_pred[ind] = i
                 ind += 1
-                l2 = list(set(y_pred))
-                i = 0
-        # for i in l1:
-        #     if i in l2:
-        #         pass
-        #     else:
-        #         y_pred[ind] = i
-        #         ind += 1
-        #         l2 = list(set(y_pred))
 
     l2 = list(set(y_pred))
     numclass2 = len(l2)
 
     if numclass1 != numclass2:
-        #print(l1)
-        #print(l2)
         print('error')
-        print("l1", l1)
-        print("l2", l2)
-        print(numclass1)
-        print(numclass2)
-        raise Exception("Num classes not equal")
-        
+        return
 
     cost = np.zeros((numclass1, numclass2), dtype=int)
     for i, c1 in enumerate(l1):
@@ -83,34 +62,11 @@ def cluster_acc(y_true, y_pred):
     recall_micro = metrics.recall_score(y_true, new_predict, average='micro')
     return acc, f1_macro
 
+
 def eva(y_true, y_pred, epoch=0):
     acc, f1 = cluster_acc(y_true, y_pred)
     nmi = nmi_score(y_true, y_pred, average_method='arithmetic')
     ari = ari_score(y_true, y_pred)
-    # (nmi, ari, f1, acc) = evaluate(y_true, y_pred)
+    print(epoch, ':acc {:.4f}'.format(acc), ', nmi {:.4f}'.format(nmi), ', ari {:.4f}'.format(ari),
+            ', f1 {:.4f}'.format(f1))
 
-    if not ('Z' in epoch or 'P' in epoch or 'Q' in epoch):
-        print(epoch, ':acc {:.4f}'.format(acc), ', nmi {:.4f}'.format(nmi), ', ari {:.4f}'.format(ari),', f1 {:.4f}'.format(f1))
-    
-    return acc, nmi, ari, f1
-
-def evaluate(label, pred):
-    nmi = metrics.normalized_mutual_info_score(label, pred)
-    ari = metrics.adjusted_rand_score(label, pred)
-    f = metrics.fowlkes_mallows_score(label, pred)
-    acc = clustering_accuracy_score(label, pred)
-    return (nmi, ari, f, acc)
-
-def hungray_aligment(y_true, y_pred):
-    D = max(y_pred.max(), y_true.max()) + 1
-    w = np.zeros((D, D))
-    for i in range(y_pred.size):
-        w[y_pred[i], y_true[i]] += 1
-
-    ind = np.transpose(np.asarray(linear_sum_assignment(w.max() - w)))
-    return ind, w
-
-def clustering_accuracy_score(y_true, y_pred):
-    ind, w = hungray_aligment(y_true, y_pred)
-    acc = sum([w[i, j] for i, j in ind]) / y_pred.size
-    return acc

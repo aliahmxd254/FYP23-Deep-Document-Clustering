@@ -1,6 +1,2 @@
-Doc50
+reut
 
-	 Purity: 0.96
-	 Silhouette Score: 0.17
-	 NMI: 0.92
-	 ARI: 0.90

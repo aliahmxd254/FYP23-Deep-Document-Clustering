@@ -4,7 +4,7 @@ from turtle import left
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
-from mpl_toolkits.mplot3d import Axes3D  # 空间三维画图
+from mpl_toolkits.mplot3d import Axes3D
 from collections import Counter
 
 
@@ -44,10 +44,8 @@ def plot_embedding(data, label, title):
     # plt.show()
 
 def plot_embedding_3d(X,y, title=None):
-    #坐标缩放到[0,1]区间
     x_min, x_max = np.min(X, axis=0), np.max(X, axis=0)
     X = (X - x_min) / (x_max - x_min)
-    #降维后的坐标为（X[i, 0], X[i, 1],X[i,2]），在该位置画出对应的
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1, projection='3d')
     for i in range(X.shape[0]):
@@ -73,9 +71,9 @@ if __name__ == '__main__':
 
     pass
     # from datasets import load_data, load_mat
-    # x, y, x1, y1 = load_data('Aminer')  # xy为作者标签 #x1y1为摘要维度
+    # x, y, x1, y1 = load_data('Aminer')  # xy
 
-    # # # x为数据集的feature，y为label.
+    # # # x feature，y label.
 
     # idx = np.random.choice(np.arange(len(x)),700,replace=False)
     # print(type(x))

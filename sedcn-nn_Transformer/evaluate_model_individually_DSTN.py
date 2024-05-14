@@ -25,7 +25,7 @@ import tsne
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
-from transformer1 import Transformer
+from evaluate_model_individually_transformer import Transformer
 
 seed = 100
 random.seed(seed)
@@ -137,12 +137,12 @@ class AE(nn.Module):
 
         return x_bar, f, z
 
-class SDCN(nn.Module):
+class DSTN(nn.Module):
 
     def __init__(self, ffn_hidden, num_heads, drop_prob, num_layers,
                  max_sequence_length, 
-                 n_input, n_z, n_clusters, v=2):
-        super(SDCN, self).__init__()
+                 n_input, n_z, n_clusters, batch_num, add_positional_enc, v=2):
+        super(DSTN, self).__init__()
 
         # autoencoder for intra information
         # self.ae = AE(
@@ -163,9 +163,9 @@ class SDCN(nn.Module):
         # self.gnn_4 = GNNLayer(n_enc_3, n_z)
         # self.gnn_5 = GNNLayer(n_z, n_clusters)
         # transformer for attention based internal information
-        self.transformer = Transformer(d_model=n_input, ffn_hidden=ffn_hidden, num_heads=num_heads,
-                                       drop_prob=drop_prob, num_layers=num_layers, 
-                                       max_sequence_length=max_sequence_length)
+        # self.transformer = Transformer(d_model=n_input, ffn_hidden=ffn_hidden, num_heads=num_heads,
+        #                                drop_prob=drop_prob, num_layers=num_layers, 
+        #                                max_sequence_length=max_sequence_length, batch_num=batch_num, add_positional_enc=add_positional_enc)
 
         # gcn for external information
         self.gcn = GCN(n_input, n_clusters)
@@ -183,7 +183,7 @@ class SDCN(nn.Module):
         # x_bar, tra1, tra2, tra3, z = self.ae(x)
         # GCN Module
 
-        x_bar, f = self.transformer(x=x, y=x, gamma = 0.5, gcn_embeddings=gcn_embeddings)
+        # x_bar, f = self.transformer(x=x, y=x, gamma = 0.5, gcn_embeddings=gcn_embeddings)
         # h = self.gnn_1(x, adj)  # h1
         # tra2 = tra2 + 0.001 *F.relu(self.ae.enc_2(h+tra1))  # ae update via (h1 + tra1)
 
@@ -199,18 +199,18 @@ class SDCN(nn.Module):
         # predict = F.softmax(f, dim=1)
 
         # Dual Self-supervised Module
-        q = 1.0 / (1.0 + torch.sum(torch.pow(f.unsqueeze(1) - self.cluster_layer, 2), 2) / self.v)
-        q = q.pow((self.v + 1.0) / 2.0)
-        q = (q.t() / torch.sum(q, 1)).t()
+        # q = 1.0 / (1.0 + torch.sum(torch.pow(f.unsqueeze(1) - self.cluster_layer, 2), 2) / self.v)
+        # q = q.pow((self.v + 1.0) / 2.0)
+        # q = (q.t() / torch.sum(q, 1)).t()
 
         predict = 1.0 / (1.0 + torch.sum(torch.pow(gcn_embeddings[3].unsqueeze(1) - self.cluster_layer, 2), 2) / self.v) # gcn_embeddings[3] was initially gcn_4
         predict = predict.pow((self.v + 1.0) / 2.0)
         predict = (predict.t() / torch.sum(predict, 1)).t()
 
         # dot_product
-        adj_pred = torch.sigmoid(torch.matmul(f, f.t()))
+        # adj_pred = torch.sigmoid(torch.matmul(f, f.t()))2
 
-        return x_bar, q, predict, f, adj_pred
+        return gcn_embeddings[3], None, predict, predict, None
 
 
 def evaluate_kmeans(random_state, X, true_labels):
@@ -246,10 +246,12 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 1870
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 25
+        batch_num = 25
         max_sequence_length = 3025
         ffn_hidden = 2048
         num_layers = 4
+        add_positional_enc = True
+        max_iterations = 3
         n_clusters = 3
         random_states = 500
         gpu = True
@@ -259,10 +261,12 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 9635
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 25
+        batch_num = 25
         max_sequence_length = 2225
         ffn_hidden = 2048
         num_layers = 4
+        add_positional_enc = False
+        max_iterations = 3
         n_clusters = 5
         random_states = 500
         gpu = True
@@ -272,7 +276,7 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 2000
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 25
+        batch_num = 25
         max_sequence_length = 10000
         ffn_hidden = 2048
         num_layers = 4
@@ -285,7 +289,7 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 3703
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 3
+        batch_num = 3
         max_sequence_length = 3327
         ffn_hidden = 1024
         num_layers = 4
@@ -298,10 +302,11 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 3885
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 50
+        batch_num = 5
         max_sequence_length = 50
         ffn_hidden = 2048
         num_layers = 4
+        add_positional_enc = True
         n_clusters = 5
         random_states = 500
         gpu = False
@@ -310,14 +315,16 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
         d_model = 5000
         num_heads = 1
         drop_prob = 0.1
-        num_batches = 202
+        batch_num = 202
         max_sequence_length = 8282
         ffn_hidden = 2048
         num_layers = 4
 
-    model = SDCN(ffn_hidden=ffn_hidden, num_heads=num_heads,
+    model = DSTN(ffn_hidden=ffn_hidden, num_heads=num_heads,
                 drop_prob=drop_prob, num_layers=num_layers,
                 max_sequence_length=max_sequence_length,
+                batch_num = batch_num,
+                add_positional_enc = add_positional_enc,
                 n_input=args.n_input,
                 n_z=args.n_z,
                 n_clusters=args.n_clusters,
@@ -379,36 +386,36 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
     model_lst = []
 
     # # the idx 
-    # np_txt = './sampling/{}-2000.txt'.format(args.name)
-    # if os.path.exists(np_txt):
-    #     random_idx = np.loadtxt(np_txt)
-    # else:
-    #     random_idx = np.random.choice(range(len(y)), 2000, replace=False)
-    #     np.savetxt(np_txt, random_idx)
-    # random_idx = [int(mm) for mm in random_idx]
+    np_txt = './sampling2/{}-2000.txt'.format(args.name)
+    if os.path.exists(np_txt):
+        random_idx = np.loadtxt(np_txt)
+    else:
+        random_idx = np.random.choice(range(len(y)), 2000, replace=False)
+        np.savetxt(np_txt, random_idx)
+    random_idx = [int(mm) for mm in random_idx]
 
     for epoch in tqdm(range(300)):
         if epoch % 1 == 0:
             # update_interval
             _, tmp_q, pred, z, _ = model(data, adj)
-            tmp_q = tmp_q.data
-            p = target_distribution(tmp_q)
+            # tmp_q = tmp_q.data
+            p = target_distribution(pred)
         
-            res1 = tmp_q.cpu().numpy().argmax(1)       #Q
+            # res1 = tmp_q.cpu().numpy().argmax(1)       #Q
             res2 = pred.data.cpu().numpy().argmax(1)   #Z
             res3 = p.data.cpu().numpy().argmax(1)      #P
 
-            # if epoch % 50 == 0 or epoch+1==300 or epoch == 10:
+            if epoch % 50 == 0 or epoch+1==300 or epoch == 10:
                 
-            #     z = z.data
-            #     if lambda_2 == 0:
-            #         tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic/{}-{}'.format(args.name,epoch))
-            #     else:
-            #         tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic/ours-{}-{}-{}-new-1'.format(args.name,itr,epoch))
+                z = z.data
+                if lambda_2 == 0:
+                    tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic2/{}-{}'.format(args.name,epoch))
+                else:
+                    tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic2/ours-{}-{}-{}-new-1'.format(args.name,itr,epoch))
 
 
             tmp_list = []
-            tmp_list.append(np.array(eva(y, res1, str(epoch) + 'Q')))
+            # tmp_list.append(np.array(eva(y, res1, str(epoch) + 'Q')))
             tmp_list.append(np.array(eva(y, res2, str(epoch) + 'Z')))
             tmp_list.append(np.array(eva(y, res3, str(epoch) + 'P')))
             tmp_list = np.array(tmp_list)
@@ -419,14 +426,14 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
 
         x_bar, q, pred, _, adj_pred = model(data, adj)
 
-        kl_loss = F.kl_div(q.log(), p, reduction='batchmean')
+        # kl_loss = F.kl_div(q.log(), p, reduction='batchmean')
         ce_loss = F.kl_div(pred.log(), p, reduction='batchmean')
         #re_loss = F.mse_loss(x_bar, data)
         ren_loss = F.mse_loss(x_bar, data_n)
         # re_gcn_loss = F.binary_cross_entropy(adj_pred, adj_dense)
 
 
-        loss = kl_loss + 0.01 * ce_loss # + 0.1 * re_loss #+ 0.001* re_gcn_loss
+        loss = ce_loss # + 0.1 * re_loss #+ 0.001* re_gcn_loss
         # loss = 1 * kl_loss + 0.0 * ce_loss + 0 * re_loss + 0 * ren_loss # DEC
         # loss = 1 * kl_loss + 0.0 * ce_loss + 1 * re_loss + 0 * ren_loss # IDEC
 
@@ -447,7 +454,7 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
 if __name__ == "__main__":
     start = time.time()
     parser = argparse.ArgumentParser(description='train', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--name', type=str, default='bbc')
+    parser.add_argument('--name', type=str, default='acm')
     parser.add_argument('--k', type=int, default=3)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--n_clusters', default=3, type=int)
@@ -465,11 +472,13 @@ if __name__ == "__main__":
     if args.name == 'usps':
         args.n_clusters = 10
         args.n_input = 256
+        max_iterations = 3
 
     if args.name == 'hhar':
         args.k = 5
         args.n_clusters = 6
         args.n_input = 561
+        max_iterations = 3
 
     if args.name == 'reut':
         args.k = None
@@ -477,17 +486,20 @@ if __name__ == "__main__":
         args.n_clusters = 4
         args.n_input = 2000
         args.n_z = args.n_input
+        max_iterations = 3
 
     if args.name == 'acm':
         args.k = None
         args.n_clusters = 3
         args.n_input = 1870
         args.n_z = args.n_input
+        max_iterations = 1
 
     if args.name == 'dblp':
         args.k = None
         args.n_clusters = 4
         args.n_input = 334
+        max_iterations = 3
 
     if args.name == 'cite':
         args.lr = 1e-4
@@ -495,29 +507,34 @@ if __name__ == "__main__":
         args.n_clusters = 6
         args.n_input = 3703
         args.n_z = args.n_input
+        max_iterations = 3
 
     if args.name == 'abstract':
         args.k = 10
         args.n_clusters = 3
         args.n_input = 10000
+        max_iterations = 3
 
     if args.name == 'bbc':
         args.k = 10
         args.n_clusters = 5
         args.n_input = 5000
         args.n_z = args.n_input
+        max_iterations = 3
 
     if args.name == 'webkb':
         args.k = None
         args.n_clusters = 7
         args.n_input = 5000
         args.n_z = args.n_input
+        max_iterations = 3
 
     if args.name == 'doc50':
         args.k = 10
         args.n_clusters = 5
         args.n_input = 3885
         args.n_z = args.n_input
+        max_iterations = 4
 
     print(args)
     # train_sdcn(dataset,1,0)

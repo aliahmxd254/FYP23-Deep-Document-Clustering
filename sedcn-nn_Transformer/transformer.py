@@ -82,12 +82,10 @@ class SentenceEmbedding(nn.Module):
         #x = self.embedding(x)
         pos = self.position_encoder().to(get_device())
         dim_diff = self.d_model - pos.shape[1]  
-
         if dim_diff != 0:
             pos = pos[:,0:dim_diff]
         x = self.dropout(x + pos)
         return x
-
 
 class MultiHeadAttention(nn.Module):
     def __init__(self, d_model, num_heads):
@@ -109,7 +107,6 @@ class MultiHeadAttention(nn.Module):
         out = self.linear_layer(values)
         return out
 
-
 class LayerNormalization(nn.Module):
     def __init__(self, parameters_shape, eps=1e-5):
         super().__init__()
@@ -127,10 +124,9 @@ class LayerNormalization(nn.Module):
         out = self.gamma * y + self.beta
         return out
 
-  
-class PositionsFeedForward(nn.Module):
+class PositionwiseFeedForward(nn.Module):
     def __init__(self, d_model, hidden, drop_prob=0.1):
-        super(PositionsFeedForward, self).__init__()
+        super(PositionwiseFeedForward, self).__init__()
         self.linear1 = nn.Linear(d_model, hidden)
         self.linear2 = nn.Linear(hidden, d_model)
         self.relu = nn.ReLU()
@@ -143,14 +139,13 @@ class PositionsFeedForward(nn.Module):
         x = self.linear2(x)
         return x
 
-
 class EncoderLayer(nn.Module):
     def __init__(self, d_model, ffn_hidden, num_heads, drop_prob):
         super(EncoderLayer, self).__init__()
         self.attention = MultiHeadAttention(d_model=d_model, num_heads=num_heads)
         self.norm1 = LayerNormalization(parameters_shape=[d_model])
         self.dropout1 = nn.Dropout(p=drop_prob)
-        self.ffn = PositionsFeedForward(d_model=d_model, hidden=ffn_hidden, drop_prob=drop_prob)
+        self.ffn = PositionwiseFeedForward(d_model=d_model, hidden=ffn_hidden, drop_prob=drop_prob)
         self.norm2 = LayerNormalization(parameters_shape=[d_model])
         self.dropout2 = nn.Dropout(p=drop_prob)
 
@@ -167,7 +162,7 @@ class EncoderLayer(nn.Module):
     
 class SequentialEncoder(nn.Sequential):
     def forward(self, *inputs):
-        x, gcn_embeddings, gamma, self_attention_mask = inputs
+        x, gcn_embeddings, gamma, self_attention_mask, batch_num = inputs
         gcn_embedding_index = 0
         for module in self._modules.values():
             x = divide_into_batches(x, batch_num=batch_num)    #x.unsqueeze(0)
@@ -190,15 +185,15 @@ class Encoder(nn.Module):
                  END_TOKEN=None, 
                  PADDING_TOKEN=None): # add GCN parameters
         super().__init__()
-        # self.sentence_embedding = SentenceEmbedding(max_sequence_length, d_model, language_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN) # comment this out not needed
+        self.sentence_embedding = SentenceEmbedding(max_sequence_length, d_model, language_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN) # comment this out not needed
         self.layers = SequentialEncoder(*[EncoderLayer(d_model, ffn_hidden, num_heads, drop_prob)
                                       for _ in range(num_layers)])
 
-    def forward(self, x, gcn_embeddings, gamma, self_attention_mask=None, start_token=None, end_token=None):
-        # x = self.sentence_embedding(x, start_token, end_token)
-        x = self.layers(x, gcn_embeddings, gamma, self_attention_mask)
+    def forward(self, x, gcn_embeddings, gamma, batch_num, add_positional_enc, self_attention_mask=None, start_token=None, end_token=None):
+        if add_positional_enc:
+            x = self.sentence_embedding(x, start_token, end_token)
+        x = self.layers(x, gcn_embeddings, gamma, self_attention_mask, batch_num)
         return x
-
 
 class MultiHeadCrossAttention(nn.Module):
     def __init__(self, d_model, num_heads):
@@ -224,7 +219,6 @@ class MultiHeadCrossAttention(nn.Module):
         out = self.linear_layer(values)
         return out
 
-
 class DecoderLayer(nn.Module):
     def __init__(self, d_model, ffn_hidden, num_heads, drop_prob):
         super(DecoderLayer, self).__init__()
@@ -236,7 +230,7 @@ class DecoderLayer(nn.Module):
         self.layer_norm2 = LayerNormalization(parameters_shape=[d_model])
         self.dropout2 = nn.Dropout(p=drop_prob)
 
-        self.ffn = PositionsFeedForward(d_model=d_model, hidden=ffn_hidden, drop_prob=drop_prob)
+        self.ffn = PositionwiseFeedForward(d_model=d_model, hidden=ffn_hidden, drop_prob=drop_prob)
         self.layer_norm3 = LayerNormalization(parameters_shape=[d_model])
         self.dropout3 = nn.Dropout(p=drop_prob)
 
@@ -266,7 +260,6 @@ class DecoderLayer(nn.Module):
         y = self.layer_norm3(y + _y)
         return y
 
-
 class SequentialDecoder(nn.Sequential):
     def forward(self, *inputs):
         x, y, self_attention_mask, cross_attention_mask = inputs
@@ -287,14 +280,13 @@ class Decoder(nn.Module):
                  END_TOKEN=None, 
                  PADDING_TOKEN=None):
         super().__init__()
-        # self.sentence_embedding = SentenceEmbedding(max_sequence_length, d_model, language_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN)
+        self.sentence_embedding = SentenceEmbedding(max_sequence_length, d_model, language_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN)
         self.layers = SequentialDecoder(*[DecoderLayer(d_model, ffn_hidden, num_heads, drop_prob) for _ in range(num_layers)])
 
     def forward(self, x, y, self_attention_mask, cross_attention_mask, start_token, end_token):
-        # y = self.sentence_embedding(y, start_token, end_token)
+        y = self.sentence_embedding(y, start_token, end_token)
         y = self.layers(x, y, self_attention_mask, cross_attention_mask)
         return y
-
 
 class Transformer(nn.Module):
     def __init__(self, 
@@ -303,7 +295,9 @@ class Transformer(nn.Module):
                 num_heads, 
                 drop_prob, 
                 num_layers,
-                max_sequence_length, 
+                max_sequence_length,
+                batch_num,
+                add_positional_enc,
                 kn_vocab_size=None,
                 english_to_index=None,
                 kannada_to_index=None,
@@ -313,8 +307,12 @@ class Transformer(nn.Module):
                 ):
         super().__init__()
         self.encoder = Encoder(d_model, ffn_hidden, num_heads, drop_prob, num_layers, max_sequence_length, english_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN)
-        self.decoder = Decoder(d_model, ffn_hidden, num_heads, drop_prob, num_layers, max_sequence_length, kannada_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN)
+        #self.decoder = Decoder(d_model, ffn_hidden, num_heads, drop_prob, num_layers, max_sequence_length, kannada_to_index, START_TOKEN, END_TOKEN, PADDING_TOKEN)
         self.linear = nn.Linear(d_model, d_model)
+        self.batch_num = batch_num
+        self.add_positional_enc = add_positional_enc
+        # self.linear2 = nn.Linear(d_model, 3500)
+        # self.linear3 = nn.Linear(3500, d_model)
         self.device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
     def forward(self, 
@@ -329,7 +327,11 @@ class Transformer(nn.Module):
                 enc_end_token=False,
                 dec_start_token=False, # We should make this true
                 dec_end_token=False): # x, y are batch of sentences
-        x = self.encoder(x, gcn_embeddings, gamma, encoder_self_attention_mask, start_token=enc_start_token, end_token=enc_end_token) # make changes here - add GCN parameters
-        out = self.decoder(x, y, decoder_self_attention_mask, decoder_cross_attention_mask, start_token=dec_start_token, end_token=dec_end_token) # y would be the original input
-        out = self.linear(out)
+        x = self.encoder(x, gcn_embeddings, gamma, batch_num=self.batch_num, add_positional_enc=self.add_positional_enc, self_attention_mask=encoder_self_attention_mask, 
+                         start_token=enc_start_token, end_token=enc_end_token)
+        x = F.relu(x)
+        #out = self.decoder(x, y, decoder_self_attention_mask, decoder_cross_attention_mask, start_token=dec_start_token, end_token=dec_end_token) # y would be the original input
+        out = F.relu(self.linear(x))
+        #out = F.relu(self.linear2(out))
+        #out = F.relu(self.linear3(out))
         return out, x # return x as F and out as x_bar

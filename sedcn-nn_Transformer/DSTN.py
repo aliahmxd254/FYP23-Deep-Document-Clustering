@@ -25,7 +25,7 @@ import tsne
 import os
 import time
 from concurrent.futures import ThreadPoolExecutor
-from transformer2 import Transformer
+from transformer import Transformer
 
 seed = 100
 random.seed(seed)

@@ -1,2 +1,7 @@
-reut
+Reuters
 
+Tf-Idf
+	 Purity: 0.72
+	 Silhouette Score: 0.02
+	 NMI: 0.35
+	 ARI: 0.22

@@ -38,7 +38,7 @@ torch.cuda.set_device(0)
 class AE(nn.Module):
 
     def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3,
-                 n_input, n_z):
+                n_input, n_z):
         super(AE, self).__init__()
         self.enc_1 = Linear(n_input, n_enc_1)
         self.enc_2 = Linear(n_enc_1, n_enc_2)
@@ -71,8 +71,8 @@ class EncoderLayer(nn.Module):
         super(EncoderLayer, self).__init__()
 
         self.encoder = Encoder(d_model=d_model, ffn_hidden=ffn_hidden, 
-                          num_heads=num_heads, drop_prob=drop_prob, 
-                          num_layers=num_layers)
+                        num_heads=num_heads, drop_prob=drop_prob, 
+                        num_layers=num_layers)
         
         #self.encoder.load_state_dict(torch.load(args.pretrain_path, map_location='cpu'))
         
@@ -105,10 +105,10 @@ class SDCN(nn.Module):
         #                              max_sequence_length=max_sequence_length)
         
         self.encoder = EncoderLayer(d_model=d_model, ffn_hidden=ffn_hidden, 
-                          num_heads=num_heads, drop_prob=drop_prob, 
-                          num_layers=num_layers,
-                          n_enc_1=n_enc_1, n_enc_2=n_enc_2, n_enc_3=n_enc_3,
-                          n_z = n_z, n_input=n_input)
+                        num_heads=num_heads, drop_prob=drop_prob, 
+                        num_layers=num_layers,
+                        n_enc_1=n_enc_1, n_enc_2=n_enc_2, n_enc_3=n_enc_3,
+                        n_z = n_z, n_input=n_input)
         
         #self.z_layer = Linear(d_model, n_z) # change
         
@@ -233,8 +233,26 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
         max_sequence_length = 10000
         ffn_hidden = 2048
         num_layers = 3
-
-    model = SDCN(800, 1000, 1500, 2000, 500, 500,
+    
+    if args.name == 'cite':
+        d_model = 3703
+        num_heads = 1
+        drop_prob = 0.1
+        num_batches = 3
+        max_sequence_length = 3327
+        ffn_hidden = 2048
+        num_layers = 3
+    
+    if args.name == 'webkb':
+        d_model = 5000
+        num_heads = 1
+        drop_prob = 0.1
+        num_batches = 202
+        max_sequence_length = 8282
+        ffn_hidden = 2048
+        num_layers = 3
+    
+    model = SDCN(3500, 3500, 5000, 5000, 3500, 3500,
                 n_input=args.n_input,
                 n_z=args.n_z,
                 n_clusters=args.n_clusters,
@@ -261,13 +279,13 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     if dim_diff != 0:
         positional_encoding = positional_encoding[:,0:dim_diff]
 
-    #print(type(dataset.x))
+    # print(type(dataset.x))
     dataset.x = dataset.x + positional_encoding.numpy()
     
     # cluster parameter initiate
     data = torch.Tensor(dataset.x).to(device)
     data_n = torch.zeros_like(data).to(device)
- 
+
     adj_dense = adj.to_dense()
     # get the semantic from adj
     for i in tqdm(range(len(adj_dense))):
@@ -279,7 +297,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     y = dataset.y
 
     # kmeans
-    kmeans = KMeans(n_clusters=args.n_clusters, n_init=20)
+    kmeans = KMeans(n_clusters=args.n_clusters, n_init=6)
     y_pred = kmeans.fit_predict(data.data.cpu().numpy())
     model.cluster_layer.data = torch.tensor(kmeans.cluster_centers_).to(device) 
     eva(y, y_pred, 'k-means')
@@ -288,7 +306,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     data = data.reshape(shape=(num_batches, data.size()[0] // num_batches, data.size()[1]))
 
     with torch.no_grad():
-         _, _, _, _, z = model.encoder(data)
+        _, _, _, _, z = model.encoder(data)
 
     data = data.reshape(data.size()[0] * data.size()[1], data.size()[2])
     #z = z.reshape(z.size()[0] * z.size()[1], z.size()[2])
@@ -308,11 +326,11 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     # if os.path.exists(np_txt):
     #     random_idx = np.loadtxt(np_txt)
     # else:
-    #     random_idx = np.random.choice(range(len(y)), 2000, replace=False)
+    #     random_idx = np.random.choice(range(len(y)), len(y), replace=False)
     #     np.savetxt(np_txt, random_idx)
     # random_idx = [int(mm) for mm in random_idx]
 
-    for epoch in tqdm(range(350)):
+    for epoch in tqdm(range(20)):
         if epoch % 1 == 0:
             # update_interval
             _, tmp_q, pred, z, _ = model(data, adj, num_batches)
@@ -377,64 +395,59 @@ if __name__ == "__main__":
     parser.add_argument('--k', type=int, default=3)
     parser.add_argument('--lr', type=float, default=1e-3)
     parser.add_argument('--n_clusters', default=3, type=int)
-    parser.add_argument('--n_z', default=1870, type=int)
     parser.add_argument('--pretrain_path', type=str, default='pkl')
+    parser.add_argument('--n_z', type=int, default=3703)
     args = parser.parse_args()
     args.cuda = torch.cuda.is_available()
     print("use cuda: {}".format(args.cuda))
     device = torch.device("cuda" if args.cuda else "cpu")
 
-    pretrain_path = r"D:\My Work\Final Year Project\Main\FYP23-Deep-Document-Clustering\sedcn-nn_Transformer\data\{}.pkl".format(args.name)
+    #path for faizan
+    # pretrain_path = r"D:\My Work\Final Year Project\Main\FYP23-Deep-Document-Clustering\sedcn-nn_Transformer\data\{}.pkl".format(args.name)
 
-    #'D:/FAST/FYP/FYP23-Deep-Document-Clustering/data/{}.pkl'
+    #path for ali
+    pretrain_path = 'D:/FAST/FYP/FYP23-Deep-Document-Clustering/data/{}.pkl'
     args.pretrain_path = pretrain_path
     # args.pretrain_path = 'data/ab_study/embedding_size/{}_{}.pkl'.format(args.name, args.n_z)
     dataset = load_data(args.name)
     
-    if args.name == 'usps':
-        args.n_clusters = 10
-        args.n_input = 256
-
-    if args.name == 'hhar':
-        args.k = 5
-        args.n_clusters = 6
-        args.n_input = 561
-
     if args.name == 'reut':
         args.lr = 1e-4
         args.n_clusters = 4
         args.n_input = 2000
+        args.n_z = args.n_input
 
     if args.name == 'acm':
         args.k = None
         args.n_clusters = 3
         args.n_input = 1870
-
-    if args.name == 'dblp':
-        args.k = None
-        args.n_clusters = 4
-        args.n_input = 334
+        args.n_z = args.n_input
 
     if args.name == 'cite':
         args.lr = 1e-4
         args.k = None
         args.n_clusters = 6
         args.n_input = 3703
-
-    if args.name == 'abstract':
-        args.k = 10
-        args.n_clusters = 3
-        args.n_input = 10000
+        args.n_z = args.n_input
 
     if args.name == 'bbc':
         args.k = 10
         args.n_clusters = 5
         args.n_input = 9635
+        args.n_z = args.n_input
 
     if args.name == 'doc50':
         args.k = 10
         args.n_clusters = 5
         args.n_input = 3885
+        args.n_z = args.n_input
+        
+    if args.name == 'webkb':
+        args.k = None
+        args.n_clusters = 7
+        args.n_input = 5000
+        args.n_z = args.n_input
+        
 
     print(args)
     # train_sdcn(dataset,1,0)
@@ -447,11 +460,11 @@ if __name__ == "__main__":
     
 
     # for lambda_1 in range(1,11):
-    #     lambda_1 = lambda_1 * 0.1
-    #     for lambda_2 in range(1,11):
-    #         lambda_2 = lambda_2 * 0.1
-    #         for _ in range(5):
-    #             train_sdcn(dataset, lambda_1, lambda_2)
+        # lambda_1 = lambda_1 * 0.1
+        # for lambda_2 in range(1,11):
+        #     lambda_2 = lambda_2 * 0.1
+        #     for _ in range(5):
+        #         train_sdcn(dataset, lambda_1, lambda_2)
     
     end = time.time()
     duration = end - start

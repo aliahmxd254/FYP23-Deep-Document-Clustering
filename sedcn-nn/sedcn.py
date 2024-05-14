@@ -12,6 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.parameter import Parameter
 from torch.optim import Adam
+from torch.optim import RAdam 
 from torch.utils.data import DataLoader
 from torch.nn import Linear
 from utils import load_data, load_graph
@@ -19,6 +20,7 @@ from GNN import GNNLayer
 from evaluation import eva
 from collections import Counter
 from tqdm import tqdm
+from torch.nn.modules.module import Module
 import tsne
 import os
 import time
@@ -30,12 +32,11 @@ torch.manual_seed(seed)
 
 torch.cuda.set_device(0)
 
-
-class AE(nn.Module):
+class PretrainAE(nn.Module):
 
     def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3,
                  n_input, n_z):
-        super(AE, self).__init__()
+        super(PretrainAE, self).__init__()
         self.enc_1 = Linear(n_input, n_enc_1)
         self.enc_2 = Linear(n_enc_1, n_enc_2)
         self.enc_3 = Linear(n_enc_2, n_enc_3)
@@ -57,13 +58,88 @@ class AE(nn.Module):
         dec_h3 = F.relu(self.dec_3(dec_h2))
         x_bar = self.x_bar_layer(dec_h3)
 
-        return x_bar, enc_h1, enc_h2, enc_h3, z
+        return x_bar, z
 
+
+class GCN(Module):
+    def __init__(self, input_dim, n_clusters):
+        super(GCN, self).__init__()
+        self.input_dim = input_dim
+        self.weight_1 = Parameter(torch.FloatTensor(input_dim, 500))
+        self.weight_2 = Parameter(torch.FloatTensor(500, 500))
+        self.weight_3 = Parameter(torch.FloatTensor(500, 2000))
+        self.weight_4 = Parameter(torch.FloatTensor(2000, 10))
+        torch.nn.init.xavier_uniform_(self.weight_1)
+        torch.nn.init.xavier_uniform_(self.weight_2)
+        torch.nn.init.xavier_uniform_(self.weight_3)
+        torch.nn.init.xavier_uniform_(self.weight_4)
+
+    def forward(self, features, adj, active=True):
+        adj_hat = torch.eye(adj.size(0), device=device) + adj  # Adding self-loops
+        deg_inv_sqrt = torch.pow(torch.sum(adj_hat, dim=1), -0.5)
+        deg_inv_sqrt[deg_inv_sqrt == float('inf')] = 0
+        deg_inv_sqrt = torch.diag(deg_inv_sqrt)
+        adj_hat = torch.mm(torch.mm(deg_inv_sqrt, adj_hat), deg_inv_sqrt)  # Symmetrically normalized adjacency matrix
+
+        # First layer
+        support = torch.mm(features, self.weight_1)
+        output_1 = torch.mm(adj_hat, support)
+        output_1 = F.relu(output_1)
+        
+        # Second layer
+        support = torch.mm(output_1, self.weight_2)
+        output_2 = torch.mm(adj_hat, support)
+        output_2 = F.relu(output_2)
+        
+        # Third layer
+        support = torch.mm(output_2, self.weight_3)
+        output_3 = torch.mm(adj_hat, support)
+        output_3 = F.relu(output_3)
+        
+        # Fourth layer
+        support = torch.mm(output_3, self.weight_4)
+        output_4 = torch.mm(adj_hat, support)
+        output_4 = F.relu(output_4)
+
+        return output_1, output_2, output_3, output_4
+
+class AE(nn.Module):
+
+    def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3,
+                 n_input, n_z):
+        super(AE, self).__init__()
+        self.enc_1 = Linear(n_input, n_enc_1)
+        self.enc_2 = Linear(n_enc_1, n_enc_2)
+        self.enc_3 = Linear(n_enc_2, n_enc_3)
+        self.z_layer = Linear(n_enc_3, n_z)
+
+        self.dec_1 = Linear(n_z, n_dec_1)
+        self.dec_2 = Linear(n_dec_1, n_dec_2)
+        self.dec_3 = Linear(n_dec_2, n_dec_3)
+        self.x_bar_layer = Linear(n_dec_3, n_input)
+
+    def forward(self, x, gcn_1, gcn_2, gcn_3, gcn_4):
+        gamma = 0.5
+        enc_h1 = F.relu(self.enc_1(x))
+        f = gamma * enc_h1 + (1 - gamma) * gcn_1
+        enc_h2 = F.relu(self.enc_2(f))
+        f = gamma * enc_h2 + (1 - gamma) * gcn_2
+        enc_h3 = F.relu(self.enc_3(f))
+        f = gamma * enc_h3 + (1 - gamma) * gcn_3
+        z = self.z_layer(f)
+        f = gamma * z + (1 - gamma) * gcn_4
+
+        dec_h1 = F.relu(self.dec_1(f))
+        dec_h2 = F.relu(self.dec_2(dec_h1))
+        dec_h3 = F.relu(self.dec_3(dec_h2))
+        x_bar = self.x_bar_layer(dec_h3)
+
+        return x_bar, f, z
 
 class SDCN(nn.Module):
 
     def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3, 
-                n_input, n_z, n_clusters, v=1):
+                n_input, n_z, n_clusters, v=2):
         super(SDCN, self).__init__()
 
         # autoencoder for intra information
@@ -79,11 +155,12 @@ class SDCN(nn.Module):
         self.ae.load_state_dict(torch.load(args.pretrain_path, map_location='cpu'))
 
         # GCN for inter information
-        self.gnn_1 = GNNLayer(n_input, n_enc_1)
-        self.gnn_2 = GNNLayer(n_enc_1, n_enc_2)
-        self.gnn_3 = GNNLayer(n_enc_2, n_enc_3)
-        self.gnn_4 = GNNLayer(n_enc_3, n_z)
-        self.gnn_5 = GNNLayer(n_z, n_clusters)
+        # self.gnn_1 = GNNLayer(n_input, n_enc_1)
+        # self.gnn_2 = GNNLayer(n_enc_1, n_enc_2)
+        # self.gnn_3 = GNNLayer(n_enc_2, n_enc_3)
+        # self.gnn_4 = GNNLayer(n_enc_3, n_z)
+        # self.gnn_5 = GNNLayer(n_z, n_clusters)
+        self.gcn = GCN(n_input, n_clusters)
 
         # cluster layer
         self.cluster_layer = Parameter(torch.Tensor(n_clusters, n_z))
@@ -94,32 +171,38 @@ class SDCN(nn.Module):
 
     def forward(self, x, adj):
         # DNN Module
-        x_bar, tra1, tra2, tra3, z = self.ae(x)
-
+        gcn_1, gcn_2, gcn_3, gcn_4= self.gcn(x,adj)
+        # x_bar, tra1, tra2, tra3, z = self.ae(x)
         # GCN Module
-        h = self.gnn_1(x, adj)  # h1
+
+        x_bar, f, z = self.ae(x, gcn_1, gcn_2, gcn_3, gcn_4)
+        # h = self.gnn_1(x, adj)  # h1
         # tra2 = tra2 + 0.001 *F.relu(self.ae.enc_2(h+tra1))  # ae update via (h1 + tra1)
 
-        h = self.gnn_2(0.5*h+0.5*tra1, adj)
+        # h = self.gnn_2(0.5*h+0.5*tra1, adj)
         # tra3 = tra3 + 0.001 *F.relu(self.ae.enc_3(h+tra2))  # ae update via (h2 + tra2)
 
-        h = self.gnn_3(0.5*h+0.5*tra2, adj)
+        # h = self.gnn_3(0.5*h+0.5*tra2, adj)
         # z = z + 0.001 *self.ae.z_layer(h+tra3)    # ae update via (h3 + tra3)
 
-        h = self.gnn_4(0.5*h+0.5*tra3, adj)
+        # h = self.gnn_4(0.5*h+0.5*tra3, adj)
 
-        h = self.gnn_5(0.5*h+0.5*z, adj, active=False)
-        predict = F.softmax(h, dim=1)
+        # h = self.gnn_5(0.5*h+0.5*z, adj, active=False)
+        # predict = F.softmax(f, dim=1)
 
         # Dual Self-supervised Module
-        q = 1.0 / (1.0 + torch.sum(torch.pow(z.unsqueeze(1) - self.cluster_layer, 2), 2) / self.v)
+        q = 1.0 / (1.0 + torch.sum(torch.pow(f.unsqueeze(1) - self.cluster_layer, 2), 2) / self.v)
         q = q.pow((self.v + 1.0) / 2.0)
         q = (q.t() / torch.sum(q, 1)).t()
 
-        # dot_product
-        adj_pred = torch.sigmoid(torch.matmul(z, z.t()))
+        predict = 1.0 / (1.0 + torch.sum(torch.pow(gcn_4.unsqueeze(1) - self.cluster_layer, 2), 2) / self.v)
+        predict = predict.pow((self.v + 1.0) / 2.0)
+        predict = (predict.t() / torch.sum(predict, 1)).t()
 
-        return x_bar, q, predict, z, adj_pred
+        # dot_product
+        adj_pred = torch.sigmoid(torch.matmul(f, f.t()))
+
+        return x_bar, q, predict, f, adj_pred
 
 
 def target_distribution(q):
@@ -137,7 +220,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
                 v=1.0).to(device)
     print(model)
 
-    optimizer = Adam(model.parameters(), lr=args.lr)
+    optimizer = RAdam(model.parameters(), lr=args.lr)
 
     # KNN Graph
     adj = load_graph(args.name, args.k)
@@ -163,9 +246,19 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     model.cluster_layer.data = torch.tensor(kmeans.cluster_centers_).to(device)
     eva(y, y_pred, 'k-means')
 
-
     with torch.no_grad():
-        _, _, _, _, z = model.ae(data)
+        pretrain_model = PretrainAE(
+        n_enc_1=500,
+        n_enc_2=500,
+        n_enc_3=2000,
+        n_dec_1=2000,
+        n_dec_2=500,
+        n_dec_3=500,
+        n_input=args.n_input,
+        n_z=10,).cuda()
+        pretrain_model.load_state_dict(torch.load(args.pretrain_path, map_location='cpu'))
+        _, z = pretrain_model(data)
+
 
     kmeans = KMeans(n_clusters=args.n_clusters, n_init=20)
     y_pred = kmeans.fit_predict(z.data.cpu().numpy())
@@ -177,7 +270,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     res_lst = []
     model_lst = []
 
-    # the idx 
+    # # the idx 
     # np_txt = './sampling/{}-2000.txt'.format(args.name)
     # if os.path.exists(np_txt):
     #     random_idx = np.loadtxt(np_txt)
@@ -186,7 +279,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     #     np.savetxt(np_txt, random_idx)
     # random_idx = [int(mm) for mm in random_idx]
 
-    for epoch in tqdm(range(300)):
+    for epoch in tqdm(range(3000)):
         if epoch % 1 == 0:
             # update_interval
             _, tmp_q, pred, z, _ = model(data, adj)
@@ -204,7 +297,6 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
             #         tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic/{}-{}'.format(args.name,epoch))
             #     else:
             #         tsne.main(z.cpu().numpy()[random_idx],y[random_idx],'./pic/ours-{}-{}-new-1'.format(args.name,epoch))
-
 
 
             tmp_list = []
@@ -226,7 +318,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
         # re_gcn_loss = F.binary_cross_entropy(adj_pred, adj_dense)
 
 
-        loss = 0.5 * kl_loss + 0.01 * ce_loss + lambda_1 * re_loss + lambda_2 * ren_loss #+ 0.001* re_gcn_loss
+        loss = kl_loss + 0.01 * ce_loss + 0.1 * re_loss #+ 0.001* re_gcn_loss
         # loss = 1 * kl_loss + 0.0 * ce_loss + 0 * re_loss + 0 * ren_loss # DEC
         # loss = 1 * kl_loss + 0.0 * ce_loss + 1 * re_loss + 0 * ren_loss # IDEC
 
@@ -236,7 +328,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
         optimizer.step()
 
     res_lst = np.array(res_lst)
-    best_idx = np.argmax(res_lst[:, 1])
+    best_idx = np.argmax(res_lst[:, 0])
     print('best--->',best_idx)
     print('dataset:{},lambda_1:{}, lambda_2:{}'.format(args.name, lambda_1, lambda_2))
     print('ACC={:.2f} +- {:.2f}'.format(res_lst[:, 0][best_idx]*100, np.std(res_lst[:, 0])))
@@ -249,7 +341,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='train', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--name', type=str, default='bbc')
     parser.add_argument('--k', type=int, default=3)
-    parser.add_argument('--lr', type=float, default=1e-3)
+    parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--n_clusters', default=3, type=int)
     parser.add_argument('--n_z', default=10, type=int)
     parser.add_argument('--pretrain_path', type=str, default='pkl')
@@ -262,14 +354,14 @@ if __name__ == "__main__":
     # args.pretrain_path = 'data/ab_study/embedding_size/{}_{}.pkl'.format(args.name, args.n_z)
     dataset = load_data(args.name)
 
-    if args.name == 'usps':
-        args.n_clusters = 10
-        args.n_input = 256
+    # if args.name == 'usps':
+    #     args.n_clusters = 10
+    #     args.n_input = 256
 
-    if args.name == 'hhar':
-        args.k = 5
-        args.n_clusters = 6
-        args.n_input = 561
+    # if args.name == 'hhar':
+    #     args.k = 5
+    #     args.n_clusters = 6
+    #     args.n_input = 561
 
     if args.name == 'reut':
         args.lr = 1e-4
@@ -281,10 +373,10 @@ if __name__ == "__main__":
         args.n_clusters = 3
         args.n_input = 1870
 
-    if args.name == 'dblp':
-        args.k = None
-        args.n_clusters = 4
-        args.n_input = 334
+    # if args.name == 'dblp':
+    #     args.k = None
+    #     args.n_clusters = 4
+    #     args.n_input = 334
 
     if args.name == 'cite':
         args.lr = 1e-4
@@ -292,10 +384,10 @@ if __name__ == "__main__":
         args.n_clusters = 6
         args.n_input = 3703
 
-    if args.name == 'abstract':
-        args.k = 10
-        args.n_clusters = 3
-        args.n_input = 10000
+    # if args.name == 'abstract':
+    #     args.k = 10
+    #     args.n_clusters = 3
+    #     args.n_input = 10000
 
     if args.name == 'bbc':
         args.k = 10

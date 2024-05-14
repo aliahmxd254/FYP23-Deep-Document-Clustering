@@ -14,12 +14,12 @@ from evaluation2 import eva
 import random 
 import os
 import sys
-
-sys.path.insert(0, r"D:\FAST\FYP\FYP23-Deep-Document-Clustering\sedcn-nn_Transformer")
-
-
 from utils_transformer.Encoder import Encoder
 from utils_transformer.PositionalEncoding import PositionalEncoding
+
+# sys.path.insert(0, r"D:\FAST\FYP\FYP23-Deep-Document-Clustering\sedcn-nn_Transformer")
+sys.path.insert(0, r"..")
+
 
 seed = 42
 
@@ -90,7 +90,7 @@ def pretrain_ae(model, dataset, y):
     train_loader = DataLoader(dataset, batch_size=256, shuffle=True)
     print(model)
     optimizer = Adam(model.parameters(), lr=1e-3)
-    for epoch in range(300):
+    for epoch in range(20):
         # adjust_learning_rate(optimizer, epoch)
         for batch_idx, (x, _) in enumerate(train_loader):
             x = x.cuda()
@@ -115,7 +115,10 @@ def pretrain_ae(model, dataset, y):
             kmeans = KMeans(n_clusters=5, n_init=10, random_state=seed).fit(z.data.cpu().numpy())
             eva(y, kmeans.labels_, epoch)
 
-        torch.save(model.state_dict(), 'bbc.pkl')
+        # save_dir = '..\data/'
+        # if not os.path.exists(save_dir):
+        #     os.makedirs(save_dir)
+        torch.save(model.state_dict(), f'data/{dataset_name}.pkl')
 
 # model = AE(
 #         n_enc_1=500,
@@ -128,7 +131,7 @@ def pretrain_ae(model, dataset, y):
 #         n_z=10,).cuda()
         
 
-dataset_name = "bbc"
+dataset_name = "webkb"
 
 n_z = 10
 
@@ -150,6 +153,14 @@ elif dataset_name == "doc50":
     num_layers = 5
     num_batches = 25
     
+elif dataset_name == 'webkb':
+    d_model = 5000
+    num_heads = 1
+    drop_prob = 0.1
+    num_batches = 202
+    max_sequence_length = 8282
+    ffn_hidden = 2048
+    num_layers = 3
 
 
 model = Encoder(d_model=d_model, ffn_hidden=ffn_hidden, num_heads=num_heads, drop_prob=drop_prob, num_layers=num_layers).cuda()

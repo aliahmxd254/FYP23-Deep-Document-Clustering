@@ -5,10 +5,10 @@ from sklearn.metrics.pairwise import cosine_similarity as cos
 from sklearn.metrics import pairwise_distances as pair
 from sklearn.preprocessing import normalize
 
-topk = 10
+topk = 30
 
 def construct_graph(features, label, method='heat'):
-    fname = 'graph/bbc_graph.txt'
+    fname = 'graph/doc50_graph.txt'
     num = len(label)
     dist = None
 
@@ -61,7 +61,7 @@ hhar = np.loadtxt('data/hhar.txt', dtype=float)
 label = np.loadtxt('data/hhar_label.txt', dtype=int)
 '''
 
-reut = np.loadtxt('data/bbc.txt', dtype=float)
-label = np.loadtxt('data/bbc_label.txt', dtype=int)
+txt = np.loadtxt('data/doc50.txt', dtype=float)
+label = np.loadtxt('data/doc50_label.txt', dtype=int)
 
-construct_graph(reut, label, 'ncos')
+construct_graph(txt, label, 'ncos')

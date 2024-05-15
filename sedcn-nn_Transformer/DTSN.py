@@ -34,6 +34,11 @@ torch.manual_seed(seed)
 
 torch.cuda.set_device(0)
 
+acc = []
+nmi = []
+ari = []
+f1 = []
+
 class PretrainAE(nn.Module):
 
     def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3,
@@ -450,6 +455,11 @@ def train_sdcn(dataset, itr, lambda_1=0, lambda_2=1):
     print('NMI={:.2f} +- {:.2f}'.format(res_lst[:, 1][best_idx]*100, np.std(res_lst[:, 1])))
     print('ARI={:.2f} +- {:.2f}'.format(res_lst[:, 2][best_idx]*100, np.std(res_lst[:, 2])))
     print('F1={:.2f} +- {:.2f}'.format(res_lst[:, 3][best_idx]*100, np.std(res_lst[:, 3])))
+    
+    acc.append(res_lst[:, 0][best_idx]*100)
+    nmi.append(res_lst[:, 1][best_idx]*100)
+    ari.append(res_lst[:, 2][best_idx]*100)
+    f1.append(res_lst[:, 3][best_idx]*100)
 
 if __name__ == "__main__":
     start = time.time()
@@ -552,6 +562,12 @@ if __name__ == "__main__":
     #         lambda_2 = lambda_2 * 0.1
     #         for _ in range(5):
     #             train_sdcn(dataset, lambda_1, lambda_2)
+    with open("Results.txt", "w") as f:
+        f.write(f"{args.name}\n\n"
+                f"\t ACC: {max(acc):.2f}\n"
+                f"\t NMI: {max(nmi):.2f}\n"
+                f"\t ARI: {max(ari):.2f}\n"
+                f"\t F1: {max(f1):.2f}\n")
     
     end = time.time()
     duration = end - start

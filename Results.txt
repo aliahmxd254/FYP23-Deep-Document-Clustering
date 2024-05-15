@@ -1,7 +1,6 @@
-Reuters
+bbc
 
-Tf-Idf
-	 Purity: 0.72
-	 Silhouette Score: 0.02
-	 NMI: 0.35
-	 ARI: 0.22
+	 Purity: 0.90
+	 Silhouette Score: 0.11
+	 NMI: 0.84
+	 ARI: 0.78

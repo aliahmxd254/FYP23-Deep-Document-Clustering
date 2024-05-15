@@ -32,6 +32,10 @@ torch.manual_seed(seed)
 
 torch.cuda.set_device(0)
 
+acc = []
+nmi = []
+ari = []
+f1 = []
 class PretrainAE(nn.Module):
 
     def __init__(self, n_enc_1, n_enc_2, n_enc_3, n_dec_1, n_dec_2, n_dec_3,
@@ -211,14 +215,12 @@ def target_distribution(q):
 
 
 def train_sdcn(dataset, lambda_1=0, lambda_2=1):
-
-
     model = SDCN(500, 500, 2000, 2000, 500, 500,
                 n_input=args.n_input,
                 n_z=args.n_z,
                 n_clusters=args.n_clusters,
                 v=1.0).to(device)
-    print(model)
+    # print(model)
 
     optimizer = RAdam(model.parameters(), lr=args.lr)
 
@@ -279,7 +281,7 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     #     np.savetxt(np_txt, random_idx)
     # random_idx = [int(mm) for mm in random_idx]
 
-    for epoch in tqdm(range(3000)):
+    for epoch in tqdm(range(300)):
         if epoch % 1 == 0:
             # update_interval
             _, tmp_q, pred, z, _ = model(data, adj)
@@ -335,11 +337,16 @@ def train_sdcn(dataset, lambda_1=0, lambda_2=1):
     print('NMI={:.2f} +- {:.2f}'.format(res_lst[:, 1][best_idx]*100, np.std(res_lst[:, 1])))
     print('ARI={:.2f} +- {:.2f}'.format(res_lst[:, 2][best_idx]*100, np.std(res_lst[:, 2])))
     print('F1={:.2f} +- {:.2f}'.format(res_lst[:, 3][best_idx]*100, np.std(res_lst[:, 3])))
+    
+    acc.append(res_lst[:, 0][best_idx]*100)
+    nmi.append(res_lst[:, 1][best_idx]*100)
+    ari.append(res_lst[:, 2][best_idx]*100)
+    f1.append(res_lst[:, 3][best_idx]*100)
 
 if __name__ == "__main__":
     start = time.time()
     parser = argparse.ArgumentParser(description='train', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--name', type=str, default='bbc')
+    parser.add_argument('--name', type=str, default='acm')
     parser.add_argument('--k', type=int, default=3)
     parser.add_argument('--lr', type=float, default=1e-4)
     parser.add_argument('--n_clusters', default=3, type=int)
@@ -350,7 +357,10 @@ if __name__ == "__main__":
     print("use cuda: {}".format(args.cuda))
     device = torch.device("cuda" if args.cuda else "cpu")
 
-    args.pretrain_path = 'data/{}.pkl'.format(args.name)
+    if args.name == 'doc50':
+        args.pretrain_path = 'data/{}-sedcn.pkl'.format(args.name)
+    else:
+        args.pretrain_path = 'data/{}.pkl'.format(args.name)
     # args.pretrain_path = 'data/ab_study/embedding_size/{}_{}.pkl'.format(args.name, args.n_z)
     dataset = load_data(args.name)
 
@@ -392,7 +402,12 @@ if __name__ == "__main__":
     if args.name == 'bbc':
         args.k = 10
         args.n_clusters = 5
-        args.n_input = 9635
+        args.n_input = 5000
+    
+    if args.name == 'doc50':
+        args.k = 10
+        args.n_clusters = 5
+        args.n_input = 3885
 
 
 
@@ -412,7 +427,12 @@ if __name__ == "__main__":
     #         lambda_2 = lambda_2 * 0.1
     #         for _ in range(5):
     #             train_sdcn(dataset, lambda_1, lambda_2)
-    
+    with open("Results.txt", "w") as f:
+        f.write(f"{args.name}\n\n"
+                f"\t ACC: {max(acc):.2f}\n"
+                f"\t NMI: {max(nmi):.2f}\n"
+                f"\t ARI: {max(ari):.2f}\n"
+                f"\t F1: {max(f1):.2f}\n")
     end = time.time()
     duration = end - start
     print(f"Time taken: {duration:.2f}s")

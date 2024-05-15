@@ -150,6 +150,11 @@
     </item>
     <item>
      <property name="text">
+      <string>DTSN</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
       <string>SEDCN</string>
      </property>
     </item>

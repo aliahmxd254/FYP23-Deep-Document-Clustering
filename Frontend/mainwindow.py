@@ -7,7 +7,8 @@ from PyQt5 import uic
 from nbconvert import NotebookExporter, PythonExporter
 from nbconvert.preprocessors import ExecutePreprocessor
 import nbformat
-
+import papermill as pm
+import subprocess
 
 class GUI(QMainWindow):
     def __init__(self):
@@ -20,7 +21,7 @@ class GUI(QMainWindow):
         self.showMaximized()
         self.algo.currentIndexChanged.connect(self.update_datasets)
         self.update_datasets()
-        self.clusterbtn.clicked.connect(self.run_notebook)
+        self.clusterbtn.clicked.connect(self.run_program)
         
     
     def update_datasets(self):
@@ -28,24 +29,25 @@ class GUI(QMainWindow):
         self.data.clear()
         
         if selected_algo == "Baseline":
-            datasets = ["BBC", "Doc50", "Reuters"]
+            datasets = ["BBC", "Doc50"]
         
         elif selected_algo == "SEDCN":
-            datasets = ["ACM", "BBC", "Cite", "Reuters"]
+            datasets = ["ACM", "BBC", "Doc50"]
         
         elif selected_algo == "Transformer":
-            datasets = ["ACM", "BBC", "Cite", "Doc50", "Reuters"]
+            datasets = ["ACM", "BBC", "Doc50"]
+            
+        elif selected_algo == "DTSN":
+            datasets = ["ACM", "BBC", "Doc50"]
         
         else:
             datasets = []
         
-        
         self.data.addItems(datasets)
         
     
-    def run_notebook(self):
+    def run_program(self):
         self.clusterbtn.setEnabled(False)
-        
         notebook_file = ""
         
         if self.algo.currentText() == "Baseline":
@@ -58,48 +60,95 @@ class GUI(QMainWindow):
         
         elif self.algo.currentText() == "Transformer":
             if self.data.currentText() == "ACM":
-                parameters = {'data_choice': 1}
+                parameters = {'data_choice': 'acm'}
             elif self.data.currentText() == "BBC":
-                parameters = {'data_choice': 2}
-            elif self.data.currentText() == 'Cite':
-                parameters = {'data_choice': 4}
+                parameters = {'data_choice': 'bbc'}
             elif self.data.currentText() == 'Doc50':
-                parameters = {'data_choice': 5}
-            elif self.data.currentText() == 'Reuters':
-                parameters = {'data_choice': 3}
+                parameters = {'data_choice':'doc50'}
                 
             
-            notebook_file = os.getcwd() + r"\Transformer\Clustering\TransformerAllDatasets.ipynb"
-            with open(notebook_file) as f:
-                nb_in = nbformat.read(f, nbformat.NO_CONVERT)
+            notebook_file = os.path.join(os.getcwd(), "Transformer", "Clustering", "TransformerAllDatasets.ipynb")
+            # with open(notebook_file) as f:
+            #     nb_in = nbformat.read(f, nbformat.NO_CONVERT)
                 
-            nb_in.metadata['parameters'] = parameters
-            ep = ExecutePreprocessor(timeout=60000, kernel_name='python3')
-            nb_out = ep.preprocess(nb_in)
-            # , resources={'metadata': {'path': os.getcwd()+ r"\Transformer\Clustering"}}
-        
-        elif self.algo.currentText() == "SEDCN":
-            sedcn_file = os.getcwd() + r"\sedcn-nn\sedcn.py"
+            # nb_in.metadata['parameters'] = parameters
+            # ep = ExecutePreprocessor(timeout=60000, kernel_name='python3')
+            # ep.preprocess(nb_in, {'metadata': {'path': os.path.join(os.getcwd(), "Transformer", "Clustering")}})
+            pm.execute_notebook(
+            notebook_file,
+            None,
+            parameters=parameters,
+            kernel_name='python3',
+            cwd=os.path.join(os.getcwd(), "Transformer", "Clustering")
+            ) 
             
-        
-        with open("Results.txt", 'r') as result_file:
-            results = result_file.read()
-            self.res.setText(results)
-            
-        if self.algo.currentText() == "Transformer":
-            clust = QPixmap("D:/FAST/FYP/FYP23-Deep-Document-Clustering/Cluster_Image.png")
+            clust = QPixmap(os.path.join(os.getcwd(), "Transformer", "Clustering", "Cluster_image.png"))
             self.cluster_graph.setPixmap(clust)
             
-            purity = QPixmap("D:/FAST/FYP/FYP23-Deep-Document-Clustering/Purity_Image.png")
+            purity = QPixmap(os.path.join(os.getcwd(), "Transformer", "Clustering", "Purity_image.png"))
             self.purity_graph.setPixmap(purity)
             
             self.cluster_graph.setVisible(True)
             self.purity_graph.setVisible(True)
-            
         
+        elif self.algo.currentText() == "SEDCN":
+            sedcn_file = os.path.join(os.getcwd(), "sedcn-nn", "sedcn.py")
+            if self.data.currentText() == "ACM":
+                data_choice = 'acm'
+            elif self.data.currentText() == "BBC":
+                data_choice = 'bbc'
+            elif self.data.currentText() == 'Doc50':
+                data_choice = 'doc50'
+            
+            if os.path.isfile(sedcn_file):
+                try:
+                    # Run the script using subprocess and pass the parameter
+                    result = subprocess.run(['python', sedcn_file, '--name', data_choice], check=True, capture_output=True, text=True)
+                    
+                    # Print the output and errors (if any)
+                    # print(result.stdout)
+                    # print(result.stderr)
+                    
+                except subprocess.CalledProcessError as e:
+                    # Handle errors in case the script execution fails
+                    print(f"An error occurred while running {sedcn_file}: {e}")
+                    print(e.output)
+            else:
+                print(f"The file {sedcn_file} does not exist.")
+        
+        elif self.algo.currentText() == "DTSN":
+            # D:\FAST\FYP\FYP23-Deep-Document-Clustering\sedcn-nn_Transformer\DTSN.py
+            dtsn_file = os.path.join(os.getcwd(), "sedcn-nn_Transformer", "DTSN.py")
+            print(dtsn_file)
+            if self.data.currentText() == "ACM":
+                data_choice = 'acm'
+            elif self.data.currentText() == "BBC":
+                data_choice = 'bbc'
+            elif self.data.currentText() == 'Doc50':
+                data_choice = 'doc50'
+            
+            if os.path.isfile(dtsn_file):
+                try:
+                    # Run the script using subprocess and pass the parameter
+                    result = subprocess.run(['python', dtsn_file, '--name', data_choice], check=True, capture_output=True, text=True)
+                    
+                    # Print the output and errors (if any)
+                    # print(result.stdout)
+                    # print(result.stderr)
+                    
+                except subprocess.CalledProcessError as e:
+                    # Handle errors in case the script execution fails
+                    print(f"An error occurred while running {dtsn_file}: {e}")
+                    print(e.output)
+            else:
+                print(f"The file {dtsn_file} does not exist.")
+        
+        with open("Results.txt", 'r') as result_file:
+            results = result_file.read()
+            self.res.setText(results)
         
         self.clusterbtn.setEnabled(True)
-        print("exited")
+        print("finished running program")
 
 
 if __name__ == '__main__':
